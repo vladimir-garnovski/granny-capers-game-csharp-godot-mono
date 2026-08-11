@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://7sjk214aanrw"]
+
+[ext_resource type="PackedScene" uid="uid://buo3c4kqqqaek" path="res://Scenes/Collider/Collider.tscn" id="1_kgpe0"]
+[ext_resource type="Script" uid="uid://dx5iqougrtk01" path="res://Scenes/DamageCollider/DamageCollider.cs" id="2_e00cn"]
+
+[node name="DamageCollider" unique_id=1560907654 instance=ExtResource("1_kgpe0")]
+collision_mask = 8
+script = ExtResource("2_e00cn")
+_damageAmount = 10
+_expolosedOnHit = true
+_diesOnHit = true

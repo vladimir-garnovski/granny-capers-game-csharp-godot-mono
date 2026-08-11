@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgnfsivumhmys"
+path="res://.godot/imported/Lord of the Rangs.mp3-572d2255829d2f567ab86f823912ae2a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/Lord of the Rangs.mp3"
+dest_files=["res://.godot/imported/Lord of the Rangs.mp3-572d2255829d2f567ab86f823912ae2a.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c3q1h33b6x8b4"]
+
+[ext_resource type="Script" uid="uid://cylxg77wy2lxw" path="res://Scenes/PickUpTracker/PickUpTracker.cs" id="1_4yxae"]
+
+[node name="PickUpTracker" type="Node" unique_id=184063973]
+script = ExtResource("1_4yxae")

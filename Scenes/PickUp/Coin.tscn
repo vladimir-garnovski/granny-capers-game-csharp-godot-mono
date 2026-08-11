@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bhe7yy7n3xs47"]
+
+[ext_resource type="PackedScene" uid="uid://d1ahcljorcskd" path="res://Scenes/PickUp/PickUp.tscn" id="1_o3ei0"]
+[ext_resource type="PackedScene" uid="uid://b7mwuorjqj2ei" path="res://Assets/Models/Kenny/Platformer/coin-gold.glb" id="2_nufq0"]
+[ext_resource type="AudioStream" uid="uid://dcac8q23d62gf" path="res://Assets/Audio/Effects/coin_pickup.wav" id="2_wp81s"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4pq2v"]
+height = 0.2
+radius = 0.2
+
+[node name="Coin" unique_id=10930696 instance=ExtResource("1_o3ei0")]
+_pickUpType = 2
+
+[node name="CollisionShape3D" parent="." index="0" unique_id=1822699468]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0.22609904, 0)
+shape = SubResource("CylinderShape3D_4pq2v")
+
+[node name="Effect" parent="." index="1" unique_id=1017956146]
+stream = ExtResource("2_wp81s")
+
+[node name="coin-gold2" parent="Visuals" parent_id_path=PackedInt32Array(1174979701) index="0" unique_id=49719653 instance=ExtResource("2_nufq0")]
+
+[node name="PickUpStars" parent="." index="4" unique_id=252525334]
+visible = false

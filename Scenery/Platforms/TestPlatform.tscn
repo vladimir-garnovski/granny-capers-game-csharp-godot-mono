@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://4ba2ladyttw5"]
+
+[ext_resource type="Texture2D" uid="uid://dc3ukxhphtif2" path="res://Assets/Images/Textures/kenney_prototype-textures/PNG/Dark/texture_08.png" id="1_w7rms"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rlt4w"]
+albedo_texture = ExtResource("1_w7rms")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4pq2v"]
+material = SubResource("StandardMaterial3D_rlt4w")
+size = Vector2(50, 50)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_rlt4w"]
+
+[node name="TestPlatform" type="Node3D" unique_id=160508301]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=522305338]
+mesh = SubResource("PlaneMesh_4pq2v")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1797106184]
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=776216499]
+shape = SubResource("WorldBoundaryShape3D_rlt4w")

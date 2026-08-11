@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dpbvcutpqq3bd"]
+
+[ext_resource type="Texture2D" uid="uid://bloiy2ols7b1i" path="res://Assets/Images/Textures/dot.png" id="1_1pdmc"]
+
+[sub_resource type="Curve" id="Curve_scgvg"]
+_data = [Vector2(0.17624521, 0.019230723), 0.0, 0.0, 0, 0, Vector2(0.816092, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_6ftp7"]
+curve = SubResource("Curve_scgvg")
+
+[sub_resource type="Curve" id="Curve_s42ix"]
+_data = [Vector2(0.10344827, 0.1346153), 0.0, 0.0, 0, 0, Vector2(0.7203065, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.083333254), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_lxalr"]
+curve = SubResource("Curve_s42ix")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_islli"]
+direction = Vector3(0, 1, 0)
+spread = 3.0
+initial_velocity_min = 0.19999999
+initial_velocity_max = 0.5
+gravity = Vector3(0, 0.3, 0)
+scale_min = 0.099999994
+scale_max = 0.39999998
+scale_curve = SubResource("CurveTexture_lxalr")
+color = Color(0.3135189, 0.47559875, 0.8959902, 1)
+alpha_curve = SubResource("CurveTexture_6ftp7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xby4h"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+disable_ambient_light = true
+disable_fog = true
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_1pdmc")
+billboard_mode = 2
+billboard_keep_scale = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_s42ix"]
+material = SubResource("StandardMaterial3D_xby4h")
+size = Vector2(0.3, 0.3)
+
+[node name="PickUpStars" type="GPUParticles3D" unique_id=252525334]
+amount = 32
+lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_islli")
+draw_pass_1 = SubResource("QuadMesh_s42ix")

@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://ce683neobbfxu"]
+
+[ext_resource type="Script" uid="uid://dvawqy00gpdr8" path="res://Scenes/Hud/Hud.cs" id="1_vvs1i"]
+[ext_resource type="Texture2D" uid="uid://kugfwuigocu5" path="res://Assets/Images/Textures/kenney_prototype-textures/Items/coin-gold.png" id="2_iteex"]
+[ext_resource type="Texture2D" uid="uid://xxkpcx6s7oex" path="res://Assets/Images/Textures/kenney_prototype-textures/Items/jewel.png" id="2_xymhr"]
+[ext_resource type="Texture2D" uid="uid://c8x0135nskjww" path="res://Assets/Images/Textures/kenney_prototype-textures/Items/key.png" id="4_bbjj2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xct66"]
+font_size = 100
+font_color = Color(0.21176471, 0.2627451, 1, 1)
+outline_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_bbjj2"]
+font_size = 64
+font_color = Color(0.22520205, 0.4748705, 0.21903303, 1)
+outline_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xymhr"]
+content_margin_left = 24.0
+content_margin_top = 18.0
+content_margin_right = 24.0
+content_margin_bottom = 18.0
+bg_color = Color(0.0627451, 0.13725491, 0.3254902, 0.8392157)
+corner_detail = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_vvs1i"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_4pq2v"]
+font_size = 32
+
+[node name="Hud" type="Control" unique_id=690281118 node_paths=PackedStringArray("_coinsLabel", "_jewelsLabel", "_key", "_exitLabel", "_continueLabel", "_levelCompleteRect", "_music")]
+process_mode = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vvs1i")
+_coinsLabel = NodePath("PC/HB/HBCoin/LabelCoins")
+_jewelsLabel = NodePath("PC/HB/HBJewel/LabelJewels")
+_key = NodePath("KeyImage")
+_exitLabel = NodePath("PC/LabelExit")
+_continueLabel = NodePath("LevelCompleteRect/VB/ContinueLabel")
+_levelCompleteRect = NodePath("LevelCompleteRect")
+_music = NodePath("Music")
+
+[node name="LevelCompleteRect" type="ColorRect" parent="." unique_id=391556485]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.45248222, 0.23084325, 0.75701576, 0.50980395)
+
+[node name="VB" type="VBoxContainer" parent="LevelCompleteRect" unique_id=1669178400]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CompleteLabel" type="Label" parent="LevelCompleteRect/VB" unique_id=2052598286]
+layout_mode = 2
+text = "Level complete"
+label_settings = SubResource("LabelSettings_xct66")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ContinueLabel" type="Label" parent="LevelCompleteRect/VB" unique_id=638377537]
+visible = false
+layout_mode = 2
+text = "Press shoot to continue"
+label_settings = SubResource("LabelSettings_bbjj2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PC" type="PanelContainer" parent="." unique_id=705227835]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xymhr")
+
+[node name="HB" type="HBoxContainer" parent="PC" unique_id=821693503]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 18
+
+[node name="HBJewel" type="HBoxContainer" parent="PC/HB" unique_id=623243820]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PC/HB/HBJewel" unique_id=1556674243]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_xymhr")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="LabelJewels" type="Label" parent="PC/HB/HBJewel" unique_id=471226066]
+layout_mode = 2
+text = "0/100"
+label_settings = SubResource("LabelSettings_vvs1i")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBCoin" type="HBoxContainer" parent="PC/HB" unique_id=806792158]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PC/HB/HBCoin" unique_id=641320328]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_iteex")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="LabelCoins" type="Label" parent="PC/HB/HBCoin" unique_id=499108100]
+layout_mode = 2
+text = "0/100"
+label_settings = SubResource("LabelSettings_vvs1i")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelExit" type="Label" parent="PC" unique_id=2139773025]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Go to exit"
+label_settings = SubResource("LabelSettings_4pq2v")
+
+[node name="KeyImage" type="TextureRect" parent="." unique_id=106319353]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -522.0
+offset_right = 80.0
+offset_bottom = -458.0
+grow_vertical = 2
+texture = ExtResource("4_bbjj2")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1380825405]

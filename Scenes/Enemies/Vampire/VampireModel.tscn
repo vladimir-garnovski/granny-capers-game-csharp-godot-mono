@@ -1,0 +1,2516 @@
+[gd_scene format=4 uid="uid://cn2k6628bw4ij"]
+
+[ext_resource type="Texture2D" uid="uid://b6tn7n3221nii" path="res://Assets/Models/Vampire/Textures/colormap.png" id="1_8dw6d"]
+[ext_resource type="Script" uid="uid://dqr4o15jj8hh" path="res://Scenes/Enemies/Vampire/VampireModel.cs" id="1_q8bie"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dwkg0"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("1_8dw6d")
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0afbs"]
+_surfaces = [{
+"aabb": AABB(-0.055796, -0.22318399, -0.07579599, 0.111592, 0.22318399, 0.175796),
+"format": 34896613377,
+"index_count": 96,
+"index_data": PackedByteArray("CAAJAAoACgAJAAsACwAJAAgACwAMAAoACgANAAgADAALAA4ACAAOAAsADgAPAAwADQAQAAgADgARAA8ADQAPABEAEQAOAAgAEQAQAA0ACAAQABEAAAASABMAAgATABIAEgABAAIAAQASAAAAAwATAAIAEwADAAAAAwACABQAAgAEABQAFAAEAAcAFQAHAAEABwAVABQAAQAAABUAFAAFAAMAAAADAAUABQAUABUAAAAGABUAFQAGAAUABQAGAAAA"),
+"lods": [0.114440285, PackedByteArray("AAABAAIAAgADAAAAAwACAAQAAAADAAUABAAFAAMABQAGAAAABQAEAAYAAQAAAAYABwAGAAQABgAHAAEA")],
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 22,
+"vertex_data": PackedByteArray("/////6C/AAD//xtPoL8AAAAAG0+gvwAAAAD//6C/AAAAAI0nfwQAAAAA//8fHQAA/////x8dAAD//40nfwQAAAAAAAD//wAAAAAAAAAAAAAAAI0nfwQAAP7/AAAAAAAA/v+NJ38EAAAAABtPoL8AAP7/AAD//wAA/v8bT6C/AAAAABtP//8AAP7/G0///wAA///GkzDOAAAAAMaTMM4AAAAAxpNfHwAA///Gk18fAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_we581"]
+resource_name = "character-vampire_leg-left"
+_surfaces = [{
+"aabb": AABB(-0.055796, -0.22318399, -0.07579599, 0.111592, 0.22318399, 0.175796),
+"attribute_data": PackedByteArray("/9dlxv/XPfD/1z3w/9dlxv/XZcb/12XG/9dlxv/XZcb/12XG/9c98P/XmPn/12XG/9c98P/XZcb/12XG/9eY+f/XmPn/12XG/9eY+f/XZcb/F2WG/xdlhv8XZYb/F2WG/xdlhv8XZYb/F2WG/xdlhv8XZYb/F2WG/xdlhv8XZYb/F2WG/xdlhv8XZYb/F2WG/xdlhv8XZYb/F2WG/xdlhv8XZYb/F2WG/xdlhv8XZYb/F2WG/xdlhv/X/9//1//f/9f/3//X/9//1//f/9f/3//X/9//1//f/9f/3//X/9//1//f/9f/3w=="),
+"format": 34896613399,
+"index_count": 96,
+"index_data": PackedByteArray("FAAVABYAFgAXABQAFwAYABQAGQAaABsAGwAcABkAHQAeAB8AHwAgAB0AIQAiACMAIwAkACEAIwAlACQAJgAnACgAKAApACYAKgArACwALAAtACoAAAAuAC8ALwADAAAABAAFAAYABgAHAAQACQAKADAACAAJADAACAAxAAkAMAALAAgADQAOADIADAANADIADAAzAA0AMgAPAAwANAABAAIAAgA1ADQANgASABAAEAA3ADYAEwA4ADkAOQARABMA"),
+"lods": [0.114440285, PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEwASABEA")],
+"material": SubResource("StandardMaterial3D_dwkg0"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 58,
+"vertex_data": PackedByteArray("/////6C/TIT//xtPoL+9hgAAG0+gv72GAAD//6C/TIQAAP//Hx3///////8fHf///////6C///8AAP//oL///wAA//+gv/+/AAAbT6C//78AAI0nfwT/vwAA//8fHf+///8bT6C//7//////oL//v/////8fHf+///+NJ38E/7///40nfwT///////8fHf//AACNJ38E//8AAP//Hx3//wAAAAD///+/AAAAAAAA/78AAI0nfwT/vwAAG0+gv/+/AAAbT////78AABtPoL////7/G0+gv////v8bT/////8AABtP/////wAAAAD///+//v8AAP///7/+/wAAAAD/vwAAAAAAAP+//v+NJ38E/7/+/wAAAAD/v/7/AAD///+//v8bT6C//7/+/xtP////vwAAjSd/BP//AAAAAAAA///+/wAAAAD///7/jSd/BP///v8bT////5/+/wAA//8AgAAAAAD//wCAAAAbT////5///8aTMM43gQAAxpMwzjeBAADGk18f/78AAMaTMM7/v///xpNfH/+////GkzDO/7///8aTMM43gQAAxpMwzjeBAADGk18f/////8aTXx///wAAxpNfH//////Gk18f//////9/AAD/fwAA/3////9//3//v/9//7//f/+//3//v/9/////f////3////9/////fwAA/38AAP9/AAD/fwAA/3+w9AmB////f7D0CYH///9/////f////3////9/////f////3//v/9//7//f3yl/398pQAA/38AAP9/AAD/fwAA/3//fwAA/38AAP9/AAD/fwAA/38AAP9/hPr/f4T6/3+E+v9/hPr///9//3////9///////9/AAD/fwAA/3//f////3////9/AAD/fwAAAAD/fwAA/3//f5P6/3+T+v9/k/r/f5P6")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_0afbs")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vthek"]
+_surfaces = [{
+"aabb": AABB(-0.055796, -0.22318399, -0.07579599, 0.111592, 0.22318399, 0.175796),
+"format": 34896613377,
+"index_count": 96,
+"index_data": PackedByteArray("CAAJAAoACgALAAgACQAIAAwACgANAAsADgALAA0ADwAKAAkADQAKAA8ADAAOAA8ADQAQAA4ADgAQAA8ADwAQAA0ADAARAAkACQARAA8ADwARAAwAAAASABMAAgATABIAEgABAAIAAQASAAAAAwATAAIAEwADAAAAAwACABQAAgAEABQAFAAEAAcAFQAHAAEABwAVABQAAQAAABUAFAAFAAMAAAADAAUABQAUABUAAAAGABUAFQAGAAUABQAGAAAA"),
+"lods": [0.114440285, PackedByteArray("AAABAAIAAgADAAAAAwACAAQAAAADAAUABAAFAAMABQAGAAAABQAEAAYAAQAAAAYABwAGAAQABgAHAAEA")],
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 22,
+"vertex_data": PackedByteArray("/////6C/AAD//xtPoL8AAAAAG0+gvwAAAAD//6C/AAAAAI0nfwQAAAAA//8fHQAA/////x8dAAD//40nfwQAAP7/jSd/BAAA/v8AAAAAAAD+/wAA//8AAP7/G0+gvwAAAACNJ38EAAD+/xtP//8AAAAAG0+gvwAAAAAAAP//AAAAABtP//8AAAAAAAAAAAAA///GkzDOAAAAAMaTMM4AAAAAxpNfHwAA///Gk18fAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2wd0s"]
+resource_name = "character-vampire_leg-right"
+_surfaces = [{
+"aabb": AABB(-0.055796, -0.22318399, -0.07579599, 0.111592, 0.22318399, 0.175796),
+"attribute_data": PackedByteArray("/9dlxv/XPfD/1z3w/9dlxv/XZcb/12XG/9dlxv/XZcb/12XG/9c98P/XmPn/12XG/9c98P/XZcb/12XG/9eY+f/XmPn/12XG/9eY+f/XZcb/F2WG/xdlhv8XZYb/F2WG/xdlhv8XZYb/F2WG/xdlhv8XZYb/F2WG/xdlhv8XZYb/F2WG/xdlhv8XZYb/F2WG/xdlhv8XZYb/F2WG/xdlhv8XZYb/F2WG/xdlhv8XZYb/F2WG/xdlhv/X/9//1//f/9f/3//X/9//1//f/9f/3//X/9//1//f/9f/3//X/9//1//f/9f/3w=="),
+"format": 34896613399,
+"index_count": 96,
+"index_data": PackedByteArray("FAAVABYAFgAXABQAFgAYABcAGQAaABsAGwAcABkAHAAdABkAHgAfACAAIAAhAB4AIgAjACQAJAAlACIAJgAnACgAKAApACYAKgArACwALAAtACoAAAAuAC8ALwADAAAABAAFAAYABgAHAAQACQAKADAACAAJADAACAAxAAkAMAALAAgADQAOADIADAANADIADAAzAA0AMgAPAAwANAABAAIAAgA1ADQANgASABAAEAA3ADYAEwA4ADkAOQARABMA"),
+"lods": [0.114440285, PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEwASABEA")],
+"material": SubResource("StandardMaterial3D_dwkg0"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 58,
+"vertex_data": PackedByteArray("/////6C/TIT//xtPoL+9hgAAG0+gv72GAAD//6C/TIQAAP//Hx3///////8fHf///////6C///8AAP//oL///wAA//+gv/+/AAAbT6C//78AAI0nfwT/vwAA//8fHf+///8bT6C//7//////oL//v/////8fHf+///+NJ38E/7///40nfwT///////8fHf//AACNJ38E//8AAP//Hx3///7/jSd/BP+//v8AAAAA/7/+/wAA////v/7/G0+gv/+//v8bT////78AAAAA////vwAAAAAAAP+/AACNJ38E/78AABtPoL//vwAAG0////+//v8bT////5/+/wAA//8AgAAAAAD//wCAAAAbT////58AABtPoL////7/G0+gv////v8bT/////8AABtP/////wAAjSd/BP//AAAAAAAA///+/wAAAAD///7/jSd/BP//AAAAAP///7/+/wAA////v/7/AAAAAP+/AAAAAAAA/7///8aTMM43gQAAxpMwzjeBAADGk18f/78AAMaTMM7/v///xpNfH/+////GkzDO/7///8aTMM43gQAAxpMwzjeBAADGk18f/////8aTXx///wAAxpNfH//////Gk18f//////9/AAD/fwAA/3////9//3//v/9//7//f/+//3//v/9/////f////3////9/////fwAA/38AAP9/AAD/fwAA/3+w9AmB////f7D0CYH///9/AAD/fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9///////9//3////9///////9//3//v/9//7//f3yl/398pf9/hPr/f4T6/3+E+v9/hPoAAP9/AAD/fwAA/38AAP9/AAD/fwAA/3//f////3////9/AAD/fwAAAAD/fwAA/3//f5P6/3+T+v9/k/r/f5P6")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vthek")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sedw7"]
+_surfaces = [{
+"aabb": AABB(-0.13, 0, -0.1, 0.26, 0.26, 0.20000002),
+"format": 34896613377,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAAAAMAAwAFAAQABQADAAIABgAFAAIABwAGAAIACAAGAAcAAgAJAAcABwAKAAgACwAJAAIABwAJAAsACwAKAAcAAgABAAsACgALAAwADAALAAEADAANAAoACgANAA4ADgANAAwADgAAAAoAAQAAAA4ADAAPAA4ADgAPAAEAAQAPAAwAEAARABIAEgATABAAEwAUABAAEwAVABQA"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 22,
+"vertex_data": PackedByteArray("AAAUPP7/AAAAABQ8AAAAAAAA//8AAAAAAAD///7/AAD/X6d2/v8AAP9f///+/wAA/5////7/AAD//////v8AAP+fp3b+/wAA/////wAAAAD//xQ8/v8AAP//FDwAAAAA//8AAAAAAAD//wAA/v8AAAAAAAD+/wAAAAAAAAAAAAD/n6d2//8AAP//FDz//wAAAAAUPP//AAD/X6d2//8AAP+f/////wAA/1//////AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jeto4"]
+resource_name = "character-vampire_torso"
+_surfaces = [{
+"aabb": AABB(-0.13, 0, -0.1, 0.26, 0.26, 0.20000002),
+"attribute_data": PackedByteArray("/5eU7f+XlO3/l2XG/5dlxv+XZcb/l2XG/5dlxv+XZcb/l2XG/5dlxv+XZcb/l2XG/5eU7f+XlO3/l2XG/5eU7f+XlO3/l2XG/5dlxv+XlO3/l93h/5dlxv+X3eH/l5Tt/5dlxv+XZcb/15j5/9eY+f/XZcb/12XG/9dlxv/XmPn/15j5/9dlxv/XZcb/15j5/9eY+f/XZcb/12XG/9dlxv/XmPn/15j5/9eY+f/XmPn/15j5/9eY+f9XSer/V5j5/1eY+f9XSer/V2XG/1dlxg=="),
+"format": 34896613399,
+"index_count": 84,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQABwAIAAQACAAJAAQACgALAAwADAANAAoADgAPABAAEAARAA4AEgATABQAFAAVABIAFgAXABgAGAAZABYAGgAbABwAHAAdABoAHgAfACAAIAAhAB4AIgAjACQAJAAlACIAJgAnACgAKAApACYAKgArACwALAAtACoALgAvADAAMAAxAC4AMQAyAC4AMQAzADIA"),
+"material": SubResource("StandardMaterial3D_dwkg0"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 52,
+"vertex_data": PackedByteArray("AAAUPP7//78AABQ8AAD/vwAA//8AAP+/AAD///7//78AAP//AAD///////8AAP////////7/////n////v////9f///+////AAD///7//////////v//v/////8AAP+///8UPAAA/7///xQ8/v//vwAA//8AAP//AAAUPAAA/////xQ8AAD///////8AAP////////7/AID//xQ8/v8AgP+fp3b+/wCA/5////7/AID/X6d2/v8AgAAAFDz+/wCAAAD///7/AID/X////v8AgAAAAAD+//+/AAAAAAAA/78AABQ8AAD/vwAAFDz+//+/AAAUPAAA//8AAAAAAAD/////AAAAAP////8UPAAA/////xQ8/v8AgP//AAD+/wCAAAAAAP7/AIAAABQ8/v8AgP//FDz+//+///8UPAAA/7///wAAAAD/v///AAD+//+/AAAAAP7//7///wAA/v//v///AAAAAP+/AAAAAAAA/7//n6d2//8AgP//FDz//wCAAAAUPP//AID/X6d2//8AgP+f/////wCA/1//////AID/f////3////9/////f////3//v/9//7//f/+//3//v/9//7//f/+//38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/AAD/fwAA/38AAP9/AAAAAP9/AAD/fwAA/38AAP9//3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_sedw7")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4q01b"]
+_surfaces = [{
+"aabb": AABB(-0.05, -0.04006492, -0.055796, 0.31600446, 0.14172184, 0.1517132),
+"format": 34896613377,
+"index_count": 162,
+"index_data": PackedByteArray("CgALAAIAAgAMAAoADAANAAoADgAMAAIADQAMAA4ACgANAA8ADgAPAA0ACgAPABAAEAAPAA4AAgADAA4AEAAOAAMAAwACAAsAAAAKABAACwAKAAAAAwARABAAEQADAAsABQAQABEAEAAFAAAAEQALAAEAAAABAAsAEQAEAAUAAQAEABEAAAAFAAQABAABAAAAAQAGAAAABAABAAYAAQAEAAYABgABAAAABgAHAAQABwAGAAQACAAAAAYAAAAIAAYACAAAAAUAAAAIAAUACQAFAAgABQAJAAgABQAJAAQACQAFAAQABwAEAAkABAAHAAkAEgATABQAEwASABUAFQASABYAFAAWABIAFgAXABUAFwAWABQAEwAVABgAGQAXABQAGAAaABMAFAATABoAGAAZABsAFAAbABkAGwAaABgAGgAbABQA"),
+"lods": [0.13311124, PackedByteArray("AAABAAIAAwACAAEAAAACAAMABAADAAEABAABAAAAAwAFAAAAAwAEAAUAAAAFAAQABAABAAYABgABAAAAAQAEAAYAAQAGAAAABgAHAAQABwAGAAQACAAAAAYAAAAIAAYACAAAAAUAAAAIAAUACQAFAAgABQAJAAgABQAJAAQACQAFAAQABAAHAAkABwAEAAkA")],
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 28,
+"vertex_data": PackedByteArray("tqbI5AHcAAC2pjYbAdwAAAAANhtLvAAAAAA2GwAAAAAcvjYbtR8AABy+yOS1HwAAKbcAAP//AADf1AAA2xAAACm3/v///wAA39T//9sQAADka8jkS7wAAORrNhtLvAAAAAD/f0u8AAAzLcjkS7wAAAAA/38AAAAAMy3I5AAAAABKg8jkAAAAAEqDNhsAAAAAWtqg0AZDAAD//+x5UVcAAEft7Hn07QAA2meg0EwFAACix6DQqdkAACJVoNDwmwAA2mdeL0wFAAAiVV4v8JsAAP//Xi9RVwAAR+1eL/TtAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_l07cw"]
+resource_name = "character-vampire_arm-left"
+_surfaces = [{
+"aabb": AABB(-0.05, -0.04006492, -0.055796, 0.31600446, 0.14172184, 0.1517132),
+"attribute_data": PackedByteArray("/5f8zf+XmPn/l5j5/5eY+f+X/M3/l/zN/5eY+f+XmPn/l5j5/5f8zf+XmPn/l5j5/5eY+f+XmPn/l/zN/5f8zf+XmPn/l5j5/5f8zf+XZcb/l2XG/5f8zf+XZcb/l/zN/5dlxv+X/M3/l5j5/5eY+f+X/M3/l2XG/5eY+f+XmPn/l/zN/5dlxv+XmPn/l5j5/5eY+f+XmPn/l5j5/5eY+f+XmPn/l5j5/5eY+f+XmPn/l2XG/5f8zf+XmPn/l5j5/5dlxv+X/M3/l/zN/5eY+f+XFer/l/zN/5cV6v+X/M3/l/zN/5cV6v+X/M3/l/zN/5f8zf+X/M3/l5j5/5f8zf+XFer/l/zN/5cV6v+XFer/l5j5/5eY+f+XmPn/l/zN/5eY+f+X/M3/V5uT/1fHq/9Xx6v/V5uT/1fHq/9Xx6v/V5i5/1eYuf9XmLn/V5i5/1fHq/9Xm5P/V5uT/1ebk/9Xm5P/V5uT/1ebk/9XmLn/V5i5/1eYuf9XmLn/V8er/1eYuf9XmLn/V5uT/1ebkw=="),
+"format": 34896613399,
+"index_count": 162,
+"index_data": PackedByteArray("MgAzAAIAAgA0ADIANAA1ADIANgA3ADgAOAA5ADYAOgAEAAUABQA7ADoAOwA8ADoAOwA9ADwABwA+AD8APwBAAAcAPwBBAEAABgADAEIAQgBDAAYADAAKAEQARABFAAwARAALAEUACwANAEUADgAPABAAEAARAA4ARgAIAAkACQBHAEYAAAABAEgASABJAAAAEgATABQAFAAVABIAFgAXABgAGQAYABcAGgAbABwAHAAdABoAHgAfACAAIQAgAB8AIgAjACQAJAAlACIAJgAnACgAKQAoACcAKgArACwALAAtACoALgAvADAAMQAwAC8ASgBLAEwATABNAEoATgBPAFAAUABRAE4AUgBTAFQAVABVAFIAVABWAFUAVwBYAFkAWQBaAFcAWwBcAF0AXQBeAFsAXwBgAGEAYQBiAF8AYgBjAF8A"),
+"lods": [0.13311124, PackedByteArray("AAABAAIAAwAEAAUABQAGAAMABwAIAAkACgALAAwACwANAAwADgAPABAAEAARAA4AEgATABQAFAAVABIAFgAXABgAGQAYABcAGgAbABwAHAAdABoAHgAfACAAIQAgAB8AIgAjACQAJAAlACIAJgAnACgAKQAoACcAKgArACwALAAtACoALgAvADAAMQAwAC8A")],
+"material": SubResource("StandardMaterial3D_dwkg0"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 100,
+"vertex_data": PackedByteArray("tqbI5AHcUYq2pjYbAdxRigAANhtLvACAAAA2GwAA/78cvsjktR///7amyOQB3P//AAA2G0u8/78AADYbAAD//xy+Nhu1H631HL7I5LUfrfUcvjYbtR//vwAANhsAAP+/tqY2GwHc/78AADYbS7z/v7amyOQB3K21HL7I5LUfrbUcvjYbtR+ttbamNhsB3K21HL7I5LUfMdLf1P//2xAx0im3/v///zHStqbI5AHcMdLf1P//2xDrGBy+yOS1H+sYKbf+////6xi2psjkAdzrGCm3AAD//wChtqY2GwHcAKG2psjkAdwAoSm3/v///wChtqY2GwHcAAAptwAA//8AALamyOQB3AAAKbf+////AAAptwAA//8x0t/UAADbEDHSHL42G7UfMdK2pjYbAdwx0t/UAADbEOsYKbcAAP//6xgcvjYbtR/rGLamNhsB3OsYHL42G7UfofPf1AAA2xCh89/U///bEKHzHL7I5LUfofPf1AAA2xAAABy+Nhu1HwAA39T//9sQAAAcvsjktR8AAORryORLvCiF5Gs2G0u8KIUAAP9/S7wAgDMtyORLvACAAAD/fwAAjMEzLcjkAADIzDMtyORLvMjMAAD/f0u8jMFKg8jkAAD//+RryORLvP//My3I5AAAuPQzLcjkS7y49EqDNhsAANb6SoPI5AAA1voAAP9/AAD//zMtyOQAAP//AAD/fwAAjMEAAP9/S7yMwUqDNhsAAP+/5Gs2G0u8/79KgzYbAADW+kqDyOQAANb65Gs2G0u8KIXka8jkS7wohVraoNAGQ4jF///seVFXq7dH7ex59O2rt6LHoNCp2YjFR+3sefTtq7f//+x5UVert///Xi9RV621R+1eL/TtrbXaZ14vTAWt9f//Xi9RV631///seVFXrfXaZ6DQTAWt9VraoNAGQ6312meg0EwF//9a2qDQBkOt9aLHoNCp2a31IlWg0PCb//9H7V4v9O3/v///Xi9RV/+/2mdeL0wF/78iVV4v8Jv/v0ft7Hn07VGKR+1eL/TtUYoiVV4v8JtRiiJVoNDwm1GKoseg0KnZUYr/f////3////9/////f////3//v/9//7//f////3////9/AAD/fwAAAAD/fwAA/38AAP9/AAD/f/9/AAD/fwAA/38AAP9/AAD0m+y/9Jvsv/Sb7L/0m+y/6h6i1eoeotXqHqLV6h6i1f9/////f////3////9///+W2f9/ltn/f5bZ/3+W2f9/7T8J5O0/CeTtPwnk7T8J5Fyq6Z5cqumeXKrpnlyq6Z7/f////3////9/////f///+ZD/f/mQ/3/5kP9/+ZD/f/9/////f////3////9///82kpHbmqTItpqkyLY2kpHb/3//v/9//79rdDW6a3Q1uv9/AAD/fwAA/3////9///82kpHbNpKR2wAA/38AAP9//38AAP9/AAD/f////3///27NpSsTqJcWE6iXFm7NpSsTqJcWE6iXFv9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/f/+/Hje+Cx43vgv/f/+/AAD/fwAA/38AAP9/AAD/f/9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_4q01b")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pi70a"]
+_surfaces = [{
+"aabb": AABB(-0.26600444, -0.04006492, -0.055796, 0.31600446, 0.14172184, 0.1517132),
+"format": 34896613377,
+"index_count": 162,
+"index_data": PackedByteArray("AAAKAAsACgAAAAMADAADAAAAAAANAAwACwANAAAADgAMAA0ACwAPAA0ADQAPAA4ADAAOABAAEAAOAA8AAwAMABAADwALABAAAwARAAoAEAARAAMAAgALAAoACwACABAAEQABAAoACgABAAIAEQAQAAUAAgAFABAABQACAAEAEQAEAAEABQAEABEAAQAEAAUAAgABAAYABgABAAQAAQACAAYAAQAGAAQABAAHAAYABwAEAAYABgAIAAIACAAGAAIABQACAAgAAgAFAAgACQAIAAUACAAJAAUABAAFAAkABQAEAAkACQAHAAQABwAJAAQAEgATABQAFAATABUAFAAWABIAFQAXABQAGAAVABMAFwAVABgAEwASABgAGAAZABcAFgAaABIAGAASABoAFgAZABsAGAAbABkAGwAaABYAGgAbABgA"),
+"lods": [0.13311121, PackedByteArray("AAABAAIAAQAAAAMAAAACAAMAAwAEAAEABQADAAIABQAEAAMABQACAAEAAQAEAAUAAQAGAAQAAgABAAYABgABAAQAAQACAAYABwAEAAYABAAHAAYABgAIAAIACAAGAAIAAgAFAAgABQACAAgACQAHAAQABwAJAAQABQAEAAkABAAFAAkACQAIAAUACAAJAAUA")],
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 28,
+"vertex_data": PackedByteArray("//82G0u8AABIWTYbAdwAAEhZyOQB3AAA//82GwAAAADiQTYbtR8AAOJByOS1HwAA1UgAAP//AAAfKwAA2xAAANVI/v///wAAHyv//9sQAAAalDYbS7wAABqUyORLvAAA////fwAAAAD///9/S7wAAMvSyOQAAAAAy9LI5Eu8AAC0fMjkAAAAALR8NhsAAAAAAADseVFXAAAAAF4vUVcAACSYXi9MBQAAtxJeL/TtAAAkmKDQTAUAANyqXi/wmwAAtxLsefTtAADcqqDQ8JsAAKQloNAGQwAAXDig0KnZAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fv34e"]
+resource_name = "character-vampire_arm-right"
+_surfaces = [{
+"aabb": AABB(-0.26600444, -0.04006492, -0.055796, 0.31600446, 0.14172184, 0.1517132),
+"attribute_data": PackedByteArray("/5eY+f+XmPn/l/zN/5eY+f+X/M3/l5j5/5f8zf+XmPn/l5j5/5eY+f+XmPn/l2XG/5eY+f+XmPn/l/zN/5eY+f+XZcb/l5j5/5f8zf+XmPn/l5j5/5eY+f+XmPn/l5j5/5eY+f+XmPn/l5j5/5eY+f+XmPn/l/zN/5f8zf+X/M3/l5j5/5eY+f+XZcb/l5j5/5f8zf+XmPn/l2XG/5f8zf+X/M3/l2XG/5dlxv+X/M3/l/zN/5dlxv+XZcb/l/zN/5eY+f+XmPn/l5j5/5f8zf+XFer/l/zN/5f8zf+XFer/lxXq/5f8zf+XmPn/l/zN/5eY+f+XmPn/l/zN/5f8zf+X/M3/l/zN/5cV6v+XFer/l/zN/5eY+f+XFer/l/zN/5eY+f+X/M3/V8er/1eYuf9XmLn/V5uT/1ebk/9XmLn/V5i5/1fHq/9Xm5P/V5uT/1eYuf9XmLn/V5i5/1eYuf9XmLn/V8er/1fHq/9XmLn/V5uT/1ebk/9Xx6v/V8er/1ebk/9Xm5P/V5uT/1ebkw=="),
+"format": 34896613399,
+"index_count": 162,
+"index_data": PackedByteArray("AAAyADMAMwA0AAAAMwA1ADQANgA3ADgAOAA5ADYAOgABAAIAAgA7ADoAPAAIAAkACQA9ADwAPQAHADwAPQAKAAcACwAMAA0ADQAOAAsADwAQABEAEgARABAAPgA/AEAAQABBAD4AQQAEAD4ABAAGAD4AQgAFAAMAAwBDAEIAEwAUABUAFQAWABMAFwAYABkAGgAZABgAGwAcAB0AHQAeABsAHwAgACEAIQAiAB8AIwAkACUAJgAlACQAJwAoACkAKQAqACcAKwAsAC0ALgAtACwARABFADEAMQBGAEQARgBHAEQALwAwAEgASABJAC8ASgBLAEwATABNAEoATQBOAEoATwBQAFEAUQBSAE8AUQBTAFIAVABVAFYAVgBXAFQAWABZAFoAWgBbAFgAXABdAF4AXgBfAFwAYABhAGIAYgBjAGAA"),
+"lods": [0.13311121, PackedByteArray("AAABAAIAAwAEAAUABgAFAAQABwAIAAkACQAKAAcACwAMAA0ADQAOAAsADwAQABEAEgARABAAEwAUABUAFQAWABMAFwAYABkAGgAZABgAGwAcAB0AHQAeABsAHwAgACEAIQAiAB8AIwAkACUAJgAlACQAJwAoACkAKQAqACcAKwAsAC0ALgAtACwALwAwADEA")],
+"material": SubResource("StandardMaterial3D_dwkg0"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 100,
+"vertex_data": PackedByteArray("//82G0u8AIBIWTYbAdxRikhZyOQB3FGK//82G0u8/79IWcjkAdz/////NhsAAP+/4kHI5LUf//9IWTYbAdz/v///NhtLvP+///82GwAA/7/iQTYbtR//vx8r///bEKHzHysAANsQofPiQTYbtR+h8+JByOS1H6HzHysAANsQAAAfK///2xAAAOJBNhu1HwAA4kHI5LUfAADVSAAA//8x0khZNhsB3DHS4kE2G7UfMdIfKwAA2xAx0khZNhsB3OsY1UgAAP//6xjiQTYbtR/rGB8rAADbEOsYSFk2GwHcrbXiQTYbtR+tteJByOS1H621SFnI5AHcrbVIWcjkAdwAoUhZNhsB3ACh1UgAAP//AKHVSP7///8AoUhZNhsB3AAASFnI5AHcAADVSAAA//8AANVI/v///wAA4kHI5LUfMdJIWcjkAdwx0tVI/v///zHSHyv//9sQMdJIWcjkAdzrGOJByOS1H+sY1Uj+////6xgfK///2xDrGOJByOS1H6314kE2G7UfrfX//zYbAAD//xqUNhtLvCiFGpTI5Eu8KIX///9/S7wAgMvSyORLvACAy9LI5AAAyMz///9/AACMwf///39LvIzBy9LI5Eu8yMwalDYbS7wohRqUyORLvCiFGpQ2G0u8/7+0fDYbAAD/v7R8yOQAAP//y9LI5AAAuPTL0sjkS7y49BqUyORLvP//////fwAAjMH///9/S7yMwbR8yOQAANb6tHw2GwAA1vr///9/AAD//8vSyOQAAP//tHw2GwAA1vq0fMjkAADW+gAA7HlRV631AABeL1FXrfUkmF4vTAWt9SSYoNBMBa31pCWg0AZDrfXcql4v8JtRircSXi/07VGKtxLsefTtUYrcqqDQ8JtRilw4oNCp2VGKtxJeL/Tt/7/cql4v8Jv/vySYXi9MBf+/AABeL1FX/78AAF4vUVettQAA7HlRV6u3txLsefTtq7e3El4v9O2ttaQloNAGQ4jFXDig0KnZiMW3Eux59O2rtwAA7HlRV6u3JJig0EwF///cqqDQ8Jv//1w4oNCp2a31pCWg0AZDrfX/f////38AAP9/AAD/fwAA/3//v/9/AAD/f/+/AAD/fwAA/38AAP9/AAD/f/9/AAD/fwAA/38AAP9/AAAFb/9/BW//fwVv/38Fb/9/CmQSQApkEkAKZBJACmQSQBThXCoU4VwqFOFcKhThXCr/f////3////9/////f////38AAP9/AAD/fwAA/38AAP//aKb//2im//9opv//aKYRwPUbEcD1GxHA9RsRwPUbolUVYaJVFWGiVRVholUVYf9/////f////3////9/AAD/fwAA/3////9///81yZskbaQ2Em2kNhI1yZsk/38AAP9/AAAAAP9/AAD/f/9//781OpQLNTqUC/9//79tpDYSbaQ2Ev9/////f////3////9/////f////3////9/////f////3////9/////f////38AAP9/AAD/fwAA/38AAP9/AAAAAP9/AAD/fwAA/38AAP9//3///5aW6teWlurX/3///6SrkLKkq5Cylpbq15aW6tf/f/+//3//v0F0HrdBdB63")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_pi70a")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_s2cv5"]
+_surfaces = [{
+"aabb": AABB(-0.19, -0.48318398, -0.11889703, 0.38, 0.56818396, 0.11889703),
+"format": 34896613377,
+"index_count": 48,
+"index_data": PackedByteArray("BgABAAAAAQAGAAAABwAAAAYAAAAHAAYAAAABAAIAAQAAAAIAAgADAAAAAwACAAAAAgAIAAMACAACAAMAAwAJAAgACQADAAgACAAFAAkABQAIAAkACQAEAAUABAAJAAUA"),
+"lods": [0.076035105, PackedByteArray("AAABAAIAAQAAAAIAAwACAAAAAgADAAAAAwAEAAIABAADAAIAAgAFAAQABQACAAQA")],
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 10,
+"vertex_data": PackedByteArray("ayi40CWGAACT17jQJYYAAJPXs9n//wAAayiz2f//AAAAAAAAo7QAAP//AACjtAAAhfL//wAAAAB5Df//AAAAAAzl2WyjtAAA8hrZbKO0AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_h5lxt"]
+resource_name = "character-vampire_cape"
+_surfaces = [{
+"aabb": AABB(-0.19, -0.48318398, -0.11889703, 0.38, 0.56818396, 0.11889703),
+"attribute_data": PackedByteArray("/1eY+f9XmPn/V5j5/1eY+f9XmPn/V5j5/1eY+f9XmPn/V5j5/1eY+f9XmPn/V5j5/1eY+f9XmPn/V5j5/1eY+f9XZcb/V2XG/1dlxv9XZcb/V5j5/1eY+f9XmPn/V5j5/1eY+f9XmPn/V5j5/1eY+f9XmPn/V5j5/1eY+f9XmPk="),
+"format": 34896613399,
+"index_count": 48,
+"index_data": PackedByteArray("EAABAAAAAAARABAABAASAAUAEwAFABIAFAAVAAIAAgADABQAFgAXAAYABwAGABcACAAYABkAGQAKAAgAGgANABsADgAbAA0AHAAJAAsACwAdABwADAAeAA8AHwAPAB4A"),
+"lods": [0.076035105, PackedByteArray("AAABAAIAAgADAAAABAAFAAYABwAGAAUACAAJAAoACwAKAAkADAANAA4ADgAPAAwA")],
+"material": SubResource("StandardMaterial3D_dwkg0"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("ayi40CWGwa6T17jQJYbBrpPXs9n/////ayiz2f////+T17jQJYbCLmsouNAlhsIuk9ez2f//AABrKLPZ//8AAGsos9n/////AAAAAKO0//+T17PZ////////AACjtP//AAAAAKO0AABrKLPZ//8AAJPXs9n//wAA//8AAKO0AACF8v//AADUlXkN//8AANSVhfL//wAA1BV5Df//AADUFWsouNAlhv//k9e40CWG//+T17jQJYYAAGsouNAlhgAA8hrZbKO0//8M5dlso7T///Ia2WyjtAAADOXZbKO0AADyGtlso7T//wzl2WyjtP//8hrZbKO0AAAM5dlso7QAAP///3////9//3/vyv9/78oAAP9/AAD/f/9/8Er/f/BK/39k9/9/////f2T3/3////9//3//f2R3/39kd/9//3////9/////fwAA/38AAP9//39Asv9/QLJAsv//QLL///9/4fv/f+H7/3/he/9/4Xv/f+H7/3/h+/9/4Xv/f+F7")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_s2cv5")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5a203"]
+_surfaces = [{
+"aabb": AABB(-0.18999998, -9.0238926e-17, -0.13, 0.37999997, 0.30999997, 0.26),
+"format": 34896613377,
+"index_count": 288,
+"index_data": PackedByteArray("AAABAAIAAwAEAAAABAAFAAAABgADAAAABQAHAAgACAAHAAkABQAIAAoAAAAFAAoACwAIAAkADAALAAkADQALAAwADQAMAA4ACgANAA4ADwAMAAkACgAOABAAEAAPAAkACgARAAAACgASABEACgAQABIAEQATAAAAFAASABAAFQAUABAAFgAVABAAEwAWABAAEwAQAAEAEAAJAAEAAQAAABMAAQAJABcACQAYABcAAQAXABkAAQAZABoAAgABABoAGwAaABkAAgAcAAAAGQAdABsAHQAZAB4AHgAfAB0AGwAdAB8AHwAeACAAIAAhAB8AHwAhABsAIQAgACIAGwAhACIAIgAaABsAAgAaACIAIgAjAAIAAgAjACQAJAAcAAIAAAAcACQAJAAlAAAAJQAGAAAAJgAlACQAJwAGACUAKAAlACYAJQAoACcAKQAGACcAJgAqACgAJwAoACoAJgArACoAKgArACkAJwAsACkAKQAsACoAKgAsACcALQAuAC8AMAAtAC8AMAAvADEAMgAwADEAMgAxADMAMwA0ADIAMgA1ADAANQA2ADAAMgA0ADcANgA1ADgAOAA1ADIAOQA6ADYANgA4ADkANwA7ADIAMgA7ADgAOAA7ADcANwA8ADgAPQA8ADcAPgA5ADgAPAA+ADgAPAA/AD4APwBAAD4AQQA+AEAAQgBDAEQARQBCAEQARgBCAEUARQBHAEYASABGAEcASABJAEYASgBLAEwATABNAEoATgBPAFAAUABRAE4A"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 82,
+"vertex_data": PackedByteArray("aygAAP//AACT1wAA//8AAJPXAAAAAAAAayiMMf+/AABrKN67/78AAGso3rv//wAAayiMMbCTAAD/fweh//8AALFB63X//wAAk9feu///AACxQUJE//8AADRq63X//wAAypXrdf//AAA0akJE//8AAMqVQkT//wAATb7rdf//AABNvkJE//8AAMxhfRn//wAAzGGJLf//AAAynn0Z//8AAEJ5iS3//wAAvIaJLf//AAAynokt//8AAJPXjDH/vwAAk9feu/+/AACT14wxsJMAAJPXjDFObAAA///WOk5sAABrKAAAAAAAAP//1jqwkwAAk9fee7CTAAD//5RysJMAAJPX3ntObAAA//+Uck5sAACT1zFGTmwAAJPXMUYAAAAAaygxRgAAAABrKIwxTmwAAGsoMUZObAAAAADWOrCTAAAAANY6TmwAAGso3nuwkwAAAACUck5sAABrKN57TmwAAAAAlHKwkwAAayiMMf+/AABrKIwxsJMAAGso3nuwkwAAayjeu/+/AABrKN57TmwAAGsotNYAAAAAaygxRk5sAABrKDFGAAAAAGsotNb//wAAayjeu///AACT1zFGAAAAAJPX/////wAAk9feu///AAD/fweh//8AAJPX//8AAAAAk9fee05sAACT1zFGTmwAAJPX3rv/vwAAk9fee7CTAACT14wxsJMAAJPXjDH/vwAAh219Gf//AADMYX0Z//8AAMxhiS3//wAAQnmJLf//AAB3kn0Z//8AALyGiS3//wAAMp6JLf//AAAynn0Z//8AAE2+QkT//wAAypVCRP//AADKlet1//8AAE2+63X//wAANGpCRP//AACxQUJE//8AALFB63X//wAANGrrdf//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_emoag"]
+resource_name = "character-vampire_head"
+_surfaces = [{
+"aabb": AABB(-0.18999998, -9.0238926e-17, -0.13, 0.37999997, 0.30999997, 0.26),
+"attribute_data": PackedByteArray("/1f/n/9X/5//V/+f/1f/n/9Xbpb/V/+f/1f/n/9Xbpb/V2KQ/1dikP9X+pf/V/qX/1dulv9XPpn/V/qX/1dikP9XHo//Vz6Z/1f6l/9X+pf/Vz6Z/1cej/9XYpD/V2KQ/1cej/9X+pf/Vz6Z/1cej/9XYpD/V2KQ/1cej/9XHo//V2KQ/1cej/9XPpn/V/qX/1dikP9X+pf/Vz6Z/1dulv9XYpD/Vx6P/1f6l/9X+pf/V2KQ/1dikP9X+pf/Vz6Z/1c+mf9X+pf/V/+f/1f/n/9Xbpb/V26W/1c+mf9XPpn/Vz6Z/1dlhv9XZYb/V2WG/1dlhv9XPpn/V/+f/1c+mf9XPpn/V/+f/1dulv9Xbpb/V+2P/1cOiv9XZYb/V2WG/1eylv9X7Y//V/+f/1ftj/9Xspb/V+2P/1eylv9Xspb/V/+f/1eGnP9Xhpz/V8qZ/1fKmf9Xypn/V8qZ/5eY+f+XmPn/lyrn/5dK1/+XKuf/l6PQ/5d59P+XefT/l6PQ/5dK1/+Xo9D/l2XG/5dlxv+Xo9D/l6PQ/5d59P+XefT/l2XG/5dlxv+XZcb/l3n0/5cq5/+XefT/l0rX/5dK1/+XKuf/l5j5/5eY+f+XStf/l/Ld/5dK1/+XZcb/l6PQ/4f/3/+H/9//h//f/4f/3/+H/9//h//f/4f/3/+H/9//p/+f/6f/n/+n/5//p/+f/6f/n/+n/5//p/+f/6f/n//n/9//5//f/+f/3//n/9//5//f/+f/3w=="),
+"format": 34896613399,
+"index_count": 288,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwADwAQAAwAEQASABMAEwAUABEAFQAWABcAFwAYABUAGQAaABsAGwAcABkAHQAeAB8AHwAgAB0AIQAiACMAIwAkACEAJQAmACcAJwAoACUAJwApACgAKgArACwALAAtACoALgAvADAAMAAxAC4AMgAzADQANQA2ADQANAA2ADIANgA3ADIANwA4ADIAOAA5ADIAOQA6ADIAOwA8AD0APgA7AD0APgA9AD8APgA/AEAAQQA+AEAAQQBAAEIAQgBDAEEARABFAEYARwBFAEQARwBEAEgASQBEAEYASgBHAEgASwBJAEYATABJAEsATQBLAEYATABLAE4ASABMAE4ATwBNAEYASABOAE8ATwBGAFAAUABKAFEAUQBPAFAAUgBRAEoASABSAEoAUQBTAE8ASABUAFIASABPAFQAUwBVAE8AVgBUAE8AVQBWAE8AVwBYAFkAWgBXAFkAWgBZAFsAXABaAFsAXABbAF0AXQBeAFwAXABfAFoAXwBgAFoAYQBiAGMAYwBkAGEAZQBmAGcAZwBoAGUAaQBqAGsAawBsAGkAbQBsAGsAbABuAGkAbgBvAGkAbABwAG4AcABxAG4AcgBuAHEAcwB0AHUAdQB2AHMAdQB3AHYAeAB5AHoAewB4AHwAfAB9AHsAfgB/AHsAgACBAIIAggCDAIAAhACFAIYAhgCHAIQAiACJAIoAiwCMAI0A"),
+"material": SubResource("StandardMaterial3D_dwkg0"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 142,
+"vertex_data": PackedByteArray("aygAAP///7+T1wAA////v5PXAAAAAP+/aygAAAAA/79rKDFGAAD//2soAAAAAP//k9cAAAAA//+T1zFGAAD/////lHKwk7PE//+Uck5ss8T//9Y6TmyzxP//1jqwk7PEk9cxRk5s//+T14wxTmz/////1jpObP////+Uck5s//+T1957Tmz//5PXjDGwkx3R///WOrCTs8T//9Y6TmyzxJPXjDFObB3Rk9fee05sHdH//5RyTmyzxP//lHKwk7PEk9fee7CTHdH//9Y6sJMAgJPXjDGwkwCAk9fee7CTAID//5RysJMAgAAAlHJObLPEayjee05sHdFrKN57sJMd0QAAlHKwk7PEayjee7CTAIBrKIwxsJMAgAAA1jqwkwCAAACUcrCTAIAAANY6Tmz//2sojDFObP//aygxRk5s//8AAJRyTmz//2so3ntObP//AADWOrCTs8QAANY6TmyzxAAAlHJObLPEAACUcrCTs8QAANY6sJOzxGsojDGwkx3RayiMMU5sHdEAANY6TmyzxGsoAAD///+/aygAAAAA/79rKDFGAAD/v2soMUZObP+/ayiMMU5s/79rKIwxsJP/v2sojDH/v/+/ayjeu/+//79rKN67////v5PX3rv///+/k9feu/+//7+T14wx/7//v5PXAAD///+/k9eMMbCT/7+T14wxTmz/v5PXAAAAAP+/k9cxRk5s/7+T1zFGAAD/v7FB63X//wCA/38Hof//AICT1967//8AgGso3rv//wCAsUFCRP//AIA0aut1//8AgGsoAAD//wCAypXrdf//AIA0akJE//8AgE2+63X//wCAypVCRP//AIBNvkJE//8AgJPXAAD//wCAMp59Gf//AIDMYX0Z//8AgDKeiS3//wCAzGGJLf//AIC8hokt//8AgEJ5iS3//wCAayiMMf+//79rKIwxsJP/v2so3nuwk/+/ayjeu/+//79rKN57Tmz/v2sotNYAAP+/aygxRk5s/79rKDFGAAD/v2sotNb///+/ayjeu////79rKLTWAAAD0ZPX//8AAAPRk9f/////A9FrKLTW//8D0WsotNYAAP//aygxRgAA//+T1zFGAAD//5PX//8AAP//k9f//////7+T1///AAD/v5PXMUYAAP+/k9fee05s/7+T1zFGTmz/v5PX3rv/v/+/k9feu////7+T1957sJP/v5PXjDGwk/+/k9eMMf+//7+T1967//8AgP9/B6H//wCAayjeu///AICT1/////8AgGsotNb//wCAh219Gf//AIDMYX0Z//8AgMxhiS3//wCAd5J9Gf//AIBCeYkt//8AgLyGiS3//wCAMp6JLf//AIAynn0Z//8AgE2+QkT//wCAypVCRP//AIDKlet1//8AgE2+63X//wCANGpCRP//AICxQUJE//8AgLFB63X//wCANGrrdf//AIBCeYkt//8AgIdtfRn//wCAzGGJLf//AIAynokt//8AgHeSfRn//wCAvIaJLf//AIAAAP9/AAD/fwAA/38AAP9//3////9/////f////3///6i11BqotdQaK2WoNStlqDX/f////3////9/////f////3///w9Y4E8rZag1K2WoNQ9Y4E/fz/AnqLXUGqi11Brfz/An/3////9/////f////3///9OaVsrvpx6w76cesNOaVsr/f////3////9/////f////3////9/////f////3////9///9WSirlVkoq5dOaVsrTmlbKVkoq5R8wDtgfMA7YVkoq5f9/////f////3////9/////f////3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f///3adDsN2nQ7Ddp0Ow3adDsP9/////f////3////9/////fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_5a203")
+
+[sub_resource type="Animation" id="Animation_soabe"]
+resource_name = "attack-kick-left"
+length = 0.53333336
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/torso")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/torso")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.027223775, 0, 0, -0.9996294, 0.06666667, 1, -0.09202302, 0, 0, -0.9957569, 0.1, 1, -0.16883345, 0, 0, -0.98564464, 0.13333334, 1, -0.23242699, 0, 0, -0.9726139, 0.16666667, 1, -0.25881904, 0, 0, -0.9659259, 0.2, 1, -0.07741501, 0, 0, -0.99699897, 0.23333333, 1, 0.20586263, 0, 0, -0.97858095, 0.26666668, 1, 0.25559574, 0, 0, -0.96678376, 0.3, 1, 0.23242696, 0, 0, -0.9726139, 0.33333334, 1, 0.19271223, 0, 0, -0.98125535, 0.36666667, 1, 0.14347342, 0, 0, -0.9896542, 0.4, 1, 0.092023, 0, 0, -0.99575686, 0.43333334, 1, 0.04590542, 0, 0, -0.99894583, 0.46666667, 1, 0.012721181, 0, 0, -0.9999191, 0.5, 1, 0.0063607106, 0, 0, -0.99997985, 0.53333336, 1, 0, 0, 0, -1)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.033333335, 1, 0, 0, -0.010400002, 0.06666667, 1, 0, 0, -0.035200007, 0.1, 1, 0, 0, -0.0648, 0.13333334, 1, 0, 0, -0.08960001, 0.16666667, 1, 0, 0, -0.1, 0.2, 1, 0, 0, -0.029599965, 0.23333333, 1, 0, 0, 0.079200014, 0.26666668, 1, 0, 0, 0.09872592, 0.3, 1, 0, 0, 0.0896, 0.33333334, 1, 0, 0, 0.07407407, 0.36666667, 1, 0, 0, 0.054992586, 0.4, 1, 0, 0, 0.035199996, 0.43333334, 1, 0, 0, 0.017540738, 0.46666667, 1, 0, 0, 0.0048592575, 0.53333336, 1, 0, 0, 0)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/torso/head")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.006464139, 0, 0, -0.9999792, 0.06666667, 1, 0.022622712, 0, 0, -0.9997441, 0.13333334, 1, 0.064596824, 0, 0, -0.9979115, 0.16666667, 1, 0.08071438, 0, 0, -0.99673736, 0.2, 1, 0.0871557, 0, 0, -0.9961947, 0.23333333, 1, -0.17046432, 0, 0, -0.98536384, 0.26666668, 1, -0.25629607, 0, 0, -0.96659833, 0.3, 1, -0.23791449, 0, 0, -0.9712861, 0.33333334, 1, -0.20570117, 0, 0, -0.97861487, 0.36666667, 1, -0.1644397, 0, 0, -0.98638713, 0.4, 1, -0.11907983, 0, 0, -0.9928847, 0.43333334, 1, -0.07474531, 0, 0, -0.9972027, 0.46666667, 1, -0.036653362, 0, 0, -0.9993281, 0.5, 1, -0.01832976, 0, 0, -0.99983203, 0.53333336, 1, 0, 0, 0, -1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0.38268346, -0.9238795, 0.033333335, 1, 0.050284334, 0.020828454, 0.38211623, -0.9225101, 0.06666667, 1, 0.16931489, 0.07013253, 0.37620217, -0.9082323, 0.1, 1, 0.30748516, 0.1273645, 0.3608669, -0.8712096, 0.13333334, 1, 0.41770756, 0.17302015, 0.3413366, -0.82405937, 0.16666667, 1, 0.46193975, 0.19134173, 0.3314136, -0.8001031, 0.2, 1, -0.027085815, -0.01121903, 0.38251898, -0.9234824, 0.23333333, 1, -0.71432185, -0.2958817, 0.24269457, -0.5859161, 0.26666668, 1, -0.79386884, -0.3288313, 0.19574633, -0.4725734, 0.3, 1, -0.74515295, -0.30865243, 0.22623065, -0.5461689, 0.33333334, 1, -0.64691645, -0.2679614, 0.2732093, -0.6595851, 0.36666667, 1, -0.5031207, -0.2083991, 0.32096177, -0.7748696, 0.4, 1, -0.33289447, -0.13788904, 0.35697794, -0.8618205, 0.43333334, 1, -0.16875124, -0.06989866, 0.3762457, -0.9083371, 0.46666667, 1, -0.046992343, -0.019464538, 0.3821881, -0.92268366, 0.53333336, 1, 0, 0, 0.3826835, -0.92387956)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, -0.3826835, -0.92387956, 0.033333335, 1, -0.03772141, 0.015624721, -0.38236436, -0.9231091, 0.06666667, 1, -0.12730163, 0.052730065, -0.3790332, -0.915067, 0.1, 1, -0.23256962, 0.09633349, -0.37035996, -0.89412796, 0.13333334, 1, -0.31840858, 0.13188916, -0.35923794, -0.867277, 0.16666667, 1, -0.3535534, 0.14644663, -0.3535534, -0.85355335, 0.2, 1, -0.19113886, 0.07917242, -0.37440407, -0.90389127, 0.23333333, 1, 0.070557594, -0.029225852, -0.38156587, -0.9211814, 0.26666668, 1, 0.11906268, -0.04931738, -0.37949234, -0.9161754, 0.3, 1, 0.10810999, -0.044780616, -0.38005438, -0.9175324, 0.33333334, 1, 0.08944157, -0.03704788, -0.3808859, -0.91953987, 0.36666667, 1, 0.066448174, -0.027523682, -0.38169244, -0.9214869, 0.4, 1, 0.042554248, -0.017626496, -0.38227728, -0.92289895, 0.43333334, 1, 0.021211127, -0.00878588, -0.3825826, -0.923636, 0.46666667, 1, 0.0058765393, -0.002434101, -0.38267574, -0.92386085, 0.53333336, 1, 0, 0, -0.3826835, -0.92387956)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/leg-left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.0680153, 0, 0, -0.9976843, 0.06666667, 1, -0.22835091, 0, 0, -0.97357893, 0.1, 1, -0.4115144, 0, 0, -0.9114033, 0.13333334, 1, -0.5533916, 0, 0, -0.8329212, 0.16666667, 1, -0.6087615, 0, 0, -0.7933534, 0.2, 1, -0.10140343, 0, 0, -0.99484545, 0.23333333, 1, 0.68378323, 0, 0, -0.72968525, 0.26666668, 1, 0.7861926, 0, 0, -0.6179816, 0.3, 1, 0.73182964, 0, 0, -0.6814876, 0.33333334, 1, 0.6278121, 0, 0, -0.77836496, 0.36666667, 1, 0.4828409, 0, 0, -0.8757081, 0.4, 1, 0.31697357, 0, 0, -0.9484344, 0.43333334, 1, 0.16003433, 0, 0, -0.9871115, 0.46666667, 1, 0.044510547, 0, 0, -0.99900895, 0.5, 1, 0.02226076, 0, 0, -0.9997523, 0.53333336, 1, 0, 0, 0, -1)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/leg-right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/leg-right")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.027223775, 0, 0, -0.9996294, 0.06666667, 1, 0.09202302, 0, 0, -0.9957569, 0.1, 1, 0.16883345, 0, 0, -0.98564464, 0.13333334, 1, 0.23242699, 0, 0, -0.9726139, 0.16666667, 1, 0.25881904, 0, 0, -0.9659259, 0.2, 1, 0.07741501, 0, 0, -0.99699897, 0.23333333, 1, -0.20586263, 0, 0, -0.97858095, 0.26666668, 1, -0.25559574, 0, 0, -0.96678376, 0.3, 1, -0.23242696, 0, 0, -0.9726139, 0.33333334, 1, -0.19271223, 0, 0, -0.98125535, 0.36666667, 1, -0.14347342, 0, 0, -0.9896542, 0.4, 1, -0.092023, 0, 0, -0.99575686, 0.43333334, 1, -0.04590542, 0, 0, -0.99894583, 0.46666667, 1, -0.012721181, 0, 0, -0.9999191, 0.5, 1, -0.0063607106, 0, 0, -0.99997985, 0.53333336, 1, 0, 0, 0, -1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_lekkb"]
+resource_name = "attack-kick-right"
+length = 0.53333336
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/torso")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/torso")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.027223775, 0, 0, -0.9996294, 0.06666667, 1, -0.09202302, 0, 0, -0.9957569, 0.1, 1, -0.16883345, 0, 0, -0.98564464, 0.13333334, 1, -0.23242699, 0, 0, -0.9726139, 0.16666667, 1, -0.25881904, 0, 0, -0.9659259, 0.2, 1, -0.07741501, 0, 0, -0.99699897, 0.23333333, 1, 0.20586263, 0, 0, -0.97858095, 0.26666668, 1, 0.25559574, 0, 0, -0.96678376, 0.3, 1, 0.23242696, 0, 0, -0.9726139, 0.33333334, 1, 0.19271223, 0, 0, -0.98125535, 0.36666667, 1, 0.14347342, 0, 0, -0.9896542, 0.4, 1, 0.092023, 0, 0, -0.99575686, 0.43333334, 1, 0.04590542, 0, 0, -0.99894583, 0.46666667, 1, 0.012721181, 0, 0, -0.9999191, 0.5, 1, 0.0063607106, 0, 0, -0.99997985, 0.53333336, 1, 0, 0, 0, -1)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/leg-right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/leg-right")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.0680153, 0, 0, -0.9976843, 0.06666667, 1, -0.22835091, 0, 0, -0.97357893, 0.1, 1, -0.4115144, 0, 0, -0.9114033, 0.13333334, 1, -0.5533916, 0, 0, -0.8329212, 0.16666667, 1, -0.6087615, 0, 0, -0.7933534, 0.2, 1, -0.10140343, 0, 0, -0.99484545, 0.23333333, 1, 0.68378323, 0, 0, -0.72968525, 0.26666668, 1, 0.7861926, 0, 0, -0.6179816, 0.3, 1, 0.73182964, 0, 0, -0.6814876, 0.33333334, 1, 0.6278121, 0, 0, -0.77836496, 0.36666667, 1, 0.4828409, 0, 0, -0.8757081, 0.4, 1, 0.31697357, 0, 0, -0.9484344, 0.43333334, 1, 0.16003433, 0, 0, -0.9871115, 0.46666667, 1, 0.044510547, 0, 0, -0.99900895, 0.5, 1, 0.02226076, 0, 0, -0.9997523, 0.53333336, 1, 0, 0, 0, -1)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.033333335, 1, 0, 0, -0.010400002, 0.06666667, 1, 0, 0, -0.035200007, 0.1, 1, 0, 0, -0.0648, 0.13333334, 1, 0, 0, -0.08960001, 0.16666667, 1, 0, 0, -0.1, 0.2, 1, 0, 0, -0.029599965, 0.23333333, 1, 0, 0, 0.079200014, 0.26666668, 1, 0, 0, 0.09872592, 0.3, 1, 0, 0, 0.0896, 0.33333334, 1, 0, 0, 0.07407407, 0.36666667, 1, 0, 0, 0.054992586, 0.4, 1, 0, 0, 0.035199996, 0.43333334, 1, 0, 0, 0.017540738, 0.46666667, 1, 0, 0, 0.0048592575, 0.53333336, 1, 0, 0, 0)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root/leg-left")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.027223775, 0, 0, -0.9996294, 0.06666667, 1, 0.09202302, 0, 0, -0.9957569, 0.1, 1, 0.16883345, 0, 0, -0.98564464, 0.13333334, 1, 0.23242699, 0, 0, -0.9726139, 0.16666667, 1, 0.25881904, 0, 0, -0.9659259, 0.2, 1, 0.07741501, 0, 0, -0.99699897, 0.23333333, 1, -0.20586263, 0, 0, -0.97858095, 0.26666668, 1, -0.25559574, 0, 0, -0.96678376, 0.3, 1, -0.23242696, 0, 0, -0.9726139, 0.33333334, 1, -0.19271223, 0, 0, -0.98125535, 0.36666667, 1, -0.14347342, 0, 0, -0.9896542, 0.4, 1, -0.092023, 0, 0, -0.99575686, 0.43333334, 1, -0.04590542, 0, 0, -0.99894583, 0.46666667, 1, -0.012721181, 0, 0, -0.9999191, 0.5, 1, -0.0063607106, 0, 0, -0.99997985, 0.53333336, 1, 0, 0, 0, -1)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0.3826835, -0.92387956, 0.033333335, 1, -0.03772141, -0.015624721, 0.38236436, -0.9231091, 0.06666667, 1, -0.12730163, -0.052730065, 0.3790332, -0.915067, 0.1, 1, -0.23256962, -0.0963335, 0.37035996, -0.89412796, 0.13333334, 1, -0.31840858, -0.13188916, 0.35923794, -0.867277, 0.16666667, 1, -0.3535534, -0.14644663, 0.3535534, -0.85355335, 0.2, 1, -0.19113886, -0.07917232, 0.37440404, -0.90389127, 0.23333333, 1, 0.070557594, 0.029225916, 0.38156587, -0.9211814, 0.26666668, 1, 0.11906268, 0.04931738, 0.37949234, -0.9161754, 0.3, 1, 0.10810999, 0.04478063, 0.38005438, -0.9175324, 0.33333334, 1, 0.08944157, 0.03704791, 0.3808859, -0.91953987, 0.36666667, 1, 0.066448174, 0.027523736, 0.38169244, -0.9214869, 0.4, 1, 0.042554248, 0.01762655, 0.38227728, -0.92289895, 0.43333334, 1, 0.021211127, 0.00878594, 0.3825826, -0.923636, 0.46666667, 1, 0.0058765393, 0.0024341422, 0.38267574, -0.92386085, 0.53333336, 1, 0, 0, 0.3826835, -0.92387956)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, -0.38268346, -0.9238795, 0.033333335, 1, 0.050284334, -0.020828454, -0.38211623, -0.9225101, 0.06666667, 1, 0.16931489, -0.07013253, -0.37620217, -0.9082323, 0.1, 1, 0.30748516, -0.12736453, -0.3608669, -0.8712097, 0.13333334, 1, 0.41770756, -0.17302015, -0.3413366, -0.82405937, 0.16666667, 1, 0.46193975, -0.19134173, -0.3314136, -0.8001031, 0.2, 1, -0.027085815, 0.011219312, -0.382519, -0.9234825, 0.23333333, 1, -0.71432185, 0.2958818, -0.24269445, -0.5859161, 0.26666668, 1, -0.79386884, 0.3288313, -0.19574633, -0.4725734, 0.3, 1, -0.74515295, 0.3086525, -0.22623059, -0.5461689, 0.33333334, 1, -0.64691645, 0.2679616, -0.27320912, -0.6595851, 0.36666667, 1, -0.5031207, 0.20839944, -0.32096153, -0.7748696, 0.4, 1, -0.33289447, 0.13788944, -0.3569778, -0.8618205, 0.43333334, 1, -0.16875124, 0.06989907, -0.37624565, -0.9083371, 0.46666667, 1, -0.046992343, 0.019464867, -0.3821881, -0.92268366, 0.53333336, 1, 0, 0, -0.3826835, -0.92387956)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/torso/head")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.006464139, 0, 0, -0.9999792, 0.06666667, 1, 0.022622712, 0, 0, -0.9997441, 0.13333334, 1, 0.064596824, 0, 0, -0.9979115, 0.16666667, 1, 0.08071438, 0, 0, -0.99673736, 0.2, 1, 0.0871557, 0, 0, -0.9961947, 0.23333333, 1, -0.17046432, 0, 0, -0.98536384, 0.26666668, 1, -0.25629607, 0, 0, -0.96659833, 0.3, 1, -0.23791449, 0, 0, -0.9712861, 0.33333334, 1, -0.20570117, 0, 0, -0.97861487, 0.36666667, 1, -0.1644397, 0, 0, -0.98638713, 0.4, 1, -0.11907983, 0, 0, -0.9928847, 0.43333334, 1, -0.07474531, 0, 0, -0.9972027, 0.46666667, 1, -0.036653362, 0, 0, -0.9993281, 0.5, 1, -0.01832976, 0, 0, -0.99983203, 0.53333336, 1, 0, 0, 0, -1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_ppep6"]
+resource_name = "attack-melee-left"
+length = 0.41666666
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.033333335, 1, 0, 0, -0.0053026867, 0.06666667, 1, 0, 0, -0.017637689, 0.1, 1, 0, 0, -0.032225765, 0.13333334, 1, 0, 0, -0.044287667, 0.16666667, 1, 0, 0, -0.043054156, 0.2, 1, 0, 0, 0.0036094803, 0.23333333, 1, 0, 0, 0.0754966, 0.26666668, 1, 0, 0, 0.09538005, 0.3, 1, 0, 0, 0.07746926, 0.33333334, 1, 0, 0, 0.050068256, 0.36666667, 1, 0, 0, 0.025739633, 0.41666666, 1, 0, 0, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/torso")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/torso")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.027793549, 0, 0, -0.99961376, 0.06666667, 1, 0.09226766, 0, 0, -0.99573433, 0.1, 1, 0.16798322, 0, 0, -0.9857899, 0.13333334, 1, 0.23037842, 0, 0, -0.9731012, 0.16666667, 1, 0.23761131, 0, 0, -0.9713603, 0.2, 1, 0.074464336, 0, 0, -0.99722373, 0.23333333, 1, -0.17620897, 0, 0, -0.98435277, 0.26666668, 1, -0.2493584, 0, 0, -0.9684113, 0.3, 1, -0.20147108, 0, 0, -0.9794945, 0.33333334, 1, -0.13075262, 0, 0, -0.991415, 0.36666667, 1, -0.06737267, 0, 0, -0.9977279, 0.4, 1, -0.022472678, 0, 0, -0.9997475, 0.41666666, 1, 0, 0, 0, -1)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/torso/head")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.027793549, 0, 0, -0.99961376, 0.06666667, 1, -0.09226766, 0, 0, -0.99573433, 0.1, 1, -0.16798322, 0, 0, -0.9857899, 0.13333334, 1, -0.23037842, 0, 0, -0.9731012, 0.16666667, 1, -0.23761131, 0, 0, -0.9713603, 0.2, 1, -0.074464336, 0, 0, -0.99722373, 0.23333333, 1, 0.17620897, 0, 0, -0.98435277, 0.26666668, 1, 0.2493584, 0, 0, -0.9684113, 0.3, 1, 0.20147108, 0, 0, -0.9794945, 0.33333334, 1, 0.13075262, 0, 0, -0.991415, 0.36666667, 1, 0.06737267, 0, 0, -0.9977279, 0.4, 1, 0.022472678, 0, 0, -0.9997475, 0.41666666, 1, 0, 0, 0, -1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0.3826835, -0.92387956, 0.033333335, 1, 0.14075644, 0.064913034, 0.37684327, -0.9132159, 0.06666667, 1, 0.44984254, 0.19835566, 0.32638222, -0.8073237, 0.1, 1, 0.7400794, 0.31353018, 0.2174651, -0.55379623, 0.13333334, 1, 0.8841282, 0.36725953, 0.106156535, -0.2686423, 0.16666667, 1, 0.89814925, 0.4097702, 0.045948103, -0.15266028, 0.2, 1, 0.76826125, 0.53786564, 0.04478355, -0.34419423, 0.23333333, 1, 0.5622534, 0.5506969, 0.19650869, -0.58479774, 0.26666668, 1, 0.5675302, 0.425763, 0.38178396, -0.5923482, 0.3, 1, 0.5745591, 0.24748102, 0.5071941, -0.5927809, 0.33333334, 1, 0.43505272, 0.060073175, 0.57822675, -0.68758583, 0.36666667, 1, 0.23365343, -0.02025354, 0.5384078, -0.80939054, 0.4, 1, 0.07896966, -0.0068452456, 0.43931058, -0.8948314, 0.41666666, 1, 0, 0, 0.3826835, -0.92387956)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, -0.3826835, -0.92387956, 0.033333335, 1, -0.015991377, -0.022660587, -0.3662236, -0.93011343, 0.06666667, 1, -0.050575525, -0.07457813, -0.32681954, -0.94078124, 0.1, 1, -0.08641957, -0.13506953, -0.278585, -0.946931, 0.13333334, 1, -0.111919306, -0.18279597, -0.23892349, -0.9470879, 0.16666667, 1, -0.112317026, -0.17525704, -0.22804537, -0.9511389, 0.2, 1, -0.031379934, -0.015266003, -0.25409323, -0.96655005, 0.23333333, 1, 0.10056345, 0.20393151, -0.26954272, -0.9357594, 0.26666668, 1, 0.14425394, 0.2777296, -0.27891272, -0.9078903, 0.3, 1, 0.122061454, 0.23120666, -0.30741072, -0.91495526, 0.33333334, 1, 0.082888454, 0.15314683, -0.3402942, -0.9240538, 0.36666667, 1, 0.043995548, 0.080351524, -0.36361003, -0.92703605, 0.41666666, 1, 0, 0, -0.3826835, -0.92387956)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/leg-left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.027793549, 0, 0, -0.99961376, 0.06666667, 1, 0.09226766, 0, 0, -0.99573433, 0.1, 1, 0.16798322, 0, 0, -0.9857899, 0.13333334, 1, 0.23006997, 0, 0, -0.9731741, 0.16666667, 1, 0.24757369, 0, 0, -0.9688691, 0.2, 1, 0.16739348, 0, 0, -0.98589015, 0.23333333, 1, 0.04260871, 0, 0, -0.99909186, 0.26666668, 1, 0, 0, 0, -1, 0.41666666, 1, 0, 0, 0, -1)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/leg-right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/leg-right")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.013898026, 0, 0, -0.99990344, 0.06666667, 1, -0.04618276, 0, 0, -0.9989331, 0.1, 1, -0.08429138, 0, 0, -0.9964412, 0.13333334, 1, -0.11612941, 0, 0, -0.9932341, 0.16666667, 1, -0.11457716, 0, 0, -0.99341434, 0.2, 1, 0.009533174, 0, 0, -0.9999546, 0.23333333, 1, 0.19690818, 0, 0, -0.980422, 0.26666668, 1, 0.24870634, 0, 0, -0.96857893, 0.3, 1, 0.20147108, 0, 0, -0.9794945, 0.33333334, 1, 0.13075262, 0, 0, -0.991415, 0.36666667, 1, 0.06737267, 0, 0, -0.9977279, 0.4, 1, 0.022472678, 0, 0, -0.9997475, 0.41666666, 1, 0, 0, 0, -1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_3x6w8"]
+resource_name = "attack-melee-right"
+length = 0.41666666
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.033333335, 1, 0, 0, -0.0053026867, 0.06666667, 1, 0, 0, -0.017637689, 0.1, 1, 0, 0, -0.032225765, 0.13333334, 1, 0, 0, -0.044287667, 0.16666667, 1, 0, 0, -0.043054156, 0.2, 1, 0, 0, 0.0036094803, 0.23333333, 1, 0, 0, 0.0754966, 0.26666668, 1, 0, 0, 0.09538005, 0.3, 1, 0, 0, 0.07746926, 0.33333334, 1, 0, 0, 0.050068256, 0.36666667, 1, 0, 0, 0.025739633, 0.41666666, 1, 0, 0, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/leg-right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/leg-right")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.027793549, 0, 0, -0.99961376, 0.06666667, 1, 0.09226766, 0, 0, -0.99573433, 0.1, 1, 0.16798322, 0, 0, -0.9857899, 0.13333334, 1, 0.23006997, 0, 0, -0.9731741, 0.16666667, 1, 0.24757369, 0, 0, -0.9688691, 0.2, 1, 0.16739348, 0, 0, -0.98589015, 0.23333333, 1, 0.04260871, 0, 0, -0.99909186, 0.26666668, 1, 0, 0, 0, -1, 0.41666666, 1, 0, 0, 0, -1)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/torso")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root/torso")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.027793549, 0, 0, -0.99961376, 0.06666667, 1, 0.09226766, 0, 0, -0.99573433, 0.1, 1, 0.16798322, 0, 0, -0.9857899, 0.13333334, 1, 0.23037842, 0, 0, -0.9731012, 0.16666667, 1, 0.23761131, 0, 0, -0.9713603, 0.2, 1, 0.074464336, 0, 0, -0.99722373, 0.23333333, 1, -0.17620897, 0, 0, -0.98435277, 0.26666668, 1, -0.2493584, 0, 0, -0.9684113, 0.3, 1, -0.20147108, 0, 0, -0.9794945, 0.33333334, 1, -0.13075262, 0, 0, -0.991415, 0.36666667, 1, -0.06737267, 0, 0, -0.9977279, 0.4, 1, -0.022472678, 0, 0, -0.9997475, 0.41666666, 1, 0, 0, 0, -1)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root/torso/head")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.027793549, 0, 0, -0.99961376, 0.06666667, 1, -0.09226766, 0, 0, -0.99573433, 0.1, 1, -0.16798322, 0, 0, -0.9857899, 0.13333334, 1, -0.23037842, 0, 0, -0.9731012, 0.16666667, 1, -0.23761131, 0, 0, -0.9713603, 0.2, 1, -0.074464336, 0, 0, -0.99722373, 0.23333333, 1, 0.17620897, 0, 0, -0.98435277, 0.26666668, 1, 0.2493584, 0, 0, -0.9684113, 0.3, 1, 0.20147108, 0, 0, -0.9794945, 0.33333334, 1, 0.13075262, 0, 0, -0.991415, 0.36666667, 1, 0.06737267, 0, 0, -0.9977279, 0.4, 1, 0.022472678, 0, 0, -0.9997475, 0.41666666, 1, 0, 0, 0, -1)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, -0.3826835, -0.92387956, 0.033333335, 1, 0.14073154, -0.058292925, -0.3782176, -0.913098, 0.06666667, 1, 0.44968262, -0.18626466, -0.33429345, -0.8070557, 0.1, 1, 0.739717, -0.30640087, -0.22927095, -0.55350894, 0.13333334, 1, 0.884264, -0.36525914, -0.11191885, -0.26858348, 0.16666667, 1, 0.90093184, -0.4036059, -0.04472893, -0.15304734, 0.2, 1, 0.7673609, -0.5404665, -0.034225535, -0.3433393, 0.23333333, 1, 0.55968356, -0.55472493, -0.20030263, -0.58216274, 0.26666668, 1, 0.5666313, -0.41726136, -0.39381683, -0.59138, 0.3, 1, 0.573718, -0.22984229, -0.51743793, -0.591843, 0.33333334, 1, 0.43415833, -0.04365751, -0.58123624, -0.68685156, 0.36666667, 1, 0.23424473, 0.026394863, -0.5356414, -0.81087685, 0.4, 1, 0.07916196, 0.008920025, -0.43834302, -0.8952706, 0.41666666, 1, 0, 0, -0.3826835, -0.92387956)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0.38268346, -0.9238795, 0.033333335, 1, -0.015981007, 0.020248564, 0.36779642, -0.9295485, 0.06666667, 1, -0.050526194, 0.06911962, 0.33070046, -0.9398441, 0.1, 1, -0.08637692, 0.12967946, 0.28277925, -0.94644505, 0.13333334, 1, -0.11189638, 0.18204951, 0.24020664, -0.9469097, 0.16666667, 1, -0.112170786, 0.18547468, 0.22526312, -0.94988084, 0.2, 1, -0.031394314, 0.023811057, 0.2540294, -0.9663936, 0.23333333, 1, 0.10024122, -0.2179272, 0.2695713, -0.9326257, 0.26666668, 1, 0.14404343, -0.28205842, 0.27881116, -0.90661955, 0.3, 1, 0.12209597, -0.22617832, 0.31031972, -0.91522557, 0.33333334, 1, 0.08290452, -0.14537068, 0.3433352, -0.9241835, 0.36666667, 1, 0.043986686, -0.07434309, 0.3653913, -0.9268374, 0.41666666, 1, 0, 0, 0.3826835, -0.92387956)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/leg-left")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/leg-left")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.013898026, 0, 0, -0.99990344, 0.06666667, 1, -0.04618276, 0, 0, -0.9989331, 0.1, 1, -0.08429138, 0, 0, -0.9964412, 0.13333334, 1, -0.11612941, 0, 0, -0.9932341, 0.16666667, 1, -0.11457716, 0, 0, -0.99341434, 0.2, 1, 0.009533174, 0, 0, -0.9999546, 0.23333333, 1, 0.19690818, 0, 0, -0.980422, 0.26666668, 1, 0.24870634, 0, 0, -0.96857893, 0.3, 1, 0.20147108, 0, 0, -0.9794945, 0.33333334, 1, 0.13075262, 0, 0, -0.991415, 0.36666667, 1, 0.06737267, 0, 0, -0.9977279, 0.4, 1, 0.022472678, 0, 0, -0.9997475, 0.41666666, 1, 0, 0, 0, -1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_uro7y"]
+resource_name = "crouch"
+length = 0.16666667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/torso")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.098, -0.028)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/torso")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.095046565, 0, 0, -0.99547285)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/leg-left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.083570965, 0.086, -0.034)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/leg-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.8085551, 0, 0, -0.58842045)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/leg-right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.083570965, 0.17625, 0.066)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root/leg-right")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 2.4302863e-06, -0.024697, -0.12816706, -0.99144506)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 2.4302863e-06, 0.024697, 0.12816706, -0.99144506)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/torso/head")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -0.0013613565, 0, 0, -0.9999991)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_no7ln"]
+resource_name = "die"
+length = 0.33333334
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.033333335, 1, 0, 0.08800001, -0.012620028, 0.06666667, 1, 0, 0.22400002, -0.041700967, 0.1, 1, 0, 0.24579999, -0.074074075, 0.13333334, 1, 0, 0.21759999, -0.096570656, 0.16666667, 1, 0, 0.17499998, -0.09259259, 0.2, 1, 0, 0.13239999, -0.049999997, 0.23333333, 1, 0, 0.10419999, -0.0074074157, 0.26666668, 1, 0, 0.1, 0, 0.33333334, 1, 0, 0.1, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.06666667, 1, 0, 0, 0, -1, 0.1, 1, 0.021989392, 0, 0, -0.99975824, 0.13333334, 1, 0.1688335, 0, 0, -0.9856446, 0.2, 1, 0.5775728, 0, 0, -0.81633925, 0.23333333, 1, 0.691387, 0, 0, -0.7224847, 0.26666668, 1, 0.7071068, 0, 0, -0.7071068, 0.33333334, 1, 0.7071068, 0, 0, -0.7071068)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/leg-left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/leg-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.12939101, 0, 0, -0.99159366, 0.06666667, 1, 0.38655844, 0, 0, -0.92226493, 0.1, 1, 0.57960457, 0, 0, -0.81489784, 0.13333334, 1, 0.5999799, 0, 0, -0.80001515, 0.16666667, 1, 0.5362775, 0, 0, -0.8440418, 0.2, 1, 0.42459726, 0, 0, -0.90538245, 0.23333333, 1, 0.28553456, 0, 0, -0.9583684, 0.26666668, 1, 0.14722404, 0, 0, -0.9891032, 0.3, 1, 0.07381338, 0, 0, -0.9972721, 0.33333334, 1, 0, 0, 0, -1)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/leg-right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root/leg-right")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.12939101, 0, 0, -0.99159366, 0.06666667, 1, 0.38655844, 0, 0, -0.92226493, 0.1, 1, 0.57960457, 0, 0, -0.81489784, 0.13333334, 1, 0.5999799, 0, 0, -0.80001515, 0.16666667, 1, 0.5362775, 0, 0, -0.8440418, 0.2, 1, 0.42459726, 0, 0, -0.90538245, 0.23333333, 1, 0.28553456, 0, 0, -0.9583684, 0.26666668, 1, 0.14722404, 0, 0, -0.9891032, 0.3, 1, 0.07381338, 0, 0, -0.9972721, 0.33333334, 1, 0, 0, 0, -1)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root/torso")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/torso")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.046060394, 0, 0, -0.99893874, 0.06666667, 1, 0.11701742, 0, 0, -0.99312985, 0.1, 1, 0.1268915, 0, 0, -0.99191666, 0.13333334, 1, 0.10244531, 0, 0, -0.9947387, 0.2, 1, 0.028270552, 0, 0, -0.99960035, 0.23333333, 1, 0.0036651648, 0, 0, -0.9999933, 0.26666668, 1, 0, 0, 0, -1, 0.33333334, 1, 0, 0, 0, -1)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/torso/head")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.19271228, 0, 0, -0.9812553, 0.06666667, 1, -0.25629607, 0, 0, -0.96659833, 0.1, 1, -0.23791449, 0, 0, -0.97128606, 0.13333334, 1, -0.20570114, 0, 0, -0.97861487, 0.16666667, 1, -0.16443966, 0, 0, -0.98638713, 0.2, 1, -0.11907979, 0, 0, -0.9928847, 0.23333333, 1, -0.07474528, 0, 0, -0.9972027, 0.26666668, 1, -0.036653284, 0, 0, -0.9993281, 0.3, 1, -0.018329723, 0, 0, -0.99983203, 0.33333334, 1, 0, 0, 0, -1)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, -0.3826835, -0.92387956, 0.033333335, 1, 0.4303167, -0.11192872, -0.2254789, -0.86686724, 0.06666667, 1, 0.9210945, -0.03763908, -0.01582201, -0.38719237, 0.1, 1, 0.9619536, -8.998356e-09, -3.78256e-09, -0.27321306, 0.13333334, 1, 0.92977655, 0, 0, -0.36812443, 0.2, 1, 0.77763426, 0, 0, -0.6287169, 0.23333333, 1, 0.7108001, 0, 0, -0.7033941, 0.26666668, 1, 0.70093757, 0, 0, -0.7132227, 0.33333334, 1, 0.7071068, 0, 0, -0.7071068)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0.3826835, -0.92387956, 0.033333335, 1, 0.4303167, 0.11192872, 0.2254789, -0.86686724, 0.06666667, 1, 0.9210945, 0.03763908, 0.01582201, -0.38719237, 0.1, 1, 0.9619536, 8.998356e-09, 3.78256e-09, -0.27321306, 0.13333334, 1, 0.92977655, 0, 0, -0.36812443, 0.2, 1, 0.77763426, 0, 0, -0.6287169, 0.23333333, 1, 0.7108001, 0, 0, -0.7033941, 0.26666668, 1, 0.70093757, 0, 0, -0.7132227, 0.33333334, 1, 0.7071068, 0, 0, -0.7071068)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_0cyqy"]
+resource_name = "drive"
+length = 0.16666667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.15, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/leg-left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/leg-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.6087615, 0, 0, -0.7933534)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/leg-right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root/leg-right")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.6087615, 0, 0, -0.7933534)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, -0.5, 0, -0.8660254)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0.5, 0, -0.8660254)
+tracks/8/type = "position_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/torso")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/torso")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/torso/cape")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/head")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_a1him"]
+resource_name = "emote-no"
+length = 0.6666667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/torso")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/torso")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.0045378413, 0, 0, -0.99998975, 0.06666667, 1, 0.015358296, 0, 0, -0.99988204, 0.1, 1, 0.028270569, 0, 0, -0.99960035, 0.13333334, 1, 0.03908542, 0, 0, -0.99923587, 0.16666667, 1, 0.043619387, 0, 0, -0.99904823, 0.2, 1, 0.04048057, 0, 0, -0.9991803, 0.23333333, 1, 0.032457426, 0, 0, -0.99947315, 0.26666668, 1, 0.021640388, 0, 0, -0.9997658, 0.3, 1, 0.010122735, 0, 0, -0.99994886, 0.33333334, 1, 9.313226e-10, 0, 0, -1, 0.36666667, 1, -0.010122738, 0, 0, -0.9999488, 0.4, 1, -0.021640394, 0, 0, -0.9997658, 0.43333334, 1, -0.032457422, 0, 0, -0.9994731, 0.46666667, 1, -0.040480576, 0, 0, -0.9991804, 0.5, 1, -0.04361939, 0, 0, -0.99904823, 0.53333336, 1, -0.03908541, 0, 0, -0.99923587, 0.56666666, 1, -0.028270572, 0, 0, -0.99960035, 0.6, 1, -0.015358288, 0, 0, -0.99988204, 0.6333333, 1, -0.007679378, 0, 0, -0.99997056, 0.6666667, 1, 0, 0, 0, -1)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/torso/head")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0, -0.027223775, 0, -0.9996294, 0.06666667, 1, 0, -0.09202302, 0, -0.9957569, 0.1, 1, 0, -0.16883345, 0, -0.98564464, 0.13333334, 1, 0, -0.23242699, 0, -0.9726139, 0.16666667, 1, 0, -0.25881904, 0, -0.9659258, 0.2, 1, 0, -0.24056686, 0, -0.9706326, 0.23333333, 1, 0, -0.1935495, 0, -0.98109055, 0.26666668, 1, 0, -0.12948789, 0, -0.991581, 0.3, 1, 0, -0.060700107, 0, -0.9981561, 0.33333334, 1, 0, -5.5879354e-09, 0, -1, 0.36666667, 1, 0, 0.06070013, 0, -0.9981561, 0.4, 1, 0, 0.12948792, 0, -0.9915811, 0.43333334, 1, 0, 0.19354947, 0, -0.98109055, 0.46666667, 1, 0, 0.24056691, 0, -0.9706326, 0.5, 1, 0, 0.25881904, 0, -0.9659258, 0.53333336, 1, 0, 0.23242693, 0, -0.9726139, 0.56666666, 1, 0, 0.16883343, 0, -0.98564464, 0.6, 1, 0, 0.092022926, 0, -0.9957569, 0.6333333, 1, 0, 0.04606039, 0, -0.9989387, 0.6666667, 1, 0, 0, 0, -1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0.3826835, -0.92387956, 0.033333335, 1, -0.0041924184, -0.0017365568, 0.38267955, -0.92387, 0.06666667, 1, -0.014189215, -0.005877366, 0.3826383, -0.92377055, 0.1, 1, -0.0261186, -0.01081868, 0.3825305, -0.92351025, 0.13333334, 1, -0.03611022, -0.014957344, 0.38239104, -0.92317355, 0.16666667, 1, -0.04029906, -0.01669242, 0.38231927, -0.9230002, 0.2, 1, -0.037399173, -0.015491244, 0.3823698, -0.9231222, 0.23333333, 1, -0.029986748, -0.01242092, 0.38248184, -0.9233928, 0.26666668, 1, -0.019993113, -0.008281419, 0.38259387, -0.9236632, 0.3, 1, -0.009352186, -0.0038738025, 0.3826639, -0.92383224, 0.36666667, 1, 0.0093521895, 0.0038738034, 0.38266388, -0.9238322, 0.4, 1, 0.019993117, 0.008281422, 0.38259387, -0.9236632, 0.43333334, 1, 0.029986747, 0.012420918, 0.38248178, -0.9233927, 0.46666667, 1, 0.037399173, 0.015491246, 0.38236982, -0.9231223, 0.5, 1, 0.040299065, 0.01669242, 0.38231927, -0.9230002, 0.53333336, 1, 0.036110207, 0.0149573395, 0.38239104, -0.92317355, 0.56666666, 1, 0.026118603, 0.01081868, 0.3825305, -0.92351025, 0.6, 1, 0.014189206, 0.0058773626, 0.3826383, -0.92377055, 0.6666667, 1, 0, 0, 0.3826835, -0.92387956)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, -0.3826835, -0.92387956, 0.033333335, 1, -0.0041924184, 0.0017365568, -0.38267955, -0.92387, 0.06666667, 1, -0.014189215, 0.005877366, -0.3826383, -0.92377055, 0.1, 1, -0.0261186, 0.01081868, -0.3825305, -0.92351025, 0.13333334, 1, -0.03611022, 0.014957344, -0.38239104, -0.92317355, 0.16666667, 1, -0.04029906, 0.01669242, -0.38231927, -0.9230002, 0.2, 1, -0.037399173, 0.015491244, -0.3823698, -0.9231222, 0.23333333, 1, -0.029986748, 0.01242092, -0.38248184, -0.9233928, 0.26666668, 1, -0.019993113, 0.008281419, -0.38259387, -0.9236632, 0.3, 1, -0.009352186, 0.0038738025, -0.3826639, -0.92383224, 0.36666667, 1, 0.0093521895, -0.0038738034, -0.38266388, -0.9238322, 0.4, 1, 0.019993117, -0.008281422, -0.38259387, -0.9236632, 0.43333334, 1, 0.029986747, -0.012420918, -0.38248178, -0.9233927, 0.46666667, 1, 0.037399173, -0.015491246, -0.38236982, -0.9231223, 0.5, 1, 0.040299065, -0.01669242, -0.38231927, -0.9230002, 0.53333336, 1, 0.036110207, -0.0149573395, -0.38239104, -0.92317355, 0.56666666, 1, 0.026118603, -0.01081868, -0.3825305, -0.92351025, 0.6, 1, 0.014189206, -0.0058773626, -0.3826383, -0.92377055, 0.6666667, 1, 0, 0, -0.3826835, -0.92387956)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/leg-left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/leg-right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/leg-right")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_41dh4"]
+resource_name = "emote-yes"
+length = 0.6666667
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/torso/head")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.0136131495, 0, 0, -0.9999074, 0.06666667, 1, 0.046060394, 0, 0, -0.9989387, 0.1, 1, 0.08472133, 0, 0, -0.99640477, 0.13333334, 1, 0.11701742, 0, 0, -0.99312985, 0.16666667, 1, 0.1305262, 0, 0, -0.99144495, 0.2, 1, 0.12117638, 0, 0, -0.992631, 0.23333333, 1, 0.0972355, 0, 0, -0.99526143, 0.26666668, 1, 0.06488065, 0, 0, -0.9978931, 0.3, 1, 0.030364066, 0, 0, -0.9995389, 0.33333334, 1, 5.5879354e-09, 0, 0, -1, 0.36666667, 1, -0.030364068, 0, 0, -0.99953896, 0.4, 1, -0.064880654, 0, 0, -0.9978931, 0.43333334, 1, -0.09723551, 0, 0, -0.99526143, 0.46666667, 1, -0.1211764, 0, 0, -0.9926311, 0.5, 1, -0.1305262, 0, 0, -0.9914449, 0.53333336, 1, -0.11701739, 0, 0, -0.99312985, 0.56666666, 1, -0.08472132, 0, 0, -0.99640477, 0.6, 1, -0.046060354, 0, 0, -0.9989387, 0.6333333, 1, -0.02303631, 0, 0, -0.99973464, 0.6666667, 1, 0, 0, 0, -1)
+tracks/1/type = "position_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/torso")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/torso")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.0045378413, 0, 0, -0.99998975, 0.06666667, 1, 0.015358296, 0, 0, -0.99988204, 0.1, 1, 0.028270569, 0, 0, -0.99960035, 0.13333334, 1, 0.03908542, 0, 0, -0.99923587, 0.16666667, 1, 0.043619387, 0, 0, -0.99904823, 0.2, 1, 0.04048057, 0, 0, -0.9991803, 0.23333333, 1, 0.032457426, 0, 0, -0.99947315, 0.26666668, 1, 0.021640388, 0, 0, -0.9997658, 0.3, 1, 0.010122735, 0, 0, -0.99994886, 0.33333334, 1, 9.313226e-10, 0, 0, -1, 0.36666667, 1, -0.010122738, 0, 0, -0.9999488, 0.4, 1, -0.021640394, 0, 0, -0.9997658, 0.43333334, 1, -0.032457422, 0, 0, -0.9994731, 0.46666667, 1, -0.040480576, 0, 0, -0.9991804, 0.5, 1, -0.04361939, 0, 0, -0.99904823, 0.53333336, 1, -0.03908541, 0, 0, -0.99923587, 0.56666666, 1, -0.028270572, 0, 0, -0.99960035, 0.6, 1, -0.015358288, 0, 0, -0.99988204, 0.6333333, 1, -0.007679378, 0, 0, -0.99997056, 0.6666667, 1, 0, 0, 0, -1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0.3826835, -0.92387956, 0.033333335, 1, -0.0041924184, -0.0017365568, 0.38267955, -0.92387, 0.06666667, 1, -0.014189215, -0.005877366, 0.3826383, -0.92377055, 0.1, 1, -0.0261186, -0.01081868, 0.3825305, -0.92351025, 0.13333334, 1, -0.03611022, -0.014957344, 0.38239104, -0.92317355, 0.16666667, 1, -0.04029906, -0.01669242, 0.38231927, -0.9230002, 0.2, 1, -0.037399173, -0.015491244, 0.3823698, -0.9231222, 0.23333333, 1, -0.029986748, -0.01242092, 0.38248184, -0.9233928, 0.26666668, 1, -0.019993113, -0.008281419, 0.38259387, -0.9236632, 0.3, 1, -0.009352186, -0.0038738025, 0.3826639, -0.92383224, 0.36666667, 1, 0.0093521895, 0.0038738034, 0.38266388, -0.9238322, 0.4, 1, 0.019993117, 0.008281422, 0.38259387, -0.9236632, 0.43333334, 1, 0.029986747, 0.012420918, 0.38248178, -0.9233927, 0.46666667, 1, 0.037399173, 0.015491246, 0.38236982, -0.9231223, 0.5, 1, 0.040299065, 0.01669242, 0.38231927, -0.9230002, 0.53333336, 1, 0.036110207, 0.0149573395, 0.38239104, -0.92317355, 0.56666666, 1, 0.026118603, 0.01081868, 0.3825305, -0.92351025, 0.6, 1, 0.014189206, 0.0058773626, 0.3826383, -0.92377055, 0.6666667, 1, 0, 0, 0.3826835, -0.92387956)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, -0.3826835, -0.92387956, 0.033333335, 1, -0.0041924184, 0.0017365568, -0.38267955, -0.92387, 0.06666667, 1, -0.014189215, 0.005877366, -0.3826383, -0.92377055, 0.1, 1, -0.0261186, 0.01081868, -0.3825305, -0.92351025, 0.13333334, 1, -0.03611022, 0.014957344, -0.38239104, -0.92317355, 0.16666667, 1, -0.04029906, 0.01669242, -0.38231927, -0.9230002, 0.2, 1, -0.037399173, 0.015491244, -0.3823698, -0.9231222, 0.23333333, 1, -0.029986748, 0.01242092, -0.38248184, -0.9233928, 0.26666668, 1, -0.019993113, 0.008281419, -0.38259387, -0.9236632, 0.3, 1, -0.009352186, 0.0038738025, -0.3826639, -0.92383224, 0.36666667, 1, 0.0093521895, -0.0038738034, -0.38266388, -0.9238322, 0.4, 1, 0.019993117, -0.008281422, -0.38259387, -0.9236632, 0.43333334, 1, 0.029986747, -0.012420918, -0.38248178, -0.9233927, 0.46666667, 1, 0.037399173, -0.015491246, -0.38236982, -0.9231223, 0.5, 1, 0.040299065, -0.01669242, -0.38231927, -0.9230002, 0.53333336, 1, 0.036110207, -0.0149573395, -0.38239104, -0.92317355, 0.56666666, 1, 0.026118603, -0.01081868, -0.3825305, -0.92351025, 0.6, 1, 0.014189206, -0.0058773626, -0.3826383, -0.92377055, 0.6666667, 1, 0, 0, -0.3826835, -0.92387956)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/leg-left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/leg-right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/leg-right")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_tdybi"]
+resource_name = "fall"
+length = 0.33333334
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/torso/head")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.043619387, 0, 0, -0.99904823, 0.033333335, 1, -0.039085418, 0, 0, -0.99923587, 0.06666667, 1, -0.028270567, 0, 0, -0.99960035, 0.1, 1, -0.015358292, 0, 0, -0.99988204, 0.13333334, 1, -0.0045378366, 0, 0, -0.99998975, 0.16666667, 1, 0, 0, 0, -1, 0.2, 1, -0.0045378422, 0, 0, -0.99998975, 0.23333333, 1, -0.0153582925, 0, 0, -0.9998821, 0.26666668, 1, -0.028270574, 0, 0, -0.99960035, 0.33333334, 1, -0.043619387, 0, 0, -0.99904823)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.03377988, -0.25660077, -0.1260749, -0.9576639, 0.033333335, 1, 0.03613736, -0.25575155, -0.1354657, -0.956522, 0.06666667, 1, 0.042116046, -0.25387546, -0.15881543, -0.95317954, 0.13333334, 1, 0.058138605, -0.2506846, -0.21853513, -0.94128615, 0.16666667, 1, 0.064444326, -0.2501199, -0.24106368, -0.935508, 0.2, 1, 0.066983305, -0.24999867, -0.24999867, -0.9330137, 0.23333333, 1, 0.061638307, -0.25032452, -0.23109964, -0.93815327, 0.26666668, 1, 0.05005046, -0.251972, -0.18886817, -0.94780487, 0.33333334, 1, 0.03377988, -0.25660077, -0.1260749, -0.9576639)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.03377988, 0.25660077, 0.1260749, -0.9576639, 0.033333335, 1, 0.03613736, 0.25575155, 0.1354657, -0.956522, 0.06666667, 1, 0.042116046, 0.25387546, 0.15881543, -0.95317954, 0.13333334, 1, 0.058138605, 0.2506846, 0.21853513, -0.94128615, 0.16666667, 1, 0.064444326, 0.2501199, 0.24106368, -0.935508, 0.2, 1, 0.066983305, 0.24999867, 0.24999867, -0.9330137, 0.23333333, 1, 0.061638307, 0.25032452, 0.23109964, -0.93815327, 0.26666668, 1, 0.05005046, 0.251972, 0.18886817, -0.94780487, 0.33333334, 1, 0.03377988, 0.25660077, 0.1260749, -0.9576639)
+tracks/3/type = "position_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/leg-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/leg-left")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.46193975, -0.3314136, -0.19134173, -0.8001031, 0.033333335, 1, 0.4579299, -0.3477077, -0.20074913, -0.7931579, 0.1, 1, 0.43803507, -0.4175834, -0.24109189, -0.758699, 0.13333334, 1, 0.4330127, -0.4330127, -0.25, -0.75, 0.16666667, 1, 0.4354164, -0.42572024, -0.2457897, -0.7541633, 0.2, 1, 0.44124603, -0.40731558, -0.23516376, -0.7642605, 0.26666668, 1, 0.45518148, -0.3583706, -0.20690536, -0.78839743, 0.33333334, 1, 0.46193975, -0.3314136, -0.19134173, -0.8001031)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root/leg-right")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root/leg-right")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.3535534, 0.3535534, 0.14644663, -0.85355335, 0.033333335, 1, 0.3504844, 0.370936, 0.15364674, -0.84614414, 0.1, 1, 0.33525756, 0.4454797, 0.18452376, -0.8093833, 0.13333334, 1, 0.3314136, 0.46193975, 0.19134173, -0.8001031, 0.16666667, 1, 0.33325332, 0.45416015, 0.1881193, -0.80454457, 0.2, 1, 0.33771512, 0.43452597, 0.17998657, -0.8153163, 0.26666668, 1, 0.34838083, 0.38231128, 0.15835851, -0.84106576, 0.33333334, 1, 0.3535534, 0.3535534, 0.14644663, -0.85355335)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/torso")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/torso")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_2is6k"]
+resource_name = "holding-both"
+length = 0.16666667
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.5, 0, -0.8660254)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.5, 0, -0.8660254)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/leg-left")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root/leg-left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root/leg-right")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-right")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/8/type = "position_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/torso")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/torso")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/torso/cape")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/head")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_kudbj"]
+resource_name = "holding-both-shoot"
+length = 0.2
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/torso")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/torso")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.09681088, 0, 0, -0.9953028, 0.1, 1, 0.09681088, 0, 0, -0.9953028, 0.13333334, 1, 0.05455931, 0, 0, -0.99851054, 0.16666667, 1, 0.02728982, 0, 0, -0.99962765, 0.2, 1, 0, 0, 0, -1)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/torso/head")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.09681088, 0, 0, -0.9953028, 0.1, 1, -0.09681088, 0, 0, -0.9953028, 0.13333334, 1, -0.05455931, 0, 0, -0.99851054, 0.16666667, 1, -0.02728982, 0, 0, -0.99962765, 0.2, 1, 0, 0, 0, -1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0.5, 0, -0.8660254, 0.033333335, 1, 0.032298416, 0.49895576, -0.055942494, -0.8642167, 0.1, 1, 0.03229841, 0.49895573, -0.055942487, -0.8642166, 0.13333334, 1, 0.01819146, 0.499669, -0.031508535, -0.86545205, 0.2, 1, 0, 0.5, 0, -0.8660254)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, -0.5, 0, -0.8660254, 0.033333335, 1, 0.032298416, -0.49895576, 0.055942494, -0.8642167, 0.1, 1, 0.03229841, -0.49895573, 0.055942487, -0.8642166, 0.13333334, 1, 0.01819146, -0.499669, 0.031508535, -0.86545205, 0.2, 1, 0, -0.5, 0, -0.8660254)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/leg-left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/leg-right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/leg-right")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_qi6oy"]
+resource_name = "holding-left"
+length = 0.16666667
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.5, 0, -0.8660254)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, -0.3826835, -0.92387956)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/leg-left")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root/leg-left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root/leg-right")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-right")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/8/type = "position_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/torso")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/torso")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/torso/cape")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/head")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_xx004"]
+resource_name = "holding-left-shoot"
+length = 0.2
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/torso")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/torso")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.09681088, 0, 0, -0.9953028, 0.1, 1, 0.09681088, 0, 0, -0.9953028, 0.13333334, 1, 0.05455931, 0, 0, -0.99851054, 0.16666667, 1, 0.02728982, 0, 0, -0.99962765, 0.2, 1, 0, 0, 0, -1)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/torso/head")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.09681088, 0, 0, -0.9953028, 0.1, 1, -0.09681088, 0, 0, -0.9953028, 0.13333334, 1, -0.05455931, 0, 0, -0.99851054, 0.16666667, 1, -0.02728982, 0, 0, -0.99962765, 0.2, 1, 0, 0, 0, -1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0.5, 0, -0.8660254, 0.033333335, 1, 0.032298416, 0.49895576, -0.055942494, -0.8642167, 0.1, 1, 0.03229841, 0.49895573, -0.055942494, -0.8642166, 0.13333334, 1, 0.01819146, 0.499669, -0.031508535, -0.86545205, 0.2, 1, 0, 0.5, 0, -0.8660254)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, -0.3826835, -0.92387956)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/leg-left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/leg-right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/leg-right")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_p4ckw"]
+resource_name = "holding-right"
+length = 0.16666667
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.5, 0, -0.8660254)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0.3826835, -0.92387956)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/leg-left")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root/leg-left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root/leg-right")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-right")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/8/type = "position_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/torso")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/torso")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/torso/cape")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/head")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_2xs5h"]
+resource_name = "holding-right-shoot"
+length = 0.2
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/torso")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/torso")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.09681088, 0, 0, -0.9953028, 0.1, 1, 0.09681088, 0, 0, -0.9953028, 0.13333334, 1, 0.05455931, 0, 0, -0.99851054, 0.16666667, 1, 0.02728982, 0, 0, -0.99962765, 0.2, 1, 0, 0, 0, -1)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/torso/head")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.09681088, 0, 0, -0.9953028, 0.1, 1, -0.09681088, 0, 0, -0.9953028, 0.13333334, 1, -0.05455931, 0, 0, -0.99851054, 0.16666667, 1, -0.02728982, 0, 0, -0.99962765, 0.2, 1, 0, 0, 0, -1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0.3826835, -0.92387956)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, -0.5, 0, -0.8660254, 0.033333335, 1, 0.032298416, -0.49895576, 0.055942494, -0.8642167, 0.1, 1, 0.03229841, -0.49895573, 0.055942487, -0.8642166, 0.13333334, 1, 0.01819146, -0.499669, 0.031508535, -0.86545205, 0.2, 1, 0, -0.5, 0, -0.8660254)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/leg-left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/leg-right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/leg-right")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_pts52"]
+resource_name = "idle"
+length = 1.3333334
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/torso")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/torso")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.0012217304, 0, 0, -0.9999993, 0.06666667, 1, 0.0045378413, 0, 0, -0.9999898, 0.1, 1, 0.009424639, 0, 0, -0.99995565, 0.13333334, 1, 0.015358296, 0, 0, -0.99988204, 0.2, 1, 0.028270572, 0, 0, -0.99960035, 0.23333333, 1, 0.034201786, 0, 0, -0.999415, 0.26666668, 1, 0.03908542, 0, 0, -0.99923587, 0.3, 1, 0.042398795, 0, 0, -0.9991008, 0.33333334, 1, 0.043619387, 0, 0, -0.99904823, 0.36666667, 1, 0.042791132, 0, 0, -0.99908406, 0.4, 1, 0.040480573, 0, 0, -0.9991803, 0.43333334, 1, 0.036948934, 0, 0, -0.99931717, 0.46666667, 1, 0.032457426, 0, 0, -0.9994731, 0.5, 1, 0.027267389, 0, 0, -0.9996282, 0.53333336, 1, 0.021640388, 0, 0, -0.9997658, 0.56666666, 1, 0.015838202, 0, 0, -0.9998746, 0.6, 1, 0.010122734, 0, 0, -0.9999488, 0.6333333, 1, 0.004756002, 0, 0, -0.9999888, 0.6666667, 1, 0, 0, 0, -1, 0.7, 1, -0.004756001, 0, 0, -0.99998873, 0.73333335, 1, -0.010122738, 0, 0, -0.99994886, 0.76666665, 1, -0.015838197, 0, 0, -0.9998746, 0.8, 1, -0.021640394, 0, 0, -0.9997658, 0.8333333, 1, -0.027267389, 0, 0, -0.99962825, 0.8666667, 1, -0.03245742, 0, 0, -0.99947315, 0.9, 1, -0.036948934, 0, 0, -0.99931717, 0.93333334, 1, -0.040480576, 0, 0, -0.9991803, 0.96666664, 1, -0.04279113, 0, 0, -0.99908406, 1, 1, -0.04361939, 0, 0, -0.99904823, 1.0333333, 1, -0.042398784, 0, 0, -0.9991008, 1.0666667, 1, -0.03908541, 0, 0, -0.99923587, 1.1, 1, -0.03420178, 0, 0, -0.999415, 1.1333333, 1, -0.028270569, 0, 0, -0.9996003, 1.2, 1, -0.015358288, 0, 0, -0.99988204, 1.2333333, 1, -0.009424641, 0, 0, -0.99995565, 1.2666667, 1, -0.00453785, 0, 0, -0.9999897, 1.3, 1, -0.0022689304, 0, 0, -0.9999975, 1.3333334, 1, 0, 0, 0, -1)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0.3826835, -0.92387956, 0.033333335, 1, 0, 0, 0.3792947, -0.9252759, 0.06666667, 1, 0, 0, 0.37007105, -0.9290035, 0.1, 1, 0, 0, 0.35641187, -0.934329, 0.13333334, 1, 0, 0, 0.33972305, -0.94052553, 0.2, 1, 0, 0, 0.3030353, -0.9529793, 0.23333333, 1, 0, 0, 0.28602287, -0.95822287, 0.26666668, 1, 0, 0, 0.27194434, -0.96231306, 0.3, 1, 0, 0, 0.2623576, -0.9649707, 0.36666667, 1, 0, 0, 0.2623576, -0.9649707, 0.4, 1, 0, 0, 0.2719444, -0.96231306, 0.43333334, 1, 0, 0, 0.2860229, -0.9582228, 0.46666667, 1, 0, 0, 0.3030353, -0.95297945, 0.53333336, 1, 0, 0, 0.33972308, -0.9405256, 0.56666666, 1, 0, 0, 0.3564119, -0.934329, 0.6, 1, 0, 0, 0.37007108, -0.9290035, 0.6333333, 1, 0, 0, 0.37929466, -0.9252759, 0.7, 1, 0, 0, 0.3792947, -0.9252759, 0.73333335, 1, 0, 0, 0.37007108, -0.9290035, 0.76666665, 1, 0, 0, 0.35641193, -0.934329, 0.8, 1, 0, 0, 0.33972305, -0.94052553, 0.8666667, 1, 0, 0, 0.30303526, -0.9529794, 0.9, 1, 0, 0, 0.2860229, -0.9582228, 0.93333334, 1, 0, 0, 0.27194434, -0.962313, 0.96666664, 1, 0, 0, 0.2623576, -0.9649707, 1.0333333, 1, 0, 0, 0.2623576, -0.9649707, 1.0666667, 1, 0, 0, 0.27194437, -0.962313, 1.1, 1, 0, 0, 0.28602293, -0.9582228, 1.1333333, 1, 0, 0, 0.30303532, -0.95297945, 1.2, 1, 0, 0, 0.33972305, -0.9405256, 1.2333333, 1, 0, 0, 0.35641187, -0.934329, 1.2666667, 1, 0, 0, 0.37007108, -0.9290035, 1.3333334, 1, 0, 0, 0.3826835, -0.92387956)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, -0.3826835, -0.92387956, 0.033333335, 1, 0, 0, -0.3792947, -0.9252759, 0.06666667, 1, 0, 0, -0.37007105, -0.9290035, 0.1, 1, 0, 0, -0.35641187, -0.934329, 0.13333334, 1, 0, 0, -0.33972305, -0.94052553, 0.2, 1, 0, 0, -0.3030353, -0.9529793, 0.23333333, 1, 0, 0, -0.28602287, -0.95822287, 0.26666668, 1, 0, 0, -0.27194434, -0.96231306, 0.3, 1, 0, 0, -0.2623576, -0.9649707, 0.36666667, 1, 0, 0, -0.2623576, -0.9649707, 0.4, 1, 0, 0, -0.2719444, -0.96231306, 0.43333334, 1, 0, 0, -0.2860229, -0.9582228, 0.46666667, 1, 0, 0, -0.3030353, -0.95297945, 0.53333336, 1, 0, 0, -0.33972308, -0.9405256, 0.56666666, 1, 0, 0, -0.3564119, -0.934329, 0.6, 1, 0, 0, -0.37007108, -0.9290035, 0.6333333, 1, 0, 0, -0.37929466, -0.9252759, 0.7, 1, 0, 0, -0.3792947, -0.9252759, 0.73333335, 1, 0, 0, -0.37007108, -0.9290035, 0.76666665, 1, 0, 0, -0.35641193, -0.934329, 0.8, 1, 0, 0, -0.33972305, -0.94052553, 0.8666667, 1, 0, 0, -0.30303526, -0.9529794, 0.9, 1, 0, 0, -0.2860229, -0.9582228, 0.93333334, 1, 0, 0, -0.27194434, -0.962313, 0.96666664, 1, 0, 0, -0.2623576, -0.9649707, 1.0333333, 1, 0, 0, -0.2623576, -0.9649707, 1.0666667, 1, 0, 0, -0.27194437, -0.962313, 1.1, 1, 0, 0, -0.28602293, -0.9582228, 1.1333333, 1, 0, 0, -0.30303532, -0.95297945, 1.2, 1, 0, 0, -0.33972305, -0.9405256, 1.2333333, 1, 0, 0, -0.35641187, -0.934329, 1.2666667, 1, 0, 0, -0.37007108, -0.9290035, 1.3333334, 1, 0, 0, -0.3826835, -0.92387956)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/torso/head")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0, -0.0012217304, 0, -0.9999993, 0.06666667, 1, 0, -0.0045378413, 0, -0.9999898, 0.1, 1, 0, -0.009424639, 0, -0.99995565, 0.13333334, 1, 0, -0.015358296, 0, -0.99988204, 0.2, 1, 0, -0.028270572, 0, -0.99960035, 0.23333333, 1, 0, -0.034201786, 0, -0.999415, 0.26666668, 1, 0, -0.03908542, 0, -0.99923587, 0.3, 1, 0, -0.042398795, 0, -0.9991008, 0.33333334, 1, 0, -0.043619387, 0, -0.99904823, 0.36666667, 1, 0, -0.042791132, 0, -0.99908406, 0.4, 1, 0, -0.040480573, 0, -0.9991803, 0.43333334, 1, 0, -0.036948934, 0, -0.99931717, 0.46666667, 1, 0, -0.032457426, 0, -0.9994731, 0.5, 1, 0, -0.027267389, 0, -0.9996282, 0.53333336, 1, 0, -0.021640388, 0, -0.9997658, 0.56666666, 1, 0, -0.015838202, 0, -0.9998746, 0.6, 1, 0, -0.010122734, 0, -0.9999488, 0.6333333, 1, 0, -0.004756002, 0, -0.9999888, 0.6666667, 1, 0, 0, 0, -1, 0.7, 1, 0, 0.004756001, 0, -0.99998873, 0.73333335, 1, 0, 0.010122738, 0, -0.99994886, 0.76666665, 1, 0, 0.015838197, 0, -0.9998746, 0.8, 1, 0, 0.021640394, 0, -0.9997658, 0.8333333, 1, 0, 0.027267389, 0, -0.99962825, 0.8666667, 1, 0, 0.03245742, 0, -0.99947315, 0.9, 1, 0, 0.036948934, 0, -0.99931717, 0.93333334, 1, 0, 0.040480576, 0, -0.9991803, 0.96666664, 1, 0, 0.04279113, 0, -0.99908406, 1, 1, 0, 0.04361939, 0, -0.99904823, 1.0333333, 1, 0, 0.042398784, 0, -0.9991008, 1.0666667, 1, 0, 0.03908541, 0, -0.99923587, 1.1, 1, 0, 0.03420178, 0, -0.999415, 1.1333333, 1, 0, 0.028270569, 0, -0.9996003, 1.2, 1, 0, 0.015358288, 0, -0.99988204, 1.2333333, 1, 0, 0.009424641, 0, -0.99995565, 1.2666667, 1, 0, 0.00453785, 0, -0.9999897, 1.3, 1, 0, 0.0022689304, 0, -0.9999975, 1.3333334, 1, 0, 0, 0, -1)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/leg-left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/leg-right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/leg-right")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_u5hro"]
+resource_name = "interact-left"
+length = 0.6666667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/torso")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/torso")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.046060394, 0, 0, -0.99893874, 0.06666667, 1, -0.11701742, 0, 0, -0.99312985, 0.1, 1, -0.1305262, 0, 0, -0.99144495, 0.5, 1, -0.13052621, 0, 0, -0.9914449, 0.53333336, 1, -0.11701739, 0, 0, -0.99312985, 0.56666666, 1, -0.08472132, 0, 0, -0.99640477, 0.6, 1, -0.046060354, 0, 0, -0.9989387, 0.6333333, 1, -0.02303631, 0, 0, -0.99973464, 0.6666667, 1, 0, 0, 0, -1)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/torso/head")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.025948048, 0, 0, -0.9996633, 0.06666667, 1, 0.07929608, 0, 0, -0.99685115, 0.1, 1, 0.12333386, 0, 0, -0.99236524, 0.13333334, 1, 0.1305262, 0, 0, -0.9914449, 0.4, 1, 0.1305262, 0, 0, -0.9914449, 0.43333334, 1, 0.12887251, 0, 0, -0.9916612, 0.46666667, 1, 0.117017396, 0, 0, -0.99312985, 0.5, 1, 0.09681088, 0, 0, -0.9953028, 0.53333336, 1, 0.071922965, 0, 0, -0.9974102, 0.56666666, 1, 0.046060394, 0, 0, -0.9989387, 0.6, 1, 0.022958755, 0, 0, -0.9997364, 0.6333333, 1, 0.011480145, 0, 0, -0.9999342, 0.6666667, 1, 0, 0, 0, -1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0.3826835, -0.92387956, 0.033333335, 1, -0.017827561, 0.051424865, 0.32706222, -0.9434342, 0.06666667, 1, -0.035157, 0.17986129, 0.1885878, -0.96480495, 0.1, 1, -0.008363775, 0.33271435, 0.023697494, -0.94269276, 0.13333334, 1, 0.052122556, 0.44910893, -0.10282811, -0.8860084, 0.16666667, 1, 0.0868241, 0.4924039, -0.15038374, -0.85286856, 0.2, 1, 0.05642818, 0.49680567, -0.097736545, -0.86049265, 0.23333333, 1, 0.009075214, 0.49991766, -0.01571878, -0.86588275, 0.26666668, 1, 0, 0.5, 0, -0.8660254, 0.4, 1, 5.628158e-19, 0.5, 9.714354e-19, -0.8660254, 0.43333334, 1, -0.002472679, 0.4942053, 0.0043496764, -0.8693309, 0.46666667, 1, -0.01845992, 0.45174593, 0.036418393, -0.8912119, 0.5, 1, -0.038438387, 0.37624058, 0.09408677, -0.9209306, 0.53333336, 1, -0.049930453, 0.27955344, 0.16858695, -0.9438937, 0.56666666, 1, -0.046133593, 0.17736313, 0.24746838, -0.9514061, 0.6, 1, -0.029182235, 0.08694718, 0.31684652, -0.9440323, 0.6666667, 1, 0, 0, 0.3826835, -0.92387956)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, -0.3826835, -0.92387956, 0.033333335, 1, -0.01257691, 0.0052095274, -0.38264802, -0.9237939, 0.06666667, 1, -0.04255426, 0.017626552, -0.38227734, -0.922899, 0.1, 1, -0.07827229, 0.03242144, -0.38130757, -0.92055786, 0.13333334, 1, -0.10811, 0.044780634, -0.38005438, -0.9175324, 0.16666667, 1, -0.12059048, 0.049950216, -0.37940955, -0.91597563, 0.4, 1, -0.12059048, 0.049950216, -0.37940955, -0.91597563, 0.43333334, 1, -0.11906268, 0.049317364, -0.37949237, -0.9161755, 0.46666667, 1, -0.10810997, 0.044780567, -0.38005432, -0.9175323, 0.5, 1, -0.08944158, 0.03704783, -0.3808859, -0.91953987, 0.53333336, 1, -0.06644817, 0.027523663, -0.38169244, -0.9214869, 0.56666666, 1, -0.042554263, 0.017626517, -0.38227734, -0.922899, 0.6, 1, -0.021211121, 0.008785905, -0.3825826, -0.923636, 0.6666667, 1, 0, 0, -0.3826835, -0.92387956)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/leg-left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/leg-right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/leg-right")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_72ncm"]
+resource_name = "interact-right"
+length = 0.6666667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/torso")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/torso")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.046060394, 0, 0, -0.99893874, 0.06666667, 1, -0.11701742, 0, 0, -0.99312985, 0.1, 1, -0.1305262, 0, 0, -0.99144495, 0.5, 1, -0.13052621, 0, 0, -0.9914449, 0.53333336, 1, -0.11701739, 0, 0, -0.99312985, 0.56666666, 1, -0.08472132, 0, 0, -0.99640477, 0.6, 1, -0.046060354, 0, 0, -0.9989387, 0.6333333, 1, -0.02303631, 0, 0, -0.99973464, 0.6666667, 1, 0, 0, 0, -1)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/torso/head")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.025948048, 0, 0, -0.9996633, 0.06666667, 1, 0.07929608, 0, 0, -0.99685115, 0.1, 1, 0.12333386, 0, 0, -0.99236524, 0.13333334, 1, 0.1305262, 0, 0, -0.9914449, 0.4, 1, 0.1305262, 0, 0, -0.9914449, 0.43333334, 1, 0.12887251, 0, 0, -0.9916612, 0.46666667, 1, 0.117017396, 0, 0, -0.99312985, 0.5, 1, 0.09681088, 0, 0, -0.9953028, 0.53333336, 1, 0.071922965, 0, 0, -0.9974102, 0.56666666, 1, 0.046060394, 0, 0, -0.9989387, 0.6, 1, 0.022958755, 0, 0, -0.9997364, 0.6333333, 1, 0.011480145, 0, 0, -0.9999342, 0.6666667, 1, 0, 0, 0, -1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0.3826835, -0.92387956, 0.033333335, 1, -0.01257691, -0.0052095274, 0.38264802, -0.9237939, 0.06666667, 1, -0.04255426, -0.017626552, 0.38227734, -0.922899, 0.1, 1, -0.07827229, -0.032421447, 0.38130757, -0.92055786, 0.13333334, 1, -0.10811, -0.044780634, 0.38005438, -0.9175324, 0.16666667, 1, -0.12059048, -0.049950216, 0.37940955, -0.91597563, 0.4, 1, -0.12059048, -0.049950216, 0.37940955, -0.91597563, 0.43333334, 1, -0.11906267, -0.049317375, 0.37949234, -0.9161754, 0.46666667, 1, -0.10810997, -0.044780627, 0.38005432, -0.9175323, 0.5, 1, -0.08944158, -0.037047923, 0.3808859, -0.91953987, 0.53333336, 1, -0.06644817, -0.027523734, 0.38169244, -0.9214869, 0.56666666, 1, -0.042554263, -0.017626552, 0.38227734, -0.922899, 0.6, 1, -0.021211121, -0.008785935, 0.3825826, -0.923636, 0.6666667, 1, 0, 0, 0.3826835, -0.92387956)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, -0.3826835, -0.92387956, 0.033333335, 1, -0.017827561, -0.051424865, -0.32706222, -0.9434342, 0.06666667, 1, -0.035157, -0.17986129, -0.1885878, -0.96480495, 0.1, 1, -0.008363775, -0.3327144, -0.023697427, -0.94269276, 0.13333334, 1, 0.052122556, -0.44910893, 0.10282811, -0.8860084, 0.16666667, 1, 0.0868241, -0.4924039, 0.15038374, -0.85286856, 0.2, 1, 0.05642818, -0.49680567, 0.09773647, -0.86049265, 0.23333333, 1, 0.009075214, -0.49991766, 0.015718732, -0.86588275, 0.26666668, 1, 0, -0.5, 0, -0.8660254, 0.4, 1, 5.628158e-19, -0.5, 9.714354e-19, -0.8660254, 0.43333334, 1, -0.0024726787, -0.49420542, -0.0043495577, -0.86933076, 0.46666667, 1, -0.018459916, -0.45174634, -0.036417976, -0.8912117, 0.5, 1, -0.03843838, -0.37624145, -0.094086036, -0.9209304, 0.53333336, 1, -0.049930446, -0.27955413, -0.1685864, -0.94389355, 0.56666666, 1, -0.046133593, -0.17736346, -0.2474681, -0.9514061, 0.6, 1, -0.029182235, -0.08694743, -0.31684628, -0.9440323, 0.6666667, 1, 0, 0, -0.3826835, -0.92387956)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/leg-left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/leg-right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/leg-right")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_jttlo"]
+resource_name = "jump"
+length = 0.5
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/leg-left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.0791, 0.221, -0.0867)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/leg-left")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.6087615, 0, 0, -0.7933534, 0.033333335, 1, -0.60156345, 0, 0, -0.798825, 0.06666667, 1, -0.5825484, 0, 0, -0.81279606, 0.1, 1, -0.5555315, 0, 0, -0.8314955, 0.13333334, 1, -0.52453935, 0, 0, -0.85138625, 0.16666667, 1, -0.49398682, 0, 0, -0.8694694, 0.2, 1, -0.46866608, 0, 0, -0.88337535, 0.23333333, 1, -0.453599, 0, 0, -0.89120585, 0.26666668, 1, -0.45359904, 0, 0, -0.8912059, 0.3, 1, -0.46866608, 0, 0, -0.8833754, 0.33333334, 1, -0.49398687, 0, 0, -0.8694694, 0.36666667, 1, -0.5245394, 0, 0, -0.8513862, 0.4, 1, -0.5555315, 0, 0, -0.8314956, 0.43333334, 1, -0.58254844, 0, 0, -0.8127961, 0.5, 1, -0.6087615, 0, 0, -0.7933534)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/leg-right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.0761, 0.22, -0.009)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/leg-right")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.3826835, 0, 0, -0.92387956, 0.033333335, 1, 0.3876475, 0, 0, -0.9218077, 0.06666667, 1, 0.4005493, 0, 0, -0.9162752, 0.1, 1, 0.4183833, 0, 0, -0.90827066, 0.13333334, 1, 0.4381814, 0, 0, -0.89888656, 0.16666667, 1, 0.45706922, 0, 0, -0.8894312, 0.2, 1, 0.4722874, 0, 0, -0.88144463, 0.23333333, 1, 0.48116767, 0, 0, -0.87662864, 0.26666668, 1, 0.48116767, 0, 0, -0.87662864, 0.3, 1, 0.47228742, 0, 0, -0.88144463, 0.33333334, 1, 0.4570692, 0, 0, -0.8894312, 0.36666667, 1, 0.4381814, 0, 0, -0.8988866, 0.4, 1, 0.41838333, 0, 0, -0.9082706, 0.43333334, 1, 0.40054935, 0, 0, -0.91627526, 0.5, 1, 0.3826835, 0, 0, -0.92387956)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, -0.1305262, -0.9914449, 0.033333335, 1, 0, 0, -0.13262801, -0.9911659, 0.06666667, 1, 0, 0, -0.13811041, -0.9904168, 0.1, 1, 0, 0, -0.1457377, -0.98932326, 0.13333334, 1, 0, 0, -0.15427612, -0.9880278, 0.16666667, 1, 0, 0, -0.16249683, -0.98670906, 0.2, 1, 0, 0, -0.16917749, -0.98558563, 0.23333333, 1, 0, 0, -0.17310068, -0.98490417, 0.26666668, 1, 0, 0, -0.1731007, -0.98490417, 0.3, 1, 0, 0, -0.16917749, -0.98558563, 0.33333334, 1, 0, 0, -0.16249683, -0.98670906, 0.36666667, 1, 0, 0, -0.15427612, -0.9880278, 0.4, 1, 0, 0, -0.14573768, -0.98932326, 0.43333334, 1, 0, 0, -0.13811043, -0.9904169, 0.5, 1, 0, 0, -0.1305262, -0.9914449)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0.1305262, -0.9914449, 0.033333335, 1, 0, 0, 0.13262801, -0.9911659, 0.06666667, 1, 0, 0, 0.13811041, -0.9904168, 0.1, 1, 0, 0, 0.1457377, -0.98932326, 0.13333334, 1, 0, 0, 0.15427612, -0.9880278, 0.16666667, 1, 0, 0, 0.16249683, -0.98670906, 0.2, 1, 0, 0, 0.16917749, -0.98558563, 0.23333333, 1, 0, 0, 0.17310068, -0.98490417, 0.26666668, 1, 0, 0, 0.1731007, -0.98490417, 0.3, 1, 0, 0, 0.16917749, -0.98558563, 0.33333334, 1, 0, 0, 0.16249683, -0.98670906, 0.36666667, 1, 0, 0, 0.15427612, -0.9880278, 0.4, 1, 0, 0, 0.14573768, -0.98932326, 0.43333334, 1, 0, 0, 0.13811043, -0.9904169, 0.5, 1, 0, 0, 0.1305262, -0.9914449)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root/torso/head")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.00042489858, 0, 0, -0.99999994, 0.06666667, 1, -0.0015337795, 0, 0, -0.99999887, 0.1, 1, -0.0030779184, 0, 0, -0.9999953, 0.13333334, 1, -0.0048085894, 0, 0, -0.99998844, 0.16666667, 1, -0.0064770663, 0, 0, -0.999979, 0.2, 1, -0.007834634, 0, 0, -0.9999693, 0.3, 1, -0.007834632, 0, 0, -0.9999693, 0.33333334, 1, -0.006477065, 0, 0, -0.999979, 0.36666667, 1, -0.0048085875, 0, 0, -0.99998844, 0.4, 1, -0.003077917, 0, 0, -0.9999953, 0.43333334, 1, -0.0015337785, 0, 0, -0.99999887, 0.5, 1, 0, 0, 0, -1)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/torso")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/torso")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_xw0yo"]
+resource_name = "pick-up"
+length = 0.33333334
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root/torso")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root/torso")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.05442737, 0, 0, -0.99851775, 0.06666667, 1, -0.1832651, 0, 0, -0.9830636, 0.1, 1, -0.33281955, 0, 0, -0.9429906, 0.13333334, 1, -0.45212343, 0, 0, -0.89195544, 0.2, 1, -0.45212343, 0, 0, -0.89195544, 0.23333333, 1, -0.3328196, 0, 0, -0.9429906, 0.26666668, 1, -0.18326506, 0, 0, -0.9830636, 0.3, 1, -0.09202301, 0, 0, -0.995757, 0.33333334, 1, 0, 0, 0, -1)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, -0.3826835, -0.92387956, 0.033333335, 1, 0.004957237, -0.09874053, -0.31772384, -0.94301504, 0.06666667, 1, 0.07210969, -0.31952882, -0.1813301, -0.92726535, 0.1, 1, 0.22801499, -0.5171897, -0.089904234, -0.82002515, 0.13333334, 1, 0.38575053, -0.59881705, -0.10220423, -0.69438386, 0.16666667, 1, 0.46209705, -0.5915063, -0.15849568, -0.64145595, 0.2, 1, 0.46397987, -0.551385, -0.22053108, -0.65731525, 0.23333333, 1, 0.4478593, -0.5000253, -0.29909775, -0.6781868, 0.26666668, 1, 0.44645423, -0.45206898, -0.37352464, -0.6758636, 0.33333334, 1, 0.46467984, -0.41472965, -0.43882376, -0.64769256)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0.3826835, -0.92387956, 0.033333335, 1, 0.004957237, 0.09874053, 0.31772384, -0.94301504, 0.06666667, 1, 0.07210969, 0.31952882, 0.1813301, -0.92726535, 0.1, 1, 0.22801499, 0.5171897, 0.089904234, -0.82002515, 0.13333334, 1, 0.38575053, 0.59881705, 0.10220423, -0.69438386, 0.16666667, 1, 0.46209705, 0.5915063, 0.15849568, -0.64145595, 0.2, 1, 0.46397987, 0.551385, 0.22053108, -0.65731525, 0.23333333, 1, 0.4478593, 0.5000253, 0.29909775, -0.6781868, 0.26666668, 1, 0.44645423, 0.45206898, 0.37352464, -0.6758636, 0.33333334, 1, 0.46467984, 0.41472965, 0.43882376, -0.64769256)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/torso/head")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.051878624, 0, 0, -0.9986534, 0.06666667, 1, 0.15809275, 0, 0, -0.98742425, 0.1, 1, 0.24478449, 0, 0, -0.96957755, 0.13333334, 1, 0.25455776, 0, 0, -0.9670576, 0.16666667, 1, 0.22447884, 0, 0, -0.97447896, 0.2, 1, 0.17450868, 0, 0, -0.9846557, 0.23333333, 1, 0.11556685, 0, 0, -0.9932997, 0.26666668, 1, 0.05907003, 0, 0, -0.9982539, 0.3, 1, 0.029547919, 0, 0, -0.99956346, 0.33333334, 1, 0, 0, 0, -1)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/leg-left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/leg-right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/leg-right")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_8g3hb"]
+resource_name = "sit"
+length = 0.16666667
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.15, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0.3826835, -0.92387956)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, -0.3826835, -0.92387956)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/leg-right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root/leg-right")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0.6087615, 0, 0, -0.7933534)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root/leg-left")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.6087615, 0, 0, -0.7933534)
+tracks/8/type = "position_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/torso")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/torso")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/torso/cape")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/head")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_x5qsp"]
+resource_name = "sprint"
+length = 0.5
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.033333335, 1, 0, 0.03125, 0, 0.1, 1, 0, 0.16875, 0, 0.13333334, 1, 0, 0.2, 0, 0.16666667, 1, 0, 0.16034986, 0, 0.2, 1, 0, 0.078717194, 0, 0.23333333, 1, 0, 0.011078715, 0, 0.26666668, 1, 0, 0.011078735, 0, 0.3, 1, 0, 0.078717224, 0, 0.33333334, 1, 0, 0.16034988, 0, 0.36666667, 1, 0, 0.2, 0, 0.4, 1, 0, 0.16874999, 0, 0.43333334, 1, 0, 0.09999999, 0, 0.5, 1, 0, 0, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/leg-left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/leg-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.12241067, 0, 0, -0.99247956, 0.1, 1, 0.6152316, 0, 0, -0.7883465, 0.13333334, 1, 0.7071068, 0, 0, -0.7071068, 0.16666667, 1, 0.62527835, 0, 0, -0.7804019, 0.2, 1, 0.406876, 0, 0, -0.9134834, 0.23333333, 1, 0.12560588, 0, 0, -0.9920803, 0.26666668, 1, -0.12560596, 0, 0, -0.9920803, 0.3, 1, -0.4068762, 0, 0, -0.9134833, 0.33333334, 1, -0.6252784, 0, 0, -0.78040177, 0.36666667, 1, -0.7071068, 0, 0, -0.7071068, 0.4, 1, -0.6152316, 0, 0, -0.7883465, 0.43333334, 1, -0.38268343, 0, 0, -0.92387956, 0.46666667, 1, -0.19509031, 0, 0, -0.98078537, 0.5, 1, 0, 0, 0, -1)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/leg-right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root/leg-right")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.12241067, 0, 0, -0.99247956, 0.1, 1, -0.6152316, 0, 0, -0.7883465, 0.13333334, 1, -0.7071068, 0, 0, -0.7071068, 0.16666667, 1, -0.62527835, 0, 0, -0.7804019, 0.2, 1, -0.406876, 0, 0, -0.9134834, 0.23333333, 1, -0.12560588, 0, 0, -0.9920803, 0.26666668, 1, 0.12560596, 0, 0, -0.9920803, 0.3, 1, 0.4068762, 0, 0, -0.9134833, 0.33333334, 1, 0.6252784, 0, 0, -0.78040177, 0.36666667, 1, 0.7071068, 0, 0, -0.7071068, 0.4, 1, 0.6152316, 0, 0, -0.7883465, 0.43333334, 1, 0.38268343, 0, 0, -0.92387956, 0.46666667, 1, 0.19509031, 0, 0, -0.98078537, 0.5, 1, 0, 0, 0, -1)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root/torso/head")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.040894743, 0, 0, -0.99916345, 0.1, 1, 0.21910124, 0, 0, -0.97570217, 0.13333334, 1, 0.25881904, 0, 0, -0.9659258, 0.16666667, 1, 0.20835964, 0, 0, -0.9780523, 0.2, 1, 0.10285832, 0, 0, -0.994696, 0.23333333, 1, 0.014501505, 0, 0, -0.99989486, 0.26666668, 1, 0.0145015195, 0, 0, -0.99989486, 0.3, 1, 0.102858394, 0, 0, -0.994696, 0.33333334, 1, 0.20835964, 0, 0, -0.9780523, 0.36666667, 1, 0.25881904, 0, 0, -0.9659259, 0.4, 1, 0.21910127, 0, 0, -0.9757022, 0.43333334, 1, 0.13052617, 0, 0, -0.9914449, 0.46666667, 1, 0.06540312, 0, 0, -0.997859, 0.5, 1, 0, 0, 0, -1)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0.3826835, -0.92387956, 0.033333335, 1, 0.019654132, -0.051408507, 0.3565635, -0.9326486, 0.06666667, 1, 0.053772647, -0.17277814, 0.29225895, -0.9390639, 0.1, 1, 0.07274664, -0.30916786, 0.21718352, -0.92301387, 0.13333334, 1, 0.074035436, -0.40225357, 0.16517822, -0.8974559, 0.16666667, 1, 0.07591574, -0.3932664, 0.17367245, -0.89967567, 0.2, 1, 0.072425075, -0.24847916, 0.2702941, -0.927337, 0.23333333, 1, 0.0267166, -0.06756775, 0.36673194, -0.92748505, 0.26666668, 1, -0.022881286, 0.056430805, 0.37506327, -0.9249971, 0.3, 1, -0.06251842, 0.17893237, 0.32386413, -0.9269233, 0.33333334, 1, -0.080506824, 0.29605666, 0.2497465, -0.9184203, 0.36666667, 1, -0.07840827, 0.3827382, 0.1847429, -0.90179473, 0.4, 1, -0.07338689, 0.41619778, 0.15737869, -0.89253896, 0.43333334, 1, -0.07274664, 0.30916774, 0.21718358, -0.92301387, 0.46666667, 1, -0.036970936, 0.15712364, 0.3048613, -0.9386186, 0.5, 1, 0, 0, 0.3826835, -0.92387956)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, -0.3826835, -0.92387956, 0.033333335, 1, -0.019654132, -0.051408507, -0.3565635, -0.9326486, 0.06666667, 1, -0.053772647, -0.17277814, -0.29225895, -0.9390639, 0.1, 1, -0.07274664, -0.30916786, -0.21718352, -0.92301387, 0.13333334, 1, -0.074035436, -0.40225357, -0.16517822, -0.8974559, 0.16666667, 1, -0.07591574, -0.3932664, -0.17367245, -0.89967567, 0.2, 1, -0.072425075, -0.24847916, -0.2702941, -0.927337, 0.23333333, 1, -0.0267166, -0.06756775, -0.36673194, -0.92748505, 0.26666668, 1, 0.022881286, 0.056430805, -0.37506327, -0.9249971, 0.3, 1, 0.06251842, 0.17893237, -0.32386413, -0.9269233, 0.33333334, 1, 0.080506824, 0.29605666, -0.2497465, -0.9184203, 0.36666667, 1, 0.07840827, 0.3827382, -0.1847429, -0.90179473, 0.4, 1, 0.07338689, 0.41619778, -0.15737869, -0.89253896, 0.43333334, 1, 0.07274664, 0.30916774, -0.21718358, -0.92301387, 0.46666667, 1, 0.036970936, 0.15712364, -0.3048613, -0.9386186, 0.5, 1, 0, 0, -0.3826835, -0.92387956)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/torso")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/torso")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.04089231, -0.0108989645, 0.00044608352, -0.999104, 0.1, 1, -0.21872123, -0.057440355, 0.012898664, -0.9740099, 0.13333334, 1, -0.25818858, -0.06737958, 0.018054303, -0.9635729, 0.16666667, 1, -0.20798416, -0.058690306, 0.012503105, -0.9762898, 0.2, 1, -0.10278697, -0.03704114, 0.0038303055, -0.9940061, 0.23333333, 1, -0.014500597, -0.011193117, 0.00016233508, -0.9998322, 0.26666668, 1, -0.014500611, 0.01119313, -0.00016233447, -0.9998322, 0.3, 1, -0.10278703, 0.037041143, -0.003830308, -0.9940061, 0.33333334, 1, -0.20798415, 0.058690306, -0.012503107, -0.9762898, 0.36666667, 1, -0.25818858, 0.06737958, -0.018054303, -0.9635729, 0.4, 1, -0.2187212, 0.05744036, -0.012898662, -0.9740099, 0.43333334, 1, -0.13044667, 0.034600925, -0.0045552994, -0.9908409, 0.46666667, 1, -0.06537319, 0.01734021, -0.0022828802, -0.9977076, 0.5, 1, 0, 0, 0, -1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_hfw8l"]
+resource_name = "static"
+length = 0.1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/leg-left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/leg-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
+tracks/4/type = "position_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/leg-right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root/leg-right")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
+tracks/6/type = "position_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root/torso")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/7/type = "rotation_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/torso")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
+tracks/9/type = "rotation_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/torso/cape")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/head")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
+
+[sub_resource type="Animation" id="Animation_cder8"]
+resource_name = "walk"
+length = 0.6666667
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("character-vampire/root")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.033333335, 1, 0, 0.005200001, 0, 0.06666667, 1, 0, 0.017600004, 0, 0.1, 1, 0, 0.0324, 0, 0.13333334, 1, 0, 0.044800006, 0, 0.2, 1, 0, 0.044800002, 0, 0.23333333, 1, 0, 0.032400005, 0, 0.26666668, 1, 0, 0.017599996, 0, 0.3, 1, 0, 0.005199995, 0, 0.36666667, 1, 0, 0.005200001, 0, 0.4, 1, 0, 0.017600005, 0, 0.43333334, 1, 0, 0.032400005, 0, 0.46666667, 1, 0, 0.044800006, 0, 0.53333336, 1, 0, 0.04479999, 0, 0.56666666, 1, 0, 0.0324, 0, 0.6, 1, 0, 0.017599989, 0, 0.6666667, 1, 0, 0, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("character-vampire/root")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+tracks/2/type = "position_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("character-vampire/root/torso")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("character-vampire/root/torso")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0, 0.0136131495, 0, -0.9999074, 0.06666667, 1, 0, 0.046060394, 0, -0.9989387, 0.1, 1, 0, 0.08472133, 0, -0.99640477, 0.13333334, 1, 0, 0.11701742, 0, -0.99312985, 0.16666667, 1, 0, 0.1305262, 0, -0.99144495, 0.2, 1, 0, 0.12117638, 0, -0.992631, 0.23333333, 1, 0, 0.0972355, 0, -0.99526143, 0.26666668, 1, 0, 0.06488065, 0, -0.9978931, 0.3, 1, 0, 0.030364066, 0, -0.9995389, 0.33333334, 1, 0, 5.5879354e-09, 0, -1, 0.36666667, 1, 0, -0.030364068, 0, -0.99953896, 0.4, 1, 0, -0.064880654, 0, -0.9978931, 0.43333334, 1, 0, -0.09723551, 0, -0.99526143, 0.46666667, 1, 0, -0.1211764, 0, -0.9926311, 0.5, 1, 0, -0.1305262, 0, -0.9914449, 0.53333336, 1, 0, -0.11701739, 0, -0.99312985, 0.56666666, 1, 0, -0.08472132, 0, -0.99640477, 0.6, 1, 0, -0.046060354, 0, -0.9989387, 0.6333333, 1, 0, -0.02303631, 0, -0.99973464, 0.6666667, 1, 0, 0, 0, -1)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("character-vampire/root/torso/head")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0, -0.009075588, 0, -0.9999588, 0.06666667, 1, 0, -0.030712971, 0, -0.9995283, 0.1, 1, 0, -0.056518536, 0, -0.9984016, 0.13333334, 1, 0, -0.07811111, 0, -0.99694467, 0.16666667, 1, 0, -0.08715574, 0, -0.9961947, 0.2, 1, 0, -0.080894776, 0, -0.99672264, 0.23333333, 1, 0, -0.06488065, 0, -0.99789304, 0.26666668, 1, 0, -0.04327064, 0, -0.9990634, 0.3, 1, 0, -0.020244427, 0, -0.99979514, 0.33333334, 1, 0, -1.8626451e-09, 0, -1, 0.36666667, 1, 0, 0.020244434, 0, -0.9997951, 0.4, 1, 0, 0.04327065, 0, -0.9990634, 0.43333334, 1, 0, 0.06488065, 0, -0.9978931, 0.46666667, 1, 0, 0.08089479, 0, -0.9967227, 0.5, 1, 0, 0.087155744, 0, -0.9961947, 0.53333336, 1, 0, 0.07811109, 0, -0.99694467, 0.56666666, 1, 0, 0.056518536, 0, -0.9984016, 0.6, 1, 0, 0.030712953, 0, -0.9995283, 0.6333333, 1, 0, 0.015358302, 0, -0.9998821, 0.6666667, 1, 0, 0, 0, -1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("character-vampire/root/torso/arm-left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0.38268346, -0.9238795, 0.033333335, 1, 0.0145920105, -0.038132794, 0.3570921, -0.9331764, 0.06666667, 1, 0.040791646, -0.13161387, 0.2932177, -0.9460641, 0.1, 1, 0.055685047, -0.2454953, 0.21408455, -0.9438215, 0.13333334, 1, 0.054270472, -0.34034318, 0.14782119, -0.9270223, 0.16666667, 1, 0.049950216, -0.37940955, 0.12059048, -0.91597563, 0.2, 1, 0.056123722, -0.35196534, 0.14712755, -0.9226723, 0.23333333, 1, 0.06371438, -0.28089374, 0.21183363, -0.93389815, 0.26666668, 1, 0.05729867, -0.18487361, 0.29044354, -0.9371133, 0.3, 1, 0.03251542, -0.08497142, 0.35590795, -0.93008184, 0.33333334, 1, -3.7252903e-09, -1.1175871e-08, 0.38268346, -0.9238795, 0.36666667, 1, -0.032515433, 0.08497146, 0.35590792, -0.93008184, 0.4, 1, -0.057298668, 0.18487364, 0.29044348, -0.9371132, 0.43333334, 1, -0.06371437, 0.2808937, 0.21183366, -0.9338982, 0.46666667, 1, -0.0561237, 0.35196525, 0.14712755, -0.9226723, 0.5, 1, -0.049950223, 0.3794096, 0.120590486, -0.9159757, 0.53333336, 1, -0.054270472, 0.34034312, 0.14782123, -0.9270223, 0.56666666, 1, -0.055685047, 0.24549532, 0.21408457, -0.94382155, 0.6, 1, -0.04079163, 0.13161379, 0.29321772, -0.94606405, 0.6333333, 1, -0.020466266, 0.066034205, 0.33911756, -0.9382005, 0.6666667, 1, 0, 0, 0.3826835, -0.92387956)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("character-vampire/root/torso/arm-right")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, -0.38268346, -0.9238795, 0.033333335, 1, -0.0145920105, -0.038132794, -0.3570921, -0.9331764, 0.06666667, 1, -0.040791646, -0.13161387, -0.2932177, -0.9460641, 0.1, 1, -0.055685047, -0.2454953, -0.21408455, -0.9438215, 0.13333334, 1, -0.054270472, -0.34034318, -0.14782119, -0.9270223, 0.16666667, 1, -0.049950216, -0.37940955, -0.12059048, -0.91597563, 0.2, 1, -0.056123722, -0.35196534, -0.14712755, -0.9226723, 0.23333333, 1, -0.06371438, -0.28089374, -0.21183363, -0.93389815, 0.26666668, 1, -0.05729867, -0.18487361, -0.29044354, -0.9371133, 0.3, 1, -0.03251542, -0.08497142, -0.35590795, -0.93008184, 0.33333334, 1, 3.7252903e-09, -1.1175871e-08, -0.38268346, -0.9238795, 0.36666667, 1, 0.032515433, 0.08497146, -0.35590792, -0.93008184, 0.4, 1, 0.057298668, 0.18487364, -0.29044348, -0.9371132, 0.43333334, 1, 0.06371437, 0.2808937, -0.21183366, -0.9338982, 0.46666667, 1, 0.0561237, 0.35196525, -0.14712755, -0.9226723, 0.5, 1, 0.049950223, 0.3794096, -0.120590486, -0.9159757, 0.53333336, 1, 0.054270472, 0.34034312, -0.14782123, -0.9270223, 0.56666666, 1, 0.055685047, 0.24549532, -0.21408457, -0.94382155, 0.6, 1, 0.04079163, 0.13161379, -0.29321772, -0.94606405, 0.6333333, 1, 0.020466266, 0.066034205, -0.33911756, -0.9382005, 0.6666667, 1, 0, 0, -0.3826835, -0.92387956)
+tracks/7/type = "position_3d"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("character-vampire/root/leg-left")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0.074204, 0.223184, -7.219114e-16)
+tracks/8/type = "rotation_3d"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("character-vampire/root/leg-left")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, 0.08172107, 0, 0, -0.9966552, 0.1, 1, 0.42755508, 0, 0, -0.9039893, 0.13333334, 1, 0.5, 0, 0, -0.8660254, 0.16666667, 1, 0.46700406, 0, 0, -0.8842552, 0.2, 1, 0.3797791, 0, 0, -0.92507714, 0.23333333, 1, 0.25679553, 0, 0, -0.96646583, 0.26666668, 1, 0.121176444, 0, 0, -0.992631, 0.3, 1, 3.7252903e-09, 0, 0, -1, 0.33333334, 1, -0.121176414, 0, 0, -0.992631, 0.36666667, 1, -0.2567954, 0, 0, -0.9664658, 0.4, 1, -0.37977913, 0, 0, -0.92507726, 0.43333334, 1, -0.4670041, 0, 0, -0.88425523, 0.46666667, 1, -0.49999997, 0, 0, -0.8660254, 0.5, 1, -0.45212337, 0, 0, -0.89195544, 0.53333336, 1, -0.3328194, 0, 0, -0.94299066, 0.56666666, 1, -0.18326506, 0, 0, -0.9830636, 0.6, 1, -0.054427262, 0, 0, -0.99851775, 0.6333333, 1, -0.027223747, 0, 0, -0.9996294, 0.6666667, 1, 0, 0, 0, -1)
+tracks/9/type = "position_3d"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("character-vampire/root/leg-right")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, -0.074204, 0.223184, -7.219114e-16)
+tracks/10/type = "rotation_3d"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("character-vampire/root/leg-right")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1, 0.033333335, 1, -0.08172107, 0, 0, -0.9966552, 0.1, 1, -0.42755508, 0, 0, -0.9039893, 0.13333334, 1, -0.5, 0, 0, -0.8660254, 0.16666667, 1, -0.46700406, 0, 0, -0.8842552, 0.2, 1, -0.3797791, 0, 0, -0.92507714, 0.23333333, 1, -0.25679553, 0, 0, -0.96646583, 0.26666668, 1, -0.121176444, 0, 0, -0.992631, 0.3, 1, -3.7252903e-09, 0, 0, -1, 0.33333334, 1, 0.121176414, 0, 0, -0.992631, 0.36666667, 1, 0.2567954, 0, 0, -0.9664658, 0.4, 1, 0.37977913, 0, 0, -0.92507726, 0.43333334, 1, 0.4670041, 0, 0, -0.88425523, 0.46666667, 1, 0.49999997, 0, 0, -0.8660254, 0.5, 1, 0.45212337, 0, 0, -0.89195544, 0.53333336, 1, 0.3328194, 0, 0, -0.94299066, 0.56666666, 1, 0.18326506, 0, 0, -0.9830636, 0.6, 1, 0.054427262, 0, 0, -0.99851775, 0.6333333, 1, 0.027223747, 0, 0, -0.9996294, 0.6666667, 1, 0, 0, 0, -1)
+tracks/11/type = "rotation_3d"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("character-vampire/root/torso/cape")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4d5nf"]
+_data = {
+&"attack-kick-left": SubResource("Animation_soabe"),
+&"attack-kick-right": SubResource("Animation_lekkb"),
+&"attack-melee-left": SubResource("Animation_ppep6"),
+&"attack-melee-right": SubResource("Animation_3x6w8"),
+&"crouch": SubResource("Animation_uro7y"),
+&"die": SubResource("Animation_no7ln"),
+&"drive": SubResource("Animation_0cyqy"),
+&"emote-no": SubResource("Animation_a1him"),
+&"emote-yes": SubResource("Animation_41dh4"),
+&"fall": SubResource("Animation_tdybi"),
+&"holding-both": SubResource("Animation_2is6k"),
+&"holding-both-shoot": SubResource("Animation_kudbj"),
+&"holding-left": SubResource("Animation_qi6oy"),
+&"holding-left-shoot": SubResource("Animation_xx004"),
+&"holding-right": SubResource("Animation_p4ckw"),
+&"holding-right-shoot": SubResource("Animation_2xs5h"),
+&"idle": SubResource("Animation_pts52"),
+&"interact-left": SubResource("Animation_u5hro"),
+&"interact-right": SubResource("Animation_72ncm"),
+&"jump": SubResource("Animation_jttlo"),
+&"pick-up": SubResource("Animation_xw0yo"),
+&"sit": SubResource("Animation_8g3hb"),
+&"sprint": SubResource("Animation_x5qsp"),
+&"static": SubResource("Animation_hfw8l"),
+&"walk": SubResource("Animation_cder8")
+}
+
+[node name="VampireModel" type="Node3D" unique_id=1309663092 node_paths=PackedStringArray("_animationPlayer")]
+script = ExtResource("1_q8bie")
+_animationPlayer = NodePath("AnimationPlayer")
+
+[node name="character-vampire" type="Node3D" parent="." unique_id=1523140959]
+transform = Transform3D(-1.5, 0, -1.3113416e-07, 0, 1.5, 0, 1.3113416e-07, 0, -1.5, 0, 0, 0)
+
+[node name="root" type="Node3D" parent="character-vampire" unique_id=522139176]
+
+[node name="leg-left" type="MeshInstance3D" parent="character-vampire/root" unique_id=71862159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.074204, 0.223184, -7.219114e-16)
+mesh = SubResource("ArrayMesh_we581")
+
+[node name="leg-right" type="MeshInstance3D" parent="character-vampire/root" unique_id=1791202234]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.074204, 0.223184, -7.219114e-16)
+mesh = SubResource("ArrayMesh_2wd0s")
+
+[node name="torso" type="MeshInstance3D" parent="character-vampire/root" unique_id=403252312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4438228e-15, 0.223184, -7.219114e-16)
+mesh = SubResource("ArrayMesh_jeto4")
+
+[node name="arm-left" type="MeshInstance3D" parent="character-vampire/root/torso" unique_id=2096239517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.2, 0.0025)
+mesh = SubResource("ArrayMesh_l07cw")
+
+[node name="arm-right" type="MeshInstance3D" parent="character-vampire/root/torso" unique_id=985080964]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.2, 0.0025)
+mesh = SubResource("ArrayMesh_fv34e")
+
+[node name="cape" type="MeshInstance3D" parent="character-vampire/root/torso" unique_id=170190449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26, -0.1)
+mesh = SubResource("ArrayMesh_h5lxt")
+
+[node name="head" type="MeshInstance3D" parent="character-vampire/root/torso" unique_id=209772664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.26, 0)
+mesh = SubResource("ArrayMesh_emoag")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1464125143]
+libraries/ = SubResource("AnimationLibrary_4d5nf")
+autoplay = &"static"

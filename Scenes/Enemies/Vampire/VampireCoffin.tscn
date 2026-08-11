@@ -1,0 +1,209 @@
+[gd_scene format=3 uid="uid://b0j3afeysrcbl"]
+
+[ext_resource type="Script" uid="uid://bwt7pfoi5xuhf" path="res://Scenes/Enemies/Vampire/VampireCoffin.cs" id="1_72j70"]
+[ext_resource type="PackedScene" uid="uid://ccx617jn8raa3" path="res://Assets/Models/Vampire/coffin-old.glb" id="1_ajp2x"]
+[ext_resource type="PackedScene" uid="uid://cn2k6628bw4ij" path="res://Scenes/Enemies/Vampire/VampireModel.tscn" id="1_yainm"]
+[ext_resource type="PackedScene" uid="uid://csc5hvqjvjsdq" path="res://Assets/Models/Vampire/coffin.glb" id="2_yainm"]
+[ext_resource type="AudioStream" uid="uid://d4ijiut2epgov" path="res://Assets/Audio/Effects/coffin_open.wav" id="4_mw21y"]
+[ext_resource type="AudioStream" uid="uid://bj3h5qe4lxy3y" path="res://Assets/Audio/Effects/269115__visualpony__growl-4.wav" id="5_poccj"]
+[ext_resource type="PackedScene" uid="uid://bi4pdei3r5kfm" path="res://Scenes/Utilities/LinkPlayer/LinkPlayer.tscn" id="6_poccj"]
+
+[sub_resource type="Animation" id="Animation_hd83o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("coffin2:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("coffin-old2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VampireModel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("coffin2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VampireModel:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.5707964, -3.1415925, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_mw21y"]
+resource_name = "appear"
+length = 3.5000000000000004
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("coffin2:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.20000005, 0.4, 0.7, 1, 1.2, 1.4, 1.5, 1.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.43633232, 0), Vector3(0, 0, 0), Vector3(0, -0.43633232, 0), Vector3(0, 0, 0), Vector3(0, 0.43633232, 0), Vector3(0, 0, 0), Vector3(0, -0.43633232, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("coffin-old2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VampireModel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.9, 3.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("coffin2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sounds")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_mw21y")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_poccj")
+}],
+"times": PackedFloat32Array(0.099999994, 2)
+}
+tracks/4/use_blend = true
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VampireModel:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.9, 3.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1.5707964, -3.1415925, 0), Vector3(1.5707964, -3.1415925, 0), Vector3(0, -3.1415927, 0)]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(3.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"CreateCharacter"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_poccj"]
+_data = {
+&"RESET": SubResource("Animation_hd83o"),
+&"appear": SubResource("Animation_mw21y")
+}
+
+[node name="VampireCoffin" type="Node3D" unique_id=661437096 node_paths=PackedStringArray("_animationPlayer", "_playerDetect", "_linkPlayer")]
+script = ExtResource("1_72j70")
+_animationPlayer = NodePath("AnimationPlayer")
+_playerDetect = NodePath("PlayerDetect")
+_linkPlayer = NodePath("LinkPlayer")
+
+[node name="LinkPlayer" parent="." unique_id=479148828 instance=ExtResource("6_poccj")]
+
+[node name="VampireModel" parent="." unique_id=1309663092 instance=ExtResource("1_yainm")]
+transform = Transform3D(-1, -1.509958e-07, 6.600236e-15, 0, -4.371139e-08, -1, 1.509958e-07, -1, 4.371139e-08, 0, 0, 0)
+visible = false
+
+[node name="coffin-old2" parent="." unique_id=1386427168 instance=ExtResource("1_ajp2x")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.14970264, -0.5331861)
+visible = false
+
+[node name="coffin2" parent="." unique_id=756231053 instance=ExtResource("2_yainm")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.14970264, -0.50478864)
+
+[node name="Node3D" type="Node3D" parent="." unique_id=778799564]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=173221319]
+libraries/ = SubResource("AnimationLibrary_poccj")
+
+[node name="Sounds" type="AudioStreamPlayer3D" parent="." unique_id=1164161530]
+
+[node name="PlayerDetect" type="RayCast3D" parent="." unique_id=1604509616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4154148, 0)
+target_position = Vector3(0, 0, -5)
+collision_mask = 3
+debug_shape_custom_color = Color(0.77000016, 0.3844215, 0.85767615, 1)
+debug_shape_thickness = 4

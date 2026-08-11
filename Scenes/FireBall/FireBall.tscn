@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://3q26bayxwfdf"]
+
+[ext_resource type="Script" uid="uid://m20hjb6tstie" path="res://Scenes/FireBall/FireBall.cs" id="1_7cwuc"]
+[ext_resource type="AudioStream" uid="uid://kxwutg2js06j" path="res://Assets/Audio/Effects/player_shoot.wav" id="1_ji4iy"]
+[ext_resource type="PackedScene" uid="uid://vyhuli2fulmd" path="res://Scenes/Utilities/LifeTimer/LifeTimer.tscn" id="1_twagy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3tdtv"]
+shading_mode = 0
+disable_ambient_light = true
+disable_fog = true
+albedo_color = Color(1.0171052, 0.8865493, 1.79357, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_4pq2v"]
+material = SubResource("StandardMaterial3D_3tdtv")
+radius = 0.15
+height = 0.3
+radial_segments = 8
+rings = 4
+
+[sub_resource type="Gradient" id="Gradient_ji4iy"]
+offsets = PackedFloat32Array(0.00155521, 1)
+colors = PackedColorArray(0.7479586, 0.67829305, 0.9810229, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_7cwuc"]
+gradient = SubResource("Gradient_ji4iy")
+
+[sub_resource type="Curve" id="Curve_7cwuc"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.00896861, 0), 0.0, 0.0, 0, 0, Vector2(0.48281014, 1), 0.0, 0.0, 0, 0, Vector2(0.99999, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_ji4iy"]
+curve = SubResource("Curve_7cwuc")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ji4iy"]
+lifetime_randomness = 0.2
+emission_shape = 1
+emission_sphere_radius = 0.1
+spread = 1.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.19999999
+scale_max = 0.7
+scale_curve = SubResource("CurveTexture_ji4iy")
+color = Color(1.2844094, 1.0819601, 0.95218503, 1)
+color_ramp = SubResource("GradientTexture1D_7cwuc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7cwuc"]
+transparency = 1
+blend_mode = 1
+shading_mode = 0
+disable_ambient_light = true
+disable_fog = true
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_twagy"]
+material = SubResource("StandardMaterial3D_7cwuc")
+radius = 0.05
+height = 0.1
+radial_segments = 8
+rings = 3
+
+[node name="FireBall" type="Node3D" unique_id=1997190201]
+script = ExtResource("1_7cwuc")
+
+[node name="Effect" type="AudioStreamPlayer3D" parent="." unique_id=1843852189]
+stream = ExtResource("1_ji4iy")
+autoplay = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=270476747]
+mesh = SubResource("SphereMesh_4pq2v")
+
+[node name="LifeTimer" parent="." unique_id=1751044325 instance=ExtResource("1_twagy")]
+
+[node name="Particles" type="GPUParticles3D" parent="." unique_id=322846738]
+amount = 32
+lifetime = 0.5
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_ji4iy")
+draw_pass_1 = SubResource("SphereMesh_twagy")

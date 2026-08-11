@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://vyhuli2fulmd"]
+
+[ext_resource type="Script" uid="uid://dcdsq0y2dye4t" path="res://Scenes/Utilities/LifeTimer/LifeTimer.cs" id="1_d0jn1"]
+
+[node name="LifeTimer" type="Node" unique_id=1751044325]
+script = ExtResource("1_d0jn1")

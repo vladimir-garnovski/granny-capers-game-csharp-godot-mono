@@ -1,0 +1,203 @@
+[gd_scene format=3 uid="uid://dj73y8dvkgonq"]
+
+[ext_resource type="Texture2D" uid="uid://g0bdky50wv6w" path="res://Assets/Images/BG_2D.jpeg" id="1_cmk6n"]
+[ext_resource type="Script" uid="uid://d1f8bvaggcnhu" path="res://Scenes/Main/Main.cs" id="1_i3fi7"]
+[ext_resource type="AudioStream" uid="uid://c0rohuud0ny0h" path="res://Assets/Audio/Music/Boogie Party.mp3" id="2_i3fi7"]
+[ext_resource type="Texture2D" uid="uid://cxjykk8513y8" path="res://Assets/Images/GrannyPose-removebg-preview.png" id="3_o8wgc"]
+[ext_resource type="LabelSettings" uid="uid://dd8m6p5gflbhf" path="res://Resources/TitleLabel.tres" id="3_w20t6"]
+[ext_resource type="LabelSettings" uid="uid://djtyonv0qta8d" path="res://Resources/PressSpaceLabel.tres" id="4_aw1lf"]
+[ext_resource type="PackedScene" uid="uid://tnxn4a42tpxl" path="res://Scenes/Effects/FloatingStars/FloatingStars.tscn" id="7_aw1lf"]
+
+[sub_resource type="Animation" id="Animation_w20t6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/PressSpaceLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/VBoxContainer/TitleLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_aw1lf"]
+resource_name = "flash"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/PressSpaceLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5s61s"]
+resource_name = "title"
+length = 3.0000000000000004
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/VBoxContainer/TitleLabel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6257902, 2.006555),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/VBoxContainer/PressSpaceLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"SetPressOn"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7npjy"]
+_data = {
+&"RESET": SubResource("Animation_w20t6"),
+&"flash": SubResource("Animation_aw1lf"),
+&"title": SubResource("Animation_5s61s")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4vhfm"]
+animation = &"flash"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dvlhv"]
+animation = &"title"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wgovn"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cv8e0"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_4pq2v"]
+states/Start/position = Vector2(134.66666, 98.44444)
+states/flash/node = SubResource("AnimationNodeAnimation_4vhfm")
+states/flash/position = Vector2(583.82996, 99.270744)
+states/title/node = SubResource("AnimationNodeAnimation_dvlhv")
+states/title/position = Vector2(339.1633, 100.11963)
+transitions = ["Start", "title", SubResource("AnimationNodeStateMachineTransition_wgovn"), "title", "flash", SubResource("AnimationNodeStateMachineTransition_cv8e0")]
+graph_offset = Vector2(-266.17004, -13.590003)
+
+[node name="Main" type="Control" unique_id=554729943]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i3fi7")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1485496257]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1088.0
+offset_top = -484.0
+offset_right = 319.0
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_cmk6n")
+expand_mode = 2
+flip_v = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1985336726]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 96
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1284486145]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=972856551]
+layout_mode = 2
+text = "Granny's Capers"
+label_settings = ExtResource("3_w20t6")
+
+[node name="PressSpaceLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1949525216]
+layout_mode = 2
+text = "Press Shoot To Play"
+label_settings = ExtResource("4_aw1lf")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=107859670]
+stream = ExtResource("2_i3fi7")
+autoplay = true
+
+[node name="GrannyTexture" type="TextureRect" parent="." unique_id=499908782]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -622.0
+offset_top = -124.0
+offset_right = -289.0
+offset_bottom = 335.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("3_o8wgc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1276628400]
+libraries/ = SubResource("AnimationLibrary_7npjy")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1578174808]
+tree_root = SubResource("AnimationNodeStateMachine_4pq2v")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="FloatingStars" parent="." unique_id=523374831 instance=ExtResource("7_aw1lf")]
+position = Vector2(1020, 735)
+
+[node name="FloatingStars2" parent="." unique_id=1970556975 instance=ExtResource("7_aw1lf")]
+position = Vector2(1756, 728)

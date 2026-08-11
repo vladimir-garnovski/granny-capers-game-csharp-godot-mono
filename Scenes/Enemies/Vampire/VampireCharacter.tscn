@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://btd3m0sw4dg5l"]
+
+[ext_resource type="Script" uid="uid://dded481b0pmwo" path="res://Scenes/Enemies/Vampire/VampireCharacter.cs" id="1_04t2h"]
+[ext_resource type="PackedScene" uid="uid://cn2k6628bw4ij" path="res://Scenes/Enemies/Vampire/VampireModel.tscn" id="1_nq427"]
+[ext_resource type="PackedScene" uid="uid://codur226xup58" path="res://Scenes/Utilities/FallsOff/FallsOff.tscn" id="2_xd3ts"]
+[ext_resource type="PackedScene" uid="uid://bi4pdei3r5kfm" path="res://Scenes/Utilities/LinkPlayer/LinkPlayer.tscn" id="3_qv775"]
+[ext_resource type="AudioStream" uid="uid://pi8n5nd6i1ba" path="res://Assets/Audio/Effects/vampire-sucking-blood-short.wav" id="4_6hv1c"]
+[ext_resource type="AudioStream" uid="uid://cqf3hgo4elcjo" path="res://Assets/Audio/Effects/vampire2.wav" id="5_04t2h"]
+[ext_resource type="AudioStream" uid="uid://c024l61brjjxg" path="res://Assets/Audio/Effects/vampire_running.wav" id="6_k26hg"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pq2v"]
+radius = 0.265625
+height = 1.265625
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_xd3ts"]
+streams_count = 2
+stream_0/stream = ExtResource("5_04t2h")
+stream_1/stream = ExtResource("6_k26hg")
+
+[node name="VampireCharacter" type="CharacterBody3D" unique_id=1243865366 node_paths=PackedStringArray("_runningTimer", "_runningEffect", "_linkPlayer", "_vampireModel")]
+collision_layer = 0
+script = ExtResource("1_04t2h")
+_runningTimer = NodePath("RunningTimer")
+_runningEffect = NodePath("RunningEffect")
+_linkPlayer = NodePath("LinkPlayer")
+_vampireModel = NodePath("VampireModel")
+
+[node name="LinkPlayer" parent="." unique_id=479148828 instance=ExtResource("3_qv775")]
+
+[node name="VampireModel" parent="." unique_id=1309663092 instance=ExtResource("1_nq427")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1999123382]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5830078, 0)
+shape = SubResource("CapsuleShape3D_4pq2v")
+debug_color = Color(0.88888437, 0.2408413, 0.5609227, 1)
+
+[node name="FallsOff" parent="." unique_id=1592212656 instance=ExtResource("2_xd3ts")]
+
+[node name="BloodSuckEffect" type="AudioStreamPlayer3D" parent="." unique_id=978178820]
+stream = ExtResource("4_6hv1c")
+
+[node name="RunningEffect" type="AudioStreamPlayer3D" parent="." unique_id=1485001522]
+stream = SubResource("AudioStreamRandomizer_xd3ts")
+
+[node name="RunningTimer" type="Timer" parent="." unique_id=79195053]
+wait_time = 3.0
+autostart = true

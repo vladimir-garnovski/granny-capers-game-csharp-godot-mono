@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://3yvkxvps38f2"]
+
+[ext_resource type="PackedScene" uid="uid://ye560joiwqx0" path="res://Assets/Models/Turret/tower-square-build-b.glb" id="1_adw2l"]
+[ext_resource type="Script" uid="uid://b1bjawjbcgjo6" path="res://Scenes/Turret/Turret.cs" id="1_upwia"]
+[ext_resource type="PackedScene" uid="uid://byquoh11d1bba" path="res://Assets/Models/Turret/weapon-turret.glb" id="2_8gyjb"]
+[ext_resource type="PackedScene" uid="uid://bi4pdei3r5kfm" path="res://Scenes/Utilities/LinkPlayer/LinkPlayer.tscn" id="3_efegm"]
+[ext_resource type="AudioStream" uid="uid://bx4ie1jd3pu3s" path="res://Assets/Audio/Effects/Spell_02_Short.wav" id="5_qyqsk"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4pq2v"]
+radius = 10.0
+
+[node name="Turret" type="Node3D" unique_id=1667743435 node_paths=PackedStringArray("_playerDetect", "_shootTimer", "_pivot", "_linkPlayer", "_effects", "_shootPoint")]
+script = ExtResource("1_upwia")
+_playerDetect = NodePath("PlayerDetection")
+_shootTimer = NodePath("ShootTimer")
+_pivot = NodePath("Pivot")
+_linkPlayer = NodePath("LinkPlayer")
+_effects = NodePath("Effect")
+_shootPoint = NodePath("Pivot/ShootPoint")
+
+[node name="tower-square-build-b2" parent="." unique_id=1716477471 instance=ExtResource("1_adw2l")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="Pivot" type="Node3D" parent="." unique_id=1988071362]
+
+[node name="weapon-turret2" parent="Pivot" unique_id=178385396 instance=ExtResource("2_8gyjb")]
+transform = Transform3D(-1.5, 0, -1.3113416e-07, 0, 1.5, 0, 1.3113416e-07, 0, -1.5, 0, 1.3016696, 0)
+
+[node name="ShootPoint" type="Marker3D" parent="Pivot" unique_id=1251927022]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8217611, -0.5026593)
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=869177241]
+wait_time = 2.0
+
+[node name="PlayerDetection" type="Area3D" parent="." unique_id=1286438202]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerDetection" unique_id=1635607257]
+shape = SubResource("SphereShape3D_4pq2v")
+
+[node name="LinkPlayer" parent="." unique_id=479148828 instance=ExtResource("3_efegm")]
+
+[node name="Effect" type="AudioStreamPlayer3D" parent="." unique_id=1364510374]
+stream = ExtResource("5_qyqsk")

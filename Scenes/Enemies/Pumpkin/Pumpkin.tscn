@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://qb40qu7mk5ei"]
+
+[ext_resource type="PackedScene" uid="uid://codur226xup58" path="res://Scenes/Utilities/FallsOff/FallsOff.tscn" id="1_3bi1x"]
+[ext_resource type="Script" uid="uid://dh0pn0r267cfx" path="res://Scenes/Enemies/Pumpkin/Pumpkin.cs" id="1_foek2"]
+[ext_resource type="PackedScene" uid="uid://cjbqbmciwq4vi" path="res://Assets/Models/Kay/Pumpkin.glb" id="1_vv4x1"]
+[ext_resource type="AudioStream" uid="uid://p7jlm3oiv1vd" path="res://Assets/Audio/Enemies/pumpkin.wav" id="3_foek2"]
+[ext_resource type="PackedScene" uid="uid://bi4pdei3r5kfm" path="res://Scenes/Utilities/LinkPlayer/LinkPlayer.tscn" id="4_j4bp1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vv4x1"]
+height = 1.0126953
+
+[node name="Pumpkin" type="CharacterBody3D" unique_id=982054613 node_paths=PackedStringArray("_jumpTimer", "_labelDebug", "_linkPlayer", "_effect")]
+collision_layer = 0
+script = ExtResource("1_foek2")
+_jumpTimer = NodePath("JumpTimer")
+_labelDebug = NodePath("LabelDebug")
+_linkPlayer = NodePath("LinkPlayer")
+_effect = NodePath("Effect")
+
+[node name="FallsOff" parent="." unique_id=1592212656 instance=ExtResource("1_3bi1x")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=768624051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4416209, 0)
+shape = SubResource("CapsuleShape3D_vv4x1")
+
+[node name="Pumpkin" parent="." unique_id=1911191514 instance=ExtResource("1_vv4x1")]
+transform = Transform3D(-0.8, 0, -6.9938224e-08, 0, 0.8, 0, 6.9938224e-08, 0, -0.8, 0, 0, 0)
+
+[node name="Effect" type="AudioStreamPlayer3D" parent="." unique_id=1185101498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4416209, 0)
+stream = ExtResource("3_foek2")
+
+[node name="JumpTimer" type="Timer" parent="." unique_id=55087030]
+wait_time = 3.0
+one_shot = true
+
+[node name="LinkPlayer" parent="." unique_id=479148828 instance=ExtResource("4_j4bp1")]
+
+[node name="LabelDebug" type="Label3D" parent="." unique_id=152753246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2468567, 0)
+billboard = 1
+text = "aaaaaaaa
+aaaaaaaa
+aaaaaaaaa
+"

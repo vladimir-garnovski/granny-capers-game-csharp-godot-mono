@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://wfa61r54oeuh"]
+
+[ext_resource type="PackedScene" uid="uid://bxrtlsm8bidse" path="res://Assets/Models/Doors/Door/fence-straight.glb" id="1_6edub"]
+[ext_resource type="PackedScene" uid="uid://de85o2nwwth7v" path="res://Assets/Models/Doors/Door/door-rotate-large.glb" id="1_m8yfu"]
+[ext_resource type="Script" uid="uid://bude3jxncnhey" path="res://Scenes/LevelExit/LevelExit.cs" id="1_xn2r3"]
+[ext_resource type="AudioStream" uid="uid://evtflsxla2w5" path="res://Assets/Audio/Effects/242503__wrong-action.wav" id="3_q37bc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4pq2v"]
+size = Vector3(1, 2.0400696, 0.21435547)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xct66"]
+size = Vector3(1.8451538, 1.7722778, 0.83461)
+
+[node name="LevelExit" type="Node3D" unique_id=1783631756 node_paths=PackedStringArray("_labelHolder", "_labelKey", "_exitArea", "_effects")]
+script = ExtResource("1_xn2r3")
+_labelHolder = NodePath("LabelHolder")
+_labelKey = NodePath("LabelHolder/LabelKey")
+_exitArea = NodePath("ExitArea")
+_effects = NodePath("Effects")
+
+[node name="fence-straight3" parent="." unique_id=1559491066 instance=ExtResource("1_6edub")]
+transform = Transform3D(-1.5, 0, -2.2649371e-07, 0, 1.5, 0, 2.2649371e-07, 0, -1.5, 0, 0, 0.087067366)
+
+[node name="fence-straight4" parent="." unique_id=1870970841 instance=ExtResource("1_6edub")]
+transform = Transform3D(-1.5, 0, -2.2649371e-07, 0, 1.5, 0, 2.2649371e-07, 0, -1.5, 0, 0.64685625, 0.087067366)
+
+[node name="fence-straight5" parent="." unique_id=2014256699 instance=ExtResource("1_6edub")]
+transform = Transform3D(-1.5, 0, -2.2649371e-07, 0, 1.5, 0, 2.2649371e-07, 0, -1.5, 0, 1.2667599, 0.087067366)
+
+[node name="door-rotate-large2" parent="." unique_id=1605778599 instance=ExtResource("1_m8yfu")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+
+[node name="ExitArea" type="Area3D" parent="." unique_id=207809976]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ExitArea" unique_id=1140924838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9947052, 0.39282227)
+shape = SubResource("BoxShape3D_4pq2v")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=295065625]
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2054019285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.035980225, 1.2035867, -0.19159698)
+shape = SubResource("BoxShape3D_xct66")
+debug_color = Color(0.40784314, 0.5921569, 0.38039216, 1)
+
+[node name="LabelHolder" type="Node3D" parent="." unique_id=799601893]
+
+[node name="LabelKey" type="Label3D" parent="LabelHolder" unique_id=419961689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85403717, 0.462439)
+modulate = Color(0.8178522, 0.35406917, 0.7206248, 1)
+text = "You need the key"
+
+[node name="Effects" type="AudioStreamPlayer3D" parent="." unique_id=103038892]
+stream = ExtResource("3_q37bc")
