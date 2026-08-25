@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+// Keeping the scores for jewels and coins + FLAG for ALL collected
 public partial class PickUpScores : GodotObject // we extend GodotObject in order to use it as a signal..
 {
 	public int CoinsTotal  {get; set;} = 0;

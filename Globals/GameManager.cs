@@ -5,14 +5,16 @@ using System.Collections.Generic;
 // Job: Switching and navigating scenes, dealing with scores
 public partial class GameManager : Node
 {
-    public static GameManager Instance {get;private set;}
+    public static GameManager Instance {get;private set;} // Godot mono magic
 
-    private static readonly PackedScene MainScene = GD.Load<PackedScene>("res://Scenes/Main/Main.tscn");
+    private static readonly PackedScene MainScene = GD.Load<PackedScene>("res://Scenes/Main/Main.tscn"); // Main scene
 
     private static readonly Dictionary<int, PackedScene> Levels = new() // This is populated with all the levels
     {
-        { 1, GD.Load<PackedScene>("res://Scenes/Level/LevelBase.tscn") }
+        { 1, GD.Load<PackedScene>("res://Scenes/Level/Level1.tscn") },
+        { 2, GD.Load<PackedScene>("res://Scenes/Level/Level2.tscn") }
     };
+    public int CurrentLevel {get;set;} = 0;
 
     public override void _Input(InputEvent @event)
     {
@@ -24,7 +26,7 @@ public partial class GameManager : Node
 
     public override void _Ready()
     {
-        Instance = this;
+        Instance = this; // Godot Mono magic
         ProcessMode = ProcessModeEnum.Always; // Ignoring tree paused
     }
 
@@ -35,11 +37,17 @@ public partial class GameManager : Node
 
     public void ChangeToMain()
     {
+        CurrentLevel = 0;
+        ScoreManager.Instance.ResetScore();
         GetTree().ChangeSceneToPacked(MainScene);
     }
 
     public void LoadNextLevel()
     {
-        GetTree().ChangeSceneToPacked(Levels[1]);
+        CurrentLevel++;
+        if (CurrentLevel > Levels.Count)
+            CurrentLevel = 1;
+            
+        GetTree().ChangeSceneToPacked(Levels[CurrentLevel]);
     } 
 }

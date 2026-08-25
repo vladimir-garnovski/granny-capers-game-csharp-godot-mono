@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bw35srdphxyso" path="res://Scenes/Enemies/Ghost/Ghost.cs" id="1_boww7"]
 [ext_resource type="Texture2D" uid="uid://nqgvpbq30ga6" path="res://Assets/Models/Ghost/Textures/colormap.png" id="1_mmqny"]
 [ext_resource type="PackedScene" uid="uid://bi4pdei3r5kfm" path="res://Scenes/Utilities/LinkPlayer/LinkPlayer.tscn" id="2_8c48c"]
+[ext_resource type="PackedScene" uid="uid://7sjk214aanrw" path="res://Scenes/DamageCollider/DamageCollider.tscn" id="4_6py4n"]
+[ext_resource type="PackedScene" uid="uid://du2yrchgths4w" path="res://Scenes/HurtBox/HurtBox.tscn" id="5_a45o2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_koyyu"]
 resource_name = "colormap"
@@ -1293,6 +1295,12 @@ _data = {
 &"walk": SubResource("Animation_451ex")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_eqc8p"]
+size = Vector3(0.5, 0.6, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a45o2"]
+size = Vector3(0.8, 1, 0.7)
+
 [node name="Ghost" type="Node3D" unique_id=1280079133 node_paths=PackedStringArray("_screenNotifier", "_effects", "_linkPlayer", "_labelDebug")]
 script = ExtResource("1_boww7")
 _screenNotifier = NodePath("ScreenNotifier")
@@ -1303,6 +1311,7 @@ _labelDebug = NodePath("LabelDebug")
 
 [node name="LabelDebug" type="Label3D" parent="." unique_id=755201827]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6808764, 0)
+visible = false
 billboard = 1
 text = "sadfasdf
 asdfsad
@@ -1339,3 +1348,21 @@ autoplay = &"walk"
 [node name="ScreenNotifier" type="VisibleOnScreenNotifier3D" parent="." unique_id=617689947]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005156994, 0.691071, 0)
 aabb = AABB(-0.6833353, -0.5956618, -0.6884923, 1.3666706, 1.1913236, 1.3769846)
+
+[node name="DamageCollider" parent="." unique_id=1560907654 instance=ExtResource("4_6py4n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7839122, -0.226287)
+collision_layer = 4
+collision_mask = 0
+_damageAmount = 15
+_explodesOnHit = false
+_diesOnHit = false
+_Shape = SubResource("BoxShape3D_eqc8p")
+
+[node name="HurtBox" parent="." unique_id=252711458 instance=ExtResource("5_a45o2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6807796, 0)
+collision_layer = 128
+collision_mask = 16
+_killsParentOnDeath = true
+_diesOnSingleImpact = false
+_maxHealth = 20
+_Shape = SubResource("BoxShape3D_a45o2")

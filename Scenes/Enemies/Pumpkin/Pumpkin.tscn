@@ -5,9 +5,16 @@
 [ext_resource type="PackedScene" uid="uid://cjbqbmciwq4vi" path="res://Assets/Models/Kay/Pumpkin.glb" id="1_vv4x1"]
 [ext_resource type="AudioStream" uid="uid://p7jlm3oiv1vd" path="res://Assets/Audio/Enemies/pumpkin.wav" id="3_foek2"]
 [ext_resource type="PackedScene" uid="uid://bi4pdei3r5kfm" path="res://Scenes/Utilities/LinkPlayer/LinkPlayer.tscn" id="4_j4bp1"]
+[ext_resource type="PackedScene" uid="uid://7sjk214aanrw" path="res://Scenes/DamageCollider/DamageCollider.tscn" id="6_4gme1"]
+[ext_resource type="PackedScene" uid="uid://du2yrchgths4w" path="res://Scenes/HurtBox/HurtBox.tscn" id="7_jleyv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vv4x1"]
 height = 1.0126953
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hgbyq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4gme1"]
+radius = 0.55
 
 [node name="Pumpkin" type="CharacterBody3D" unique_id=982054613 node_paths=PackedStringArray("_jumpTimer", "_labelDebug", "_linkPlayer", "_effect")]
 collision_layer = 0
@@ -43,3 +50,20 @@ text = "aaaaaaaa
 aaaaaaaa
 aaaaaaaaa
 "
+
+[node name="DamageCollider" parent="." unique_id=1560907654 instance=ExtResource("6_4gme1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.44150162, 0)
+collision_layer = 4
+collision_mask = 0
+_explodesOnHit = false
+_diesOnHit = false
+_Shape = SubResource("SphereShape3D_hgbyq")
+
+[node name="HurtBox" parent="." unique_id=580270304 instance=ExtResource("7_jleyv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43832088, 0)
+collision_layer = 128
+collision_mask = 16
+_killsParentOnDeath = true
+_diesOnSingleImpact = false
+_maxHealth = 30
+_Shape = SubResource("SphereShape3D_4gme1")

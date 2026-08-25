@@ -9,7 +9,7 @@ public partial class DamageCollider : Collider
 
 	[ExportCategory("Damage")]
 	[Export] private int _damageAmount = 10;
-	[Export] private bool _expolosedOnHit = true;
+	[Export] private bool _explodesOnHit = true;
 	[Export] private bool  _diesOnHit = true;
 
 	// Called when the node enters the scene tree for the first time.
@@ -23,6 +23,10 @@ public partial class DamageCollider : Collider
 		GrannyUtils.PrintWithParent(this, $"DamageCollider OnAreaEntered()");
 		ApplyImpactEffects();
 	}
+	protected override void OnBodyEntered(Node3D body)
+    {
+        ApplyImpactEffects();
+    }
 
 	private void ApplyImpactEffects()
 	{
@@ -32,8 +36,9 @@ public partial class DamageCollider : Collider
 			GrannyUtils.PrintWithParent(this, "DamageCollider DiesOnHit()");
 			Die(); 
 		}
-		if (_expolosedOnHit)
+		if (_explodesOnHit)
 		{
+			SignalHub.Instance.EmitOnAddNewExplosion(GlobalPosition);
 			GrannyUtils.PrintWithParent(this, "DamageCollider ExplodeOnHit()");
 
 		}

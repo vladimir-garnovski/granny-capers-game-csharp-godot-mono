@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GrannyCapersMono")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a0a59a96754fad0e1959661d29602094dd6626e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8be61ff0ca65e4e5898c0ee5f74ee26b09aeb5b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("GrannyCapersMono")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GrannyCapersMono")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

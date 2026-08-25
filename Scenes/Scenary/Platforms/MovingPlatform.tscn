@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://clq5303kr7sd1"]
+
+[ext_resource type="Script" uid="uid://p21mcqi5khdu" path="res://Scenes/Scenary/Platforms/MovingPlatform.cs" id="1_xrrrf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h4ihr"]
+size = Vector3(2, 0.3, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xct66"]
+albedo_color = Color(0, 0.6144128, 0.7302665, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xrrrf"]
+material = SubResource("StandardMaterial3D_xct66")
+size = Vector3(2, 0.3, 2)
+
+[node name="MovingPlatform" type="AnimatableBody3D" unique_id=668251917]
+collision_mask = 0
+script = ExtResource("1_xrrrf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=965396377]
+shape = SubResource("BoxShape3D_h4ihr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2132823499]
+mesh = SubResource("BoxMesh_xrrrf")

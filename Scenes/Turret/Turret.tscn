@@ -5,9 +5,16 @@
 [ext_resource type="PackedScene" uid="uid://byquoh11d1bba" path="res://Assets/Models/Turret/weapon-turret.glb" id="2_8gyjb"]
 [ext_resource type="PackedScene" uid="uid://bi4pdei3r5kfm" path="res://Scenes/Utilities/LinkPlayer/LinkPlayer.tscn" id="3_efegm"]
 [ext_resource type="AudioStream" uid="uid://bx4ie1jd3pu3s" path="res://Assets/Audio/Effects/Spell_02_Short.wav" id="5_qyqsk"]
+[ext_resource type="PackedScene" uid="uid://du2yrchgths4w" path="res://Scenes/HurtBox/HurtBox.tscn" id="6_qyqsk"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4pq2v"]
 radius = 10.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4xqq0"]
+size = Vector3(1.4, 2, 1.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4pq2v"]
+size = Vector3(1, 1.5, 1)
 
 [node name="Turret" type="Node3D" unique_id=1667743435 node_paths=PackedStringArray("_playerDetect", "_shootTimer", "_pivot", "_linkPlayer", "_effects", "_shootPoint")]
 script = ExtResource("1_upwia")
@@ -43,3 +50,20 @@ shape = SubResource("SphereShape3D_4pq2v")
 
 [node name="Effect" type="AudioStreamPlayer3D" parent="." unique_id=1364510374]
 stream = ExtResource("5_qyqsk")
+
+[node name="HurtBox" parent="." unique_id=1560907654 instance=ExtResource("6_qyqsk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8818052, 0.011629701)
+collision_layer = 128
+collision_mask = 16
+_killsParentOnDeath = true
+_diesOnSingleImpact = false
+_maxHealth = 100
+_Shape = SubResource("BoxShape3D_4xqq0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1867290707]
+collision_layer = 256
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=526053630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7862818, 0)
+shape = SubResource("BoxShape3D_4pq2v")

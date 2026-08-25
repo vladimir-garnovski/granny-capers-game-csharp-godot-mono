@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://bj75fpwmmqvid"]
+
+[ext_resource type="PackedScene" uid="uid://d3hrc2wbg5dm0" path="res://Assets/Models/Kenny/Platformer/fence-low-straight.glb" id="1_am608"]
+[ext_resource type="PackedScene" uid="uid://c0ai3qgdbjhn" path="res://Scenes/Bridge/RopeBridgeSection.tscn" id="2_5f3rh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4pq2v"]
+size = Vector3(1, 0.3046875, 0.20678711)
+
+[node name="RopeBridge" type="Node3D" unique_id=1430823866]
+
+[node name="Start" type="StaticBody3D" parent="." unique_id=2063021212]
+
+[node name="fence-low-straight2" parent="Start" unique_id=114015788 instance=ExtResource("1_am608")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12, -0.4)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Start" unique_id=639515809]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03515625, 0.004007697)
+shape = SubResource("BoxShape3D_4pq2v")
+
+[node name="PinJoint3D" type="PinJoint3D" parent="." unique_id=147415055]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.15799701, 0.285)
+node_a = NodePath("../Start")
+node_b = NodePath("../RB1")
+
+[node name="PinJoint3D2" type="PinJoint3D" parent="." unique_id=1973363371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.15799701, 0.285)
+node_a = NodePath("../Start")
+node_b = NodePath("../RB1")
+
+[node name="RB1" parent="." unique_id=479313980 instance=ExtResource("2_5f3rh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11119455, 1)
+
+[node name="PinJoint3D3" type="PinJoint3D" parent="." unique_id=1150235096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.110230565, 1.7408385)
+node_a = NodePath("../RB1")
+node_b = NodePath("../RB2")
+
+[node name="PinJoint3D4" type="PinJoint3D" parent="." unique_id=1000418181]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.110230565, 1.7408385)
+node_a = NodePath("../RB1")
+node_b = NodePath("../RB2")
+
+[node name="RB2" parent="." unique_id=919603376 instance=ExtResource("2_5f3rh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.4534545)
+
+[node name="PinJoint3D5" type="PinJoint3D" parent="." unique_id=1652021954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.14697409, 3.1940928)
+node_a = NodePath("../RB2")
+node_b = NodePath("../RB3")
+
+[node name="PinJoint3D6" type="PinJoint3D" parent="." unique_id=2082472626]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.14697409, 3.1940928)
+node_a = NodePath("../RB2")
+node_b = NodePath("../RB3")
+
+[node name="RB3" parent="." unique_id=812933484 instance=ExtResource("2_5f3rh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13766944, 3.9187262)
+
+[node name="PinJoint3D7" type="PinJoint3D" parent="." unique_id=895004381]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.12492794, 4.6235228)
+node_a = NodePath("../RB3")
+node_b = NodePath("../RB4")
+
+[node name="PinJoint3D8" type="PinJoint3D" parent="." unique_id=350949561]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.12492794, 4.6235228)
+node_a = NodePath("../RB3")
+node_b = NodePath("../RB4")
+
+[node name="RB4" parent="." unique_id=1019809963 instance=ExtResource("2_5f3rh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.4008403)
+
+[node name="PinJoint3D9" type="PinJoint3D" parent="." unique_id=345857973]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.14329958, 6.0847187)
+node_a = NodePath("../RB4")
+node_b = NodePath("../RB5")
+
+[node name="PinJoint3D10" type="PinJoint3D" parent="." unique_id=1703324317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.14329958, 6.0847187)
+node_a = NodePath("../RB4")
+node_b = NodePath("../RB5")
+
+[node name="RB5" parent="." unique_id=1226083919 instance=ExtResource("2_5f3rh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13502198, 6.796514)
+
+[node name="PinJoint3D11" type="PinJoint3D" parent="." unique_id=1680826736]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.10655618, 8.038275)
+node_a = NodePath("../RB5")
+node_b = NodePath("../End2")
+
+[node name="PinJoint3D12" type="PinJoint3D" parent="." unique_id=317048664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.10655618, 8.038275)
+node_a = NodePath("../RB5")
+node_b = NodePath("../End2")
+
+[node name="End2" type="StaticBody3D" parent="." unique_id=2120241057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.84538)
+
+[node name="fence-low-straight2" parent="End2" unique_id=297103213 instance=ExtResource("1_am608")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12, -0.4)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="End2" unique_id=1527955425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03515625, 0.004007697)
+shape = SubResource("BoxShape3D_4pq2v")

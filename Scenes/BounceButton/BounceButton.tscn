@@ -1,0 +1,156 @@
+[gd_scene format=4 uid="uid://bpao2vqthi4eb"]
+
+[ext_resource type="Script" uid="uid://dmkpv55j0sq6w" path="res://Scenes/BounceButton/BounceButton.cs" id="1_etusp"]
+[ext_resource type="Texture2D" uid="uid://ubb7fhlmd8b2" path="res://Assets/Models/Kenny/Platformer/Textures/colormap.png" id="1_ssdoo"]
+[ext_resource type="AudioStream" uid="uid://clslb02xir21q" path="res://Assets/Audio/Effects/bouncing_pad.wav" id="2_klt3j"]
+[ext_resource type="AudioStream" uid="uid://bew7k1e1rpc0a" path="res://Assets/Audio/Effects/bouncing_pad2.wav" id="3_etusp"]
+[ext_resource type="AudioStream" uid="uid://bm00vggoqkxj" path="res://Assets/Audio/Effects/bouncing_pad3.wav" id="4_py62u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4fsem"]
+resource_name = "colormap"
+cull_mode = 2
+albedo_texture = ExtResource("1_ssdoo")
+texture_filter = 2
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qy7if"]
+_surfaces = [{
+"aabb": AABB(-0.3, 0, -0.3, 0.6, 0.1, 0.6),
+"format": 34896613377,
+"index_count": 192,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAQAEAAMABQAEAAEAAwAEAAUABQABAAAABgACAAMAAgAHAAAABwACAAYABgAIAAcAAwAJAAYACAAGAAoABgAJAAoACQADAAsABQALAAMABwAIAAwADAAIAAoADAANAAcAAAAHAA0ACwAOAAkADwAJAA4ADwAKAAkAEAAOAAsADwAOABAACwARABAAEgAPABAACwAFABMAEwARAAsAFAAQABEAEgAQABQAEQAVABQAFgAVABEAEQATABYAFAAVABcAFwAVABYAFwAYABQAFAAYABIAFgAZABcAGAAXAA0ADQAXABkAGgAZABYAGQAaAA0AFgATABoADQAMABgADQAaAAAAGAAMABsAGwASABgADAAKABsAEgAbABwAHAAbAAoAHAAAABoAEwAcABoAHAAdAAAACgAdABwAHQAeAAAAHgAdAAoACgAPAB4AHgAPABIABQAAAB4AHwAcABMAEwAFAB8AHAAfABIABQAeAB8AEgAfAB4A"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("IBoAAP//AAAAAAAA3uUAAAAA/3/e5QAAAAD/fyAaAAAAAAAAIBoAACAaAAAAAAAAVRX//4nQAAAgGv9///8AAHUv//+p6gAAVRX//3UvAACqKv//VNUAACAa/38AAAAAidD//6nqAADe5f9///8AAHUv//9VFQAAqir//6oqAACJ0P//VRUAAN7l/38AAAAAVNX//6oqAADe5QAAAAAAAKnq//91LwAA////fyAaAAD//wAAIBoAAP///3/e5QAAqer//4nQAAD//wAA3uUAAN7lAAD//wAAVNX//1TVAABU1QAAVNUAAKoqAABU1QAAqioAAKoqAABU1QAAqioAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_obsn8"]
+resource_name = "button-square_button-square"
+_surfaces = [{
+"aabb": AABB(-0.3, 0, -0.3, 0.6, 0.1, 0.6),
+"attribute_data": PackedByteArray("/zeY+f83mPn/N//f/zf/3/83Zcb/N5j5/zeY+f83Zcb/N2XG/zf/3/83/9//N2XG/zf/3/83Zcb/N2XG/zf/3/83Zcb/N//f/zf/3/83Zcb/N2XG/zeY+f83mPn/N2XG/zf/3/83/9//N5j5/zeY+f83/9//N//f/zeY+f83mPn/N//f/zeY+f83mPn/N//f/zeY+f83mPn/N2XG/zdlxv83Zcb/N2XG/zf/3/83/9//N//f/zdlxv83Zcb/N//f/zf/3/83/9//N2XG/zdlxv83mPn/N5j5/zf/3/83/9//N//f/zeY+f83mPn/N//f/zf/3/83mPn/N5j5/zf/3/83/9//N//f/zdlxv83Zcb/N2XG/zdlxv83mPn/N5j5/zf/3/83mPn/N5j5/zf/3/83mPn/N5j5/zeY+f83mPn/N5j5/zeY+f83mPn/N5j5/zeY+f83mPn/N5j5/zeY+f83Zcb/N//f/zf/3/83Zcb/N2XG/zdlxv83Zcb/N2XG/zdlxv83Zcb/N2XG/zdlxv83Zcb/N2XG/zdlxv83ZcY="),
+"format": 34896613399,
+"index_count": 192,
+"index_data": PackedByteArray("AAABAAIAAgADAAAABAAFAAYABgAHAAQACAAJAAoACgALAAgADAANAA4ADgAPAAwAEAARABIAEgATABAAFAAVABYAFgAXABQAGAAZABoAGgAbABgAHAAdAB4AHgAfABwAIAAhACIAIgAjACAAJAAlACYAJgAnACQAKAApACoAKgArACgALAAtAC4ALgAvACwAMAAxADIAMgAzADAANAA1ADYANgA3ADQAOAA5ADoAOgA7ADgAPAA9AD4APgA/ADwAQABBAEIAQgBDAEAARABFAEYARgBHAEQASABJAEoASgBLAEgATABNAE4ATgBPAEwATwBQAEwAUQBQAE8AUABSAEwAUABTAFIAUwBUAFIATwBVAFEAVQBUAFEAVQBSAFQAVQBWAFIAVQBXAFYAWABZAFoAWgBbAFgAXABdAF4AXQBfAF4AYABcAF4AYQBeAF8AYABeAGIAYQBfAGMAZABgAGIAYQBjAGUAYgBmAGQAZgBhAGUAZwBkAGYAZgBlAGcA"),
+"material": SubResource("StandardMaterial3D_4fsem"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 104,
+"vertex_data": PackedByteArray("IBoAAP///48AAAAA3uX/rwAA/3/e5f+vIBr/f////4+qKv//VNX//6oqAABU1f//VNUAAFTV//9U1f//VNX//6nq//+J0MC5////f97lrrbe5f9///86rYnQ//+p6jarIBr/fwAAwup1L///VRWs7lUV//91L/nYAAD/fyAaytyp6v//dS/5zf///38gGuTR////f97lrcCp6v//idAcwlTV//+qKgCAVNUAAKoqAICqKgAAqioAgKoq//+qKgCA3uX/f////4////9/3uX/r///AADe5f+v3uUAAP///4////9/3uX/r////38gGv/P//8AACAa/8///wAA3uX/ryAa/38AAP/vIBoAAAAA/+/e5QAAAAD/797l/38AAP/vVNUAAFTV/79U1QAAqir/v1TV//+qKv+/VNX//1TV/79VFf//idDAuXUv//+p6jarIBr/f///Oq0AAP9/3uWutgAA/38gGuTRVRX//3Uv+c1VFf//idAcwgAA/3/e5a3AIBr/fwAAdfbe5f9/AAB19onQ//9VFYH5dS///1UVgfkAAAAA3uX/rwAAAAAgGv/PAAD/fyAa/88AAP9/3uX/r97l/38AAP/v3uUAAAAA/+///wAAIBr/z////38gGv/P3uX/f////4/e5QAA////jyAaAAD///+PIBr/f////4/e5f9/AADC6v///38gGsrcqer//3Uv+diJ0P//VRWs7qoq//9U1f+/qir//6oq/7+qKgAAqir/v6oqAABU1f+/AAD/fyAa/88AAAAAIBr/zyAaAAAAAP/vIBr/fwAA/+/e5QAA////v///AADe5f+///8AACAa/7/e5QAAAAD/v1TVAABU1f+/VNUAAKoq/78gGgAA////v6oqAABU1f+/qioAAKoq/78gGgAAAAD/vwAAAADe5f+/AAAAACAa/7+J0P//qerTpd7l/3///zOpIBr/f///M6l1L///qerTpXUv//+p6v//VRX//4nQ//+qKv//VNX//1UV//91L///idD//6nq//+qKv//qir//1TV//9U1f//dS///1UV//+p6v//idD//4nQ//9VFf//VNX//6oq//+p6v//dS////9/////f////3////9/////f////3////9/////f///+cU5OPjJwjiC2vo68d+0O9iS5clulOXJoYrlyZWM5cmuvAohAr4kI5TGlB5iwj0e/3////9/////f////3////9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3////9/////fwAA/38AAP9/////f////3////9///85uAS6s7sNoPm6fKXCuAa2JKP7wQmhUMM9npu9lJ5quVN60M/QT6wFaVOkA1t8adP/f////3////9/////f////38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3////9///8YttkSGLaWDBi2oQoYtm8U/38AAP9/AAD/fwAA/38AAP9/////f////3////9///8AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/38AAP9/AAD/fwAA/3/E5LttetzSaNLog6O77Tqb/3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+//3//v/9//7//f/+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qy7if")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jwr35"]
+_surfaces = [{
+"aabb": AABB(-0.2, 0.1, -0.2, 0.4, 0.1, 0.4),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAwABAAAAAgAEAAAAAAAEAAcABwAEAAIAAwAGAAIAAgAGAAcACAAGAAMABwAGAAgAAAAFAAMABwAFAAAACQADAAUAAwAJAAgACgAFAAcABQAKAAkABwALAAoACQAKAAsACAALAAcACwAIAAkA"),
+"lods": [0.2920402, PackedByteArray("AAABAAIAAgABAAMAAwABAAAAAgAEAAAAAAAFAAMAAwAGAAIAAAAEAAcABwAEAAIABwAFAAAAAgAGAAcACAADAAUACAAGAAMACAAFAAcABwAGAAgA")],
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAA//8AAP//AAAAAAAA////f///AAAAAAAAAAAAAAAA/3///wAA////fwAAAAAAAP9/AAAAAP/f////HwAA/9/////fAAD/H////98AAP8f////HwAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vk85x"]
+resource_name = "button-square_button"
+_surfaces = [{
+"aabb": AABB(-0.2, 0.1, -0.2, 0.4, 0.1, 0.4),
+"attribute_data": PackedByteArray("/5f/n/+X/5//l/+f/5f/n/+XZYb/lzKT/5cyk/+XMpP/lzKT/5f/n/+X/5//lzKT/5f/n/+XMpP/lzKT/5cyk/+X/5//l2WG/5dlhv+XZYb/l2WG/5dlhv+XZYb/l2WG/5dlhv+XMpP/lzKT/5dlhv+XMpP/lzKT/5dlhv+XZYb/l/+f/5cyk/+XMpP/l/+f/5cyk/+XMpP/l/+f/5f/nw=="),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAgADAAAAEQASABMAEwAUABEAFQAFAAYABgAWABUACAAXABgAGAAZAAgABAAHABoAGgAbAAQAHAAdAB4AHgAfABwACQAKAAsACwANAAkADwAQACAAIAAhAA8AIgAjAAwADAAOACIAJAAlACYAJgAnACQA"),
+"lods": [0.2920402, PackedByteArray("AAABAAIAAgADAAAABAAFAAYABAAHAAUABAAGAAgACAAHAAQACQAKAAsACwAKAAwACwANAAkADAAOAAsACQANAA8ADwAOAAwADwAQAAkADAAQAA8A")],
+"material": SubResource("StandardMaterial3D_4fsem"),
+"name": "colormap",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 40,
+"vertex_data": PackedByteArray("AAAAAP///7///wAA////v///AAAAAP+/AAAAAAAA/7//3////x/M2P///3///+6vAAD/f///7q////9/AADM2AAA/38AAMzYAAAAAP///58AAAAAAAD/3wAA/38AAP/f//8AAAAA/98AAP9/////n////38AAP/f////f////5///wAA////n/8f////H////9////8f////3////9////8f////3////9/////f7q//H////9/ur/8f////H8zY/x/////fOL8AAP9///84v////3///zi//9/////fOL8AAP9/AABz8f///38AAHPx/9////8fc/H/H////x9z8QAAAAD///+fAAD/f////58AAP9/AAD/3wAAAAAAAP/f////f////5////9/AAD/3///AAAAAP/f//8AAP///58AAP9/AAD/fwAA/38AAP9/lsAwJx3SpGOj4+GtlsAwJy+nZ7//f////3////9/////fwAA/3////9/AAD/fwAA/38AAP9//7//f/+//3//v/9//78d0qRjo+PhrS+nZ7/Cnsaxwp7GsTjOwx44zsMeWXYkySRJpQkkSaUJWXYkyf9/////f////3////9/////fwAA/38AAP9/AAD/fwAA")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jwr35")
+
+[sub_resource type="Animation" id="Animation_prer6"]
+resource_name = "toggle"
+length = 0.5
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("button-square/button")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.033333335, 1, 0, -0.00012641978, 0, 0.06666667, 1, 0, -0.0020227164, 0, 0.1, 1, 0, -0.010240002, 0, 0.13333334, 1, 0, -0.03102914, 0, 0.16666667, 1, 0, -0.04506173, 0, 0.2, 1, 0, -0.04936, 0, 0.3, 1, 0, -0.04936, 0, 0.33333334, 1, 0, -0.04506173, 0, 0.36666667, 1, 0, -0.031029135, 0, 0.4, 1, 0, -0.0102400035, 0, 0.43333334, 1, 0, -0.00202272, 0, 0.5, 1, 0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_v6fi1"]
+resource_name = "toggle-off"
+length = 0.2
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("button-square/button")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.05, 0, 0.033333335, 1, 0, -0.0496958, 0, 0.06666667, 1, 0, -0.04506173, 0, 0.13333334, 1, 0, -0.004938272, 0, 0.2, 1, 0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_15w25"]
+resource_name = "toggle-on"
+length = 0.2
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("button-square/button")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.033333335, 1, 0, -0.00030419754, 0, 0.06666667, 1, 0, -0.0049382723, 0, 0.13333334, 1, 0, -0.04506173, 0, 0.2, 1, 0, -0.05, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2pamj"]
+_data = {
+&"toggle": SubResource("Animation_prer6"),
+&"toggle-off": SubResource("Animation_v6fi1"),
+&"toggle-on": SubResource("Animation_15w25")
+}
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4pq2v"]
+streams_count = 3
+stream_0/stream = ExtResource("2_klt3j")
+stream_1/stream = ExtResource("3_etusp")
+stream_2/stream = ExtResource("4_py62u")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4pq2v"]
+size = Vector3(0.8, 0.3, 0.8)
+
+[node name="BounceButton" type="Node3D" unique_id=1670390331 node_paths=PackedStringArray("_Effect", "_animationPlayer", "_detectionArea")]
+script = ExtResource("1_etusp")
+_Effect = NodePath("Effect")
+_animationPlayer = NodePath("AnimationPlayer")
+_detectionArea = NodePath("DetectionArea")
+
+[node name="button-square" type="MeshInstance3D" parent="." unique_id=1878665917]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+mesh = SubResource("ArrayMesh_obsn8")
+
+[node name="button" type="MeshInstance3D" parent="button-square" unique_id=1932930569]
+mesh = SubResource("ArrayMesh_vk85x")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1815234581]
+libraries/ = SubResource("AnimationLibrary_2pamj")
+
+[node name="Effect" type="AudioStreamPlayer3D" parent="." unique_id=2080007126]
+stream = SubResource("AudioStreamRandomizer_4pq2v")
+
+[node name="DetectionArea" type="Area3D" parent="." unique_id=1385709855]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea" unique_id=636897970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15487686, 0)
+shape = SubResource("BoxShape3D_4pq2v")

@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 public partial class PickUp : Area3D
@@ -9,6 +10,19 @@ public partial class PickUp : Area3D
 
 	[Export] private PickUpType _pickUpType = PickUpType.Jewel;
 	[Export] protected AudioStreamPlayer3D _effects;
+
+	private Dictionary<PickUpType, int> PICKUP_POINTS = new() {
+		{PickUpType.Jewel, 10},
+		{PickUpType.Key, 30},
+		{PickUpType.Coin, 5}
+
+
+	};
+	public int GetScore ()
+	{
+		return PICKUP_POINTS[_pickUpType];
+	}
+
 
 	public PickUpType GetPickUpType()
 	{
@@ -34,6 +48,7 @@ public partial class PickUp : Area3D
 		if (body is Granny)
 		{
 			Disable();
+			ScoreManager.Instance.CurrentScore += GetScore();
 			Kill();
 			
 		}

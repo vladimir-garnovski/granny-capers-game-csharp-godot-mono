@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://m20hjb6tstie" path="res://Scenes/FireBall/FireBall.cs" id="1_7cwuc"]
 [ext_resource type="AudioStream" uid="uid://kxwutg2js06j" path="res://Assets/Audio/Effects/player_shoot.wav" id="1_ji4iy"]
 [ext_resource type="PackedScene" uid="uid://vyhuli2fulmd" path="res://Scenes/Utilities/LifeTimer/LifeTimer.tscn" id="1_twagy"]
+[ext_resource type="PackedScene" uid="uid://7sjk214aanrw" path="res://Scenes/DamageCollider/DamageCollider.tscn" id="4_qov4o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3tdtv"]
 shading_mode = 0
@@ -58,6 +59,9 @@ height = 0.1
 radial_segments = 8
 rings = 3
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_6py4n"]
+radius = 0.2
+
 [node name="FireBall" type="Node3D" unique_id=1997190201]
 script = ExtResource("1_7cwuc")
 
@@ -76,3 +80,9 @@ lifetime = 0.5
 fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_ji4iy")
 draw_pass_1 = SubResource("SphereMesh_twagy")
+
+[node name="DamageCollider" parent="." unique_id=1560907654 instance=ExtResource("4_qov4o")]
+collision_layer = 16
+collision_mask = 129
+_explodesOnHit = true
+_Shape = SubResource("SphereShape3D_6py4n")

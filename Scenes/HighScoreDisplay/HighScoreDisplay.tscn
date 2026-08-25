@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d2ho6nkr3dh4a"]
+
+[ext_resource type="Script" uid="uid://dju3ac4i8hvog" path="res://Scenes/HighScoreDisplay/HighScoreDisplay.cs" id="1_7q3mo"]
+[ext_resource type="FontFile" uid="uid://c3844posdmli7" path="res://Assets/Fonts/LuckiestGuy-Regular.ttf" id="2_a8wiw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7q3mo"]
+font = ExtResource("2_a8wiw")
+font_size = 35
+
+[node name="HighScoreDisplay" type="HBoxContainer" unique_id=1080233844 node_paths=PackedStringArray("_labelScore", "_labelTime")]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_7q3mo")
+_labelScore = NodePath("LabelScore")
+_labelTime = NodePath("LabelTime")
+
+[node name="LabelScore" type="Label" parent="." unique_id=450654626]
+layout_mode = 2
+text = "0000"
+label_settings = SubResource("LabelSettings_7q3mo")
+
+[node name="LabelTime" type="Label" parent="." unique_id=346424710]
+layout_mode = 2
+text = "00:00:00"
+label_settings = SubResource("LabelSettings_7q3mo")

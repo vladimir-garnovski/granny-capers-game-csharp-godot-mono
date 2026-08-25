@@ -7,6 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://pi8n5nd6i1ba" path="res://Assets/Audio/Effects/vampire-sucking-blood-short.wav" id="4_6hv1c"]
 [ext_resource type="AudioStream" uid="uid://cqf3hgo4elcjo" path="res://Assets/Audio/Effects/vampire2.wav" id="5_04t2h"]
 [ext_resource type="AudioStream" uid="uid://c024l61brjjxg" path="res://Assets/Audio/Effects/vampire_running.wav" id="6_k26hg"]
+[ext_resource type="PackedScene" uid="uid://7sjk214aanrw" path="res://Scenes/DamageCollider/DamageCollider.tscn" id="8_41n2j"]
+[ext_resource type="PackedScene" uid="uid://du2yrchgths4w" path="res://Scenes/HurtBox/HurtBox.tscn" id="9_e6ufl"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pq2v"]
 radius = 0.265625
@@ -17,13 +19,21 @@ streams_count = 2
 stream_0/stream = ExtResource("5_04t2h")
 stream_1/stream = ExtResource("6_k26hg")
 
-[node name="VampireCharacter" type="CharacterBody3D" unique_id=1243865366 node_paths=PackedStringArray("_runningTimer", "_runningEffect", "_linkPlayer", "_vampireModel")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_t11kh"]
+size = Vector3(0.5, 1, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5t4eg"]
+size = Vector3(0.6, 1, 0.6)
+
+[node name="VampireCharacter" type="CharacterBody3D" unique_id=1243865366 node_paths=PackedStringArray("_runningTimer", "_runningEffect", "_linkPlayer", "_vampireModel", "_bloodSuckEffect", "_damageCollider")]
 collision_layer = 0
 script = ExtResource("1_04t2h")
 _runningTimer = NodePath("RunningTimer")
 _runningEffect = NodePath("RunningEffect")
 _linkPlayer = NodePath("LinkPlayer")
 _vampireModel = NodePath("VampireModel")
+_bloodSuckEffect = NodePath("BloodSuckEffect")
+_damageCollider = NodePath("DamageCollider")
 
 [node name="LinkPlayer" parent="." unique_id=479148828 instance=ExtResource("3_qv775")]
 
@@ -45,3 +55,20 @@ stream = SubResource("AudioStreamRandomizer_xd3ts")
 [node name="RunningTimer" type="Timer" parent="." unique_id=79195053]
 wait_time = 3.0
 autostart = true
+
+[node name="DamageCollider" parent="." unique_id=1560907654 instance=ExtResource("8_41n2j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5070064, -0.14773993)
+collision_layer = 4
+_damageAmount = 16
+_explodesOnHit = false
+_diesOnHit = false
+_Shape = SubResource("BoxShape3D_t11kh")
+
+[node name="HurtBox" parent="." unique_id=1389027141 instance=ExtResource("9_e6ufl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5102825, 0)
+collision_layer = 128
+collision_mask = 16
+_killsParentOnDeath = true
+_diesOnSingleImpact = false
+_maxHealth = 20
+_Shape = SubResource("BoxShape3D_5t4eg")

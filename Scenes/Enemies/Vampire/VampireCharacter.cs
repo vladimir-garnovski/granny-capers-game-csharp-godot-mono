@@ -9,13 +9,29 @@ public partial class VampireCharacter : CharacterBody3D
 	[Export] private LinkPlayer _linkPlayer;
 	[Export] private VampireModel _vampireModel;
 	[Export] private float _runningSpeed = 3f;
+	[Export] private AudioStreamPlayer3D _bloodSuckEffect;
+	[Export] private DamageCollider _damageCollider;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		_vampireModel.PlayWalk();
 		_runningTimer.Timeout += OnRunningTimerTimeout;
+		_damageCollider.DamageGiven += OnDamageGiven;
 	}
+    public override void _EnterTree()
+    {
+        base._EnterTree();
+		_damageCollider.DamageGiven -= OnDamageGiven;
+    }
+
+    private void OnDamageGiven(int amount)
+    {
+        if (!_bloodSuckEffect.Playing)
+		{
+			_bloodSuckEffect.Play();
+		}
+    }
 
     private void OnRunningTimerTimeout()
     {

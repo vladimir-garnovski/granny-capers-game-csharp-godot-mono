@@ -1,0 +1,28 @@
+.godot/
+.import/
+export.cfg
+export_presets.cfg
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
+
+# Build artifacts (Mono/C#)
+bin/
+obj/
+*.dll
+*.pdb
+
+# Addons (ignore entire addons folder)
+addons/
+
+# System/IDE
+.DS_Store
+*.tmp
+.vs/
+.vscode/
+*.user

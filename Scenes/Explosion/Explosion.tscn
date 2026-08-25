@@ -1,0 +1,185 @@
+[gd_scene format=3 uid="uid://dofs8gqiy34bj"]
+
+[ext_resource type="Script" uid="uid://jj2sw2v1b8fa" path="res://Scenes/Explosion/Explosion.cs" id="1_me2ut"]
+[ext_resource type="AudioStream" uid="uid://i1gifu6ooa1o" path="res://Assets/Audio/Effects/592581_explosion.wav" id="1_qb8ow"]
+
+[sub_resource type="Animation" id="Animation_4ofrt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fire:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sparks:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_0buog"]
+resource_name = "bang"
+step = 0.05
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Effect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("1_qb8ow")
+}],
+"times": PackedFloat32Array(0.1)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fire:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sparks:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.049999997),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k1cr7"]
+_data = {
+&"RESET": SubResource("Animation_4ofrt"),
+&"bang": SubResource("Animation_0buog")
+}
+
+[sub_resource type="Gradient" id="Gradient_qb8ow"]
+offsets = PackedFloat32Array(0.20318726, 0.7689243, 0.92231077)
+colors = PackedColorArray(0.472628, 0.36476496, 0.075013764, 1, 0.3719677, 0.2999309, 0.17977095, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_qb8ow"]
+gradient = SubResource("Gradient_qb8ow")
+
+[sub_resource type="Curve" id="Curve_qb8ow"]
+_data = [Vector2(0, 0.4780059), 0.0, 0.0, 0, 0, Vector2(0.32954544, 0.9325513), 0.0, 0.0, 0, 0, Vector2(0.67992425, 0.92082113), 0.0, 0.0, 0, 0, Vector2(0.969697, 0.5278593), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_qb8ow"]
+curve = SubResource("Curve_qb8ow")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_me2ut"]
+emission_shape = 1
+emission_sphere_radius = 0.3
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 0.6999977
+radial_accel_max = 0.99999774
+scale_min = 0.79999995
+scale_max = 1.1999999
+scale_curve = SubResource("CurveTexture_qb8ow")
+color = Color(0.88410956, 0.7042078, 0.28297415, 1)
+color_ramp = SubResource("GradientTexture1D_qb8ow")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1y3wu"]
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_4pq2v"]
+material = SubResource("StandardMaterial3D_1y3wu")
+radial_segments = 12
+rings = 6
+
+[sub_resource type="Curve" id="Curve_me2ut"]
+_limits = [0.0, 6.125883, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.5265151, 5.8173847), 0.0, 0.0, 0, 0, Vector2(0.9829545, 6.125883), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_4ofrt"]
+curve = SubResource("Curve_me2ut")
+
+[sub_resource type="Curve" id="Curve_0buog"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.971591, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_me2ut"]
+curve = SubResource("Curve_0buog")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qb8ow"]
+emission_shape = 1
+emission_sphere_radius = 0.5
+direction = Vector3(0, 1, 0)
+spread = 180.0
+initial_velocity_min = 0.19999999
+initial_velocity_max = 0.39999998
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 0.99999774
+radial_accel_max = 1.9999977
+damping_min = 1.0
+damping_max = 1.0
+damping_curve = SubResource("CurveTexture_4ofrt")
+scale_min = 0.29999998
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_me2ut")
+color = Color(0.8235624, 0.76866084, 0.40631047, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_me2ut"]
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_qb8ow"]
+material = SubResource("StandardMaterial3D_me2ut")
+radius = 0.1
+height = 0.2
+radial_segments = 8
+rings = 4
+
+[node name="Explosion" type="Node3D" unique_id=299267956 node_paths=PackedStringArray("_animationPlayer")]
+script = ExtResource("1_me2ut")
+_animationPlayer = NodePath("AnimationPlayer")
+
+[node name="Effect" type="AudioStreamPlayer3D" parent="." unique_id=1380813961]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=240115951]
+libraries/ = SubResource("AnimationLibrary_k1cr7")
+autoplay = &"bang"
+
+[node name="Fire" type="GPUParticles3D" parent="." unique_id=1790577584]
+emitting = false
+amount = 12
+lifetime = 0.4
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_me2ut")
+draw_pass_1 = SubResource("SphereMesh_4pq2v")
+
+[node name="Sparks" type="GPUParticles3D" parent="." unique_id=1477414048]
+emitting = false
+amount = 20
+lifetime = 0.6
+one_shot = true
+explosiveness = 0.7
+process_material = SubResource("ParticleProcessMaterial_qb8ow")
+draw_pass_1 = SubResource("SphereMesh_qb8ow")

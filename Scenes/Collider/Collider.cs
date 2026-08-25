@@ -39,7 +39,13 @@ public partial class Collider : Area3D
 		UpdateComponent();
 
 		AreaEntered += OnAreaEntered;
+		BodyEntered += OnBodyEntered;
 	}
+
+    protected virtual void OnBodyEntered(Node3D body)
+    {
+        throw new NotImplementedException();
+    }
 
     protected virtual void OnAreaEntered(Area3D area)
     {
@@ -58,7 +64,7 @@ public partial class Collider : Area3D
 		SetDeferred("monitoring", false);
 		GrannyUtils.PrintWithParent(this,"DamageCollider Disable()");
 	}
-	public void Die()
+	public virtual void Die()
 	{
 		GrannyUtils.PrintWithParent(this,"Collider Die()");
 		GetParent().QueueFree();

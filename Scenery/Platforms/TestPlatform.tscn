@@ -7,7 +7,7 @@ albedo_texture = ExtResource("1_w7rms")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_4pq2v"]
 material = SubResource("StandardMaterial3D_rlt4w")
-size = Vector2(50, 50)
+size = Vector2(100, 100)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_rlt4w"]
 

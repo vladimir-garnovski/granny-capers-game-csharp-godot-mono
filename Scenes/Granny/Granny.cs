@@ -9,10 +9,10 @@ public partial class Granny : CharacterBody3D
 	[Export] private Label3D _label;
 	[Export] private float _gravity = -70.0f;
 	[Export] private float _runSpeed = 6.0f;
-	[Export] private float _rotationSpeed = 2.7f;
+	[Export] private float _rotationSpeed = 2.3f;
 	[Export] private float _jumpVelocity = 40.0f;
 	[Export] private float _doubleJumpVelocity = 25.0f;
-	[Export] private float _airControlFactor = 0.7f;
+	[Export] private float _airControlFactor = 0.87f;
 	
 
 
@@ -24,6 +24,23 @@ public partial class Granny : CharacterBody3D
 	[Export] private float _shootSpeed = 10.0f;
 	[Export] private float _shootVerticalSpeed = 3.0f;
 	[Export] private BoneAttachment3D _boneAttachment;
+
+	[Export] private AudioStreamPlayer3D _effects;
+	[Export] private AudioStreamPlayer3D _hurtSounds;
+
+	[Export] private HurtBox _hurtBox;
+
+
+	private AudioStream JUMPLAND = GD.Load<AudioStream>("res://Assets/Audio/Effects/jumpland.wav");
+	private AudioStream DOUBLEJUMP = GD.Load<AudioStream>("res://Assets/Audio/Effects/double_jump.wav");
+	private AudioStream PLAYERJUMP = GD.Load<AudioStream>("res://Assets/Audio/Effects/player_jump.wav");
+	
+
+	bool _wasOnFloor = false;
+
+	// Bounce logic
+	bool _shouldBounce = false;
+	float _bounceSpeed = 0.0f;
 
 	private bool _throwing = false;
 	public bool Throwing
@@ -38,7 +55,19 @@ public partial class Granny : CharacterBody3D
 	// For state machine
 	private bool _isMoving = false;
 	private bool _isOnFloor;
-    public override void _EnterTree()
+    
+	// Fall Off
+	[Export] private float _fallOffY = -20.0f;
+
+	private void CheckFallOff()
+	{
+		if (GlobalPosition.Y < _fallOffY)
+		{
+			Die();
+		}
+	}
+	
+	public override void _EnterTree()
     {
         AddToGroup(GROUP_NAME);
     }
@@ -62,11 +91,43 @@ public partial class Granny : CharacterBody3D
 	{
 		_animationTree.AnimationFinished += OnAnimationFinished;
 		_treeSmGrounded = (AnimationNodeStateMachinePlayback)_animationTree.Get(GROUNDED); // Gets hold of the state machine
-
+		_hurtBox.DamageTaken += OnDamageTaken;
+		SignalHub.Instance.EmitOnPlayerHealthChange(_hurtBox.CurrentHealth);
+		_hurtBox.Died += OnHurtBoxDied;
+		
+		SignalHub.Instance.OnPlayerBounce += OnPlayerBounce;
 	}
-	public override void _ExitTree()
+
+    private void OnPlayerBounce(float speed)
+    {
+       _shouldBounce = true;
+	   _bounceSpeed = speed;
+    }
+
+    private void OnHurtBoxDied()
+    {
+        Die();
+    }
+
+    private void Die()
+    {
+        SignalHub.Instance.EmitPlayerDied();
+		SetPhysicsProcess(false);
+    }
+
+    private void OnDamageTaken(int dmg)
+    {
+		SignalHub.Instance.EmitOnPlayerHealthChange(_hurtBox.CurrentHealth);
+       _hurtSounds.Play();
+    }
+
+    public override void _ExitTree()
 	{
 		_animationTree.AnimationFinished -= OnAnimationFinished;
+		_hurtBox.DamageTaken -= OnDamageTaken;
+		_hurtBox.Died -= OnHurtBoxDied;
+
+		SignalHub.Instance.OnPlayerBounce -= OnPlayerBounce;
 	}
 
     private void OnAnimationFinished(StringName animName)
@@ -80,13 +141,36 @@ public partial class Granny : CharacterBody3D
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _PhysicsProcess(double delta)
 	{
+		_wasOnFloor = IsOnFloor();
 		UpdateDebug();
 		ApplyGravity((float)delta);
 		HandleInput((float)delta);
 		MoveAndSlide();
+		CheckLanding();
+		CheckFallOff();
+		HandleBounce();
 
 		// Godot Mono Workarounds
 		_isOnFloor = IsOnFloor();
+	}
+	private void HandleBounce()
+	{
+		if(!_shouldBounce)
+			return;
+
+		Velocity = new Vector3(0,_bounceSpeed,0);
+		_shouldBounce = false;
+	}
+	private void CheckLanding()
+	{
+		if (_wasOnFloor != IsOnFloor() )
+		{
+			_wasOnFloor = IsOnFloor();
+			if (IsOnFloor())
+			{
+				GrannyUtils.PlayClipStop(_effects,JUMPLAND);
+			}
+		}
 	}
 	private void UpdateDebug()
 	{
@@ -155,10 +239,12 @@ public partial class Granny : CharacterBody3D
 				velocity.Y = _jumpVelocity;
 				
 				_canDoubleJump = true;
+				GrannyUtils.PlayClipStop(_effects,PLAYERJUMP);
 			} else if(_canDoubleJump && Velocity.Y > 0)
 			{
 				_canDoubleJump = false;
 				velocity.Y += _doubleJumpVelocity;
+				GrannyUtils.PlayClipStop(_effects, DOUBLEJUMP);
 			}
 			Velocity = velocity;
 		}

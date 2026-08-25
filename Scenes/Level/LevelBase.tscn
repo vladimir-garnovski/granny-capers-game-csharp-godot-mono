@@ -3,18 +3,12 @@
 [ext_resource type="Script" uid="uid://s2eg5sp1ioie" path="res://Scenes/Level/LevelBase.cs" id="1_fs2k4"]
 [ext_resource type="Texture2D" uid="uid://cbfj8x6yxtq32" path="res://Assets/Images/Hdr/LevelSky.hdr" id="2_8xgkp"]
 [ext_resource type="PackedScene" uid="uid://ce683neobbfxu" path="res://Scenes/Hud/Hud.tscn" id="3_dle53"]
-[ext_resource type="AudioStream" uid="uid://cgnfsivumhmys" path="res://Assets/Audio/Music/Lord of the Rangs.mp3" id="4_dle53"]
-[ext_resource type="AudioStream" uid="uid://dvxhdoqb1xwpm" path="res://Assets/Audio/Music/Adventures in Adventureland.mp3" id="5_v5c15"]
-[ext_resource type="PackedScene" uid="uid://4ba2ladyttw5" path="res://Scenery/Platforms/TestPlatform.tscn" id="6_v5c15"]
 [ext_resource type="PackedScene" uid="uid://buek3usoro0kn" path="res://Scenes/Granny/Granny.tscn" id="7_yqkkm"]
 [ext_resource type="PackedScene" uid="uid://ct4q0j26e67ep" path="res://Scenes/ObjectContainer/ObjectContainer.tscn" id="8_5t4eg"]
 [ext_resource type="PackedScene" uid="uid://dg2qok7mtda3k" path="res://Scenes/PickUp/Jewel.tscn" id="8_y3j2c"]
-[ext_resource type="PackedScene" uid="uid://bhe7yy7n3xs47" path="res://Scenes/PickUp/Coin.tscn" id="9_kt428"]
 [ext_resource type="PackedScene" uid="uid://c3q1h33b6x8b4" path="res://Scenes/PickUpTracker/PickUpTracker.tscn" id="10_6ehlo"]
 [ext_resource type="PackedScene" uid="uid://64xdwxfqv1hj" path="res://Scenes/PickUp/Key.tscn" id="10_yeolc"]
 [ext_resource type="PackedScene" uid="uid://wfa61r54oeuh" path="res://Scenes/LevelExit/LevelExit.tscn" id="12_ilrmw"]
-[ext_resource type="PackedScene" uid="uid://7sjk214aanrw" path="res://Scenes/DamageCollider/DamageCollider.tscn" id="14_pggwt"]
-[ext_resource type="PackedScene" uid="uid://buo3c4kqqqaek" path="res://Scenes/Collider/Collider.tscn" id="16_5t4eg"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_4pq2v"]
 panorama = ExtResource("2_8xgkp")
@@ -27,31 +21,8 @@ background_mode = 2
 sky = SubResource("Sky_v5c15")
 glow_enabled = true
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_i3fi7"]
-playback_mode = 1
-streams_count = 2
-stream_0/stream = ExtResource("4_dle53")
-stream_1/stream = ExtResource("5_v5c15")
-
-[sub_resource type="BoxMesh" id="BoxMesh_4pq2v"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pggwt"]
-radius = 5.0
-height = 10.0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1y3wu"]
-albedo_color = Color(0.49019608, 0.36862746, 1, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_xct66"]
-material = SubResource("StandardMaterial3D_1y3wu")
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_63jni"]
-custom_solver_bias = 0.24
-radius = 5.0
-
-[node name="LevelBase" type="Node3D" unique_id=287196679 node_paths=PackedStringArray("_music")]
+[node name="LevelBase" type="Node3D" unique_id=287196679]
 script = ExtResource("1_fs2k4")
-_music = NodePath("Music")
 
 [node name="ObjectContainer" parent="." unique_id=797966770 instance=ExtResource("8_5t4eg")]
 
@@ -64,59 +35,22 @@ shadow_enabled = true
 
 [node name="Hud" parent="." unique_id=690281118 instance=ExtResource("3_dle53")]
 
-[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1255362561]
-stream = SubResource("AudioStreamRandomizer_i3fi7")
-autoplay = true
-
-[node name="TestPlatform" parent="." unique_id=160508301 instance=ExtResource("6_v5c15")]
-
 [node name="Granny" parent="." unique_id=1000199052 instance=ExtResource("7_yqkkm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6716948, 1.6053128, -5.8834257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.306828, 8.477074, -2.6386557)
 
 [node name="PickUps" type="Node" parent="." unique_id=1088514768]
 
 [node name="Key" parent="PickUps" unique_id=239881523 instance=ExtResource("10_yeolc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2753901, 0.96309817, 5.6336775)
 
-[node name="Coin" parent="PickUps" unique_id=10930696 instance=ExtResource("9_kt428")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3490102, 0)
-
 [node name="Jewel" parent="PickUps" unique_id=426378921 instance=ExtResource("8_y3j2c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9639526, 1.3490102, 0)
 
-[node name="Coin2" parent="PickUps" unique_id=695284513 instance=ExtResource("9_kt428")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3490102, 3.6949303)
+[node name="PickUpTracker" parent="PickUps" unique_id=184063973 instance=ExtResource("10_6ehlo")]
 
-[node name="Jewel2" parent="PickUps" unique_id=1776016479 instance=ExtResource("8_y3j2c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9639526, 1.3490102, 3.6949303)
+[node name="Enemies" type="Node" parent="." unique_id=495291016]
 
-[node name="Coin3" parent="PickUps" unique_id=1768947037 instance=ExtResource("9_kt428")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2753901, 1.3490102, 3.6949303)
-
-[node name="Jewel3" parent="PickUps" unique_id=1231413160 instance=ExtResource("8_y3j2c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3114376, 1.3490102, 3.6949303)
-
-[node name="PickUpTracker" parent="." unique_id=184063973 instance=ExtResource("10_6ehlo")]
+[node name="Scenary" type="Node" parent="." unique_id=615924528]
 
 [node name="LevelExit" parent="." unique_id=1783631756 instance=ExtResource("12_ilrmw")]
-transform = Transform3D(-0.9849234, 0, 0.17299105, 0, 1, 0, -0.17299105, 0, -0.9849234, 0, 0, 10.216077)
-
-[node name="TestEnemy" type="Node3D" parent="." unique_id=1842406226]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.012663, 0.9836426, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="TestEnemy" unique_id=958709360]
-mesh = SubResource("BoxMesh_4pq2v")
-
-[node name="DamageCollider" parent="TestEnemy" unique_id=1560907654 instance=ExtResource("14_pggwt")]
-_Shape = SubResource("CapsuleShape3D_pggwt")
-
-[node name="AnnoyingCube" type="Node3D" parent="." unique_id=1630431415]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.614428)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="AnnoyingCube" unique_id=1893063296]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 0)
-mesh = SubResource("BoxMesh_xct66")
-
-[node name="Collider" parent="AnnoyingCube" unique_id=61328332 instance=ExtResource("16_5t4eg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 1, 0)
-_Shape = SubResource("SphereShape3D_63jni")
+transform = Transform3D(-0.9849234, 0, 0.17299105, 0, 1, 0, -0.17299105, 0, -0.9849234, -13, 0, 10.216077)

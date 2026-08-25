@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://du2yrchgths4w"]
+
+[ext_resource type="PackedScene" uid="uid://buo3c4kqqqaek" path="res://Scenes/Collider/Collider.tscn" id="1_t7ejl"]
+[ext_resource type="Script" uid="uid://c8u4tjk35gaox" path="res://Scenes/HurtBox/HurtBox.cs" id="2_swy7e"]
+
+[node name="HurtBox" unique_id=1560907654 instance=ExtResource("1_t7ejl")]
+script = ExtResource("2_swy7e")

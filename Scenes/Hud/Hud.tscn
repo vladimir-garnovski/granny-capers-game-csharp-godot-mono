@@ -2,8 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dvawqy00gpdr8" path="res://Scenes/Hud/Hud.cs" id="1_vvs1i"]
 [ext_resource type="Texture2D" uid="uid://kugfwuigocu5" path="res://Assets/Images/Textures/kenney_prototype-textures/Items/coin-gold.png" id="2_iteex"]
+[ext_resource type="FontFile" uid="uid://c3844posdmli7" path="res://Assets/Fonts/LuckiestGuy-Regular.ttf" id="2_ogn3t"]
 [ext_resource type="Texture2D" uid="uid://xxkpcx6s7oex" path="res://Assets/Images/Textures/kenney_prototype-textures/Items/jewel.png" id="2_xymhr"]
+[ext_resource type="Texture2D" uid="uid://dbmrbq8whutnx" path="res://Assets/Images/heart.png" id="2_ysf55"]
 [ext_resource type="Texture2D" uid="uid://c8x0135nskjww" path="res://Assets/Images/Textures/kenney_prototype-textures/Items/key.png" id="4_bbjj2"]
+[ext_resource type="AudioStream" uid="uid://cgnfsivumhmys" path="res://Assets/Audio/Music/Lord of the Rangs.mp3" id="6_r61c6"]
+[ext_resource type="AudioStream" uid="uid://dvxhdoqb1xwpm" path="res://Assets/Audio/Music/Adventures in Adventureland.mp3" id="7_ogn3t"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xct66"]
 font_size = 100
@@ -23,14 +27,24 @@ content_margin_bottom = 18.0
 bg_color = Color(0.0627451, 0.13725491, 0.3254902, 0.8392157)
 corner_detail = 1
 
+[sub_resource type="LabelSettings" id="LabelSettings_1y3wu"]
+font = ExtResource("2_ogn3t")
+font_size = 32
+
 [sub_resource type="LabelSettings" id="LabelSettings_vvs1i"]
 font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_4pq2v"]
 font_size = 32
 
-[node name="Hud" type="Control" unique_id=690281118 node_paths=PackedStringArray("_coinsLabel", "_jewelsLabel", "_key", "_exitLabel", "_continueLabel", "_levelCompleteRect", "_music")]
-process_mode = 1
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_iftnw"]
+playback_mode = 1
+streams_count = 2
+stream_0/stream = ExtResource("6_r61c6")
+stream_1/stream = ExtResource("7_ogn3t")
+
+[node name="Hud" type="Control" unique_id=690281118 node_paths=PackedStringArray("_coinsLabel", "_jewelsLabel", "_key", "_exitLabel", "_continueLabel", "_levelCompleteRect", "_music", "_InGameMusic", "_healthLabel", "_levelCompleteLabel", "_scoreLabel", "_levelLabel")]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -45,6 +59,11 @@ _exitLabel = NodePath("PC/LabelExit")
 _continueLabel = NodePath("LevelCompleteRect/VB/ContinueLabel")
 _levelCompleteRect = NodePath("LevelCompleteRect")
 _music = NodePath("Music")
+_InGameMusic = NodePath("InGameMusix")
+_healthLabel = NodePath("PC/HB/HBHeart/LabelHearts")
+_levelCompleteLabel = NodePath("LevelCompleteRect/VB/CompleteLabel")
+_scoreLabel = NodePath("PC/HB/LabelScore")
+_levelLabel = NodePath("PC/HB/LabelLevel")
 
 [node name="LevelCompleteRect" type="ColorRect" parent="." unique_id=391556485]
 layout_mode = 1
@@ -95,6 +114,33 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_xymhr")
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_constants/separation = 18
+
+[node name="LabelLevel" type="Label" parent="PC/HB" unique_id=1478462905]
+layout_mode = 2
+text = "LV: 1"
+label_settings = SubResource("LabelSettings_1y3wu")
+
+[node name="LabelScore" type="Label" parent="PC/HB" unique_id=502810716]
+layout_mode = 2
+text = "000"
+label_settings = SubResource("LabelSettings_1y3wu")
+
+[node name="HBHeart" type="HBoxContainer" parent="PC/HB" unique_id=2096760039]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PC/HB/HBHeart" unique_id=748364330]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_ysf55")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="LabelHearts" type="Label" parent="PC/HB/HBHeart" unique_id=957959351]
+layout_mode = 2
+text = "100"
+label_settings = SubResource("LabelSettings_vvs1i")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HBJewel" type="HBoxContainer" parent="PC/HB" unique_id=623243820]
 layout_mode = 2
@@ -154,3 +200,7 @@ expand_mode = 3
 stretch_mode = 4
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=1380825405]
+
+[node name="InGameMusix" type="AudioStreamPlayer" parent="." unique_id=1580079620]
+stream = SubResource("AudioStreamRandomizer_iftnw")
+autoplay = true

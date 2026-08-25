@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c0ai3qgdbjhn"]
+
+[ext_resource type="Script" uid="uid://d1olqqmblpo4b" path="res://Scenes/Bridge/RopeBridgeSection.cs" id="1_bgc2q"]
+[ext_resource type="PackedScene" uid="uid://bu4ujdj4u80go" path="res://Assets/Models/Kenny/Platformer/platform.glb" id="1_fvmht"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4pq2v"]
+size = Vector3(1, 0.2, 1)
+
+[node name="RopeBridgeSection" type="RigidBody3D" unique_id=479313980 node_paths=PackedStringArray("_timer")]
+collision_mask = 2
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_bgc2q")
+_timer = NodePath("Timer")
+
+[node name="platform2" parent="." unique_id=496637722 instance=ExtResource("1_fvmht")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1359593631]
+shape = SubResource("BoxShape3D_4pq2v")
+
+[node name="Timer" type="Timer" parent="." unique_id=1831698734]
+wait_time = 4.0
+one_shot = true

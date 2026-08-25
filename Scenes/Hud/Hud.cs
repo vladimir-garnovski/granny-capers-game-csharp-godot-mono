@@ -11,35 +11,82 @@ public partial class Hud : Control
     [Export] private Label _continueLabel;
     [Export] private ColorRect _levelCompleteRect;
     [Export] private AudioStreamPlayer  _music;
+    [Export] private AudioStreamPlayer  _InGameMusic;
 
+    [Export] private Label _healthLabel;
+    [Export] private Label  _levelCompleteLabel;
+
+    [Export] private Label _scoreLabel;
+    [Export] private Label _levelLabel;
 
     private AudioStream DARKLING      = GD.Load<AudioStream>("res://Assets/Audio/Music/Darkling.mp3");
-    private AudioStream PARADISE_FOUND =  GD.Load<AudioStream>("res://Assets/Audio/Music/Darkling.mp3");
+    private AudioStream PARADISE_FOUND =  GD.Load<AudioStream>("res://Assets/Audio/Music/Paradise_Found.mp3");
 
+    bool _canContinue = false;
+    public override void _UnhandledInput(InputEvent @event)
+    {
+        if (Input.IsActionJustPressed("exit"))
+        {
+            GameManager.Instance.ChangeToMain();
+        } 
+        else if (Input.IsActionJustPressed("shoot") && _canContinue)
+        {
+            GD.Print("Shoot Clicked.. next lvl will load");
+            GameManager.Instance.LoadNextLevel();
+        }
+    }
     public override void _Ready()
     {
         SignalHub.Instance.OnPickUpScoresUpdated += OnPickUpScoresUpdated;
         SignalHub.Instance.OnJewelsCollected +=  KeyShow;
         SignalHub.Instance.OnKeyCollected += OnKeyCollected;
         SignalHub.Instance.OnLevelCompleted += OnLevelCompleted;
+        SignalHub.Instance.OnPlayerHealthChange += OnPlayerHealthChange;
+        SignalHub.Instance.OnPlayerDied += OnPlayerDied;
+        SignalHub.Instance.OnScoreChanged += OnScoreChanged;
         _levelCompleteRect.Hide();
+
+
+        GetTree().Paused = false;
+        OnScoreChanged(ScoreManager.Instance.CurrentScore);
+
+        _levelLabel.Text = "LV:"+ GameManager.Instance.CurrentLevel;
+    }
+
+    private void OnPlayerDied()
+    {
+        ShowGameOver(true);
+    }
+
+    private void OnPlayerHealthChange(int health)
+    {
+        _healthLabel.Text = health.ToString();
     }
 
     private void OnLevelCompleted()
     {
-        ShowGameOver();
+        ShowGameOver(false);
     }
-    private void ShowGameOver()
+    private void ShowGameOver(bool isDead)
     {
+        _InGameMusic.Stop();
         GetTree().Paused = true;
-        _levelCompleteRect.Show();
+        if (isDead)
+        {
+            _levelCompleteLabel.Text = "Game Over";
+        }
 
-        bool timerFinished = false;
-        GetTree().CreateTimer(1.0).Timeout+= ()=> {timerFinished = true;};
-        //while(!timerFinished) {GD.Print("Timer running");}
-        GD.Print("Timer finished");
-        _continueLabel.Show();
-        GrannyUtils.PlayClipPlain(_music, PARADISE_FOUND);
+        _levelCompleteRect.Show();
+        if(!isDead)
+        {
+            _canContinue = true;
+          _continueLabel.Show();
+          GrannyUtils.PlayClipPlain(_music, PARADISE_FOUND); 
+        } else
+        {
+            GrannyUtils.PlayClipPlain(_music, DARKLING);
+        }
+  
     }
 
     private void OnKeyCollected()
@@ -58,7 +105,17 @@ public partial class Hud : Control
         SignalHub.Instance.OnPickUpScoresUpdated -= OnPickUpScoresUpdated;
         SignalHub.Instance.OnJewelsCollected -=  KeyShow;
         SignalHub.Instance.OnKeyCollected -= OnKeyCollected;
+        SignalHub.Instance.OnLevelCompleted -= OnLevelCompleted;
+        SignalHub.Instance.OnPlayerHealthChange -= OnPlayerHealthChange;
+        SignalHub.Instance.OnPlayerDied -= OnPlayerDied;
+        SignalHub.Instance.OnScoreChanged -= OnScoreChanged;
     }
+
+    private void OnScoreChanged(int score)
+    {
+        _scoreLabel.Text = score.ToString("D3");
+    }
+
     private void KeyShow()
     {
         _key.Show();
